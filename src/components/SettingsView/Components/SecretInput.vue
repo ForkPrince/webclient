@@ -8,16 +8,19 @@
             </button>
         </div>
         <div class="right">
-            <button>{{ buttonText ?? 'Save' }}</button>
+            <button>{{ buttonText ?? t('Settings.Save')  }}</button>
         </div>
     </form>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useI18n } from "vue-i18n";
 
 import EyeSvg from '@/assets/icons/eye.svg'
 import EyeSlashSvg from '@/assets/icons/eye.slash.svg'
+
+const { t } = useI18n();
 
 const props = defineProps<{
     text?: string

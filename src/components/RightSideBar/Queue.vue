@@ -4,8 +4,8 @@
     <div class="queue-virtual-scroller" @mouseover="mouseover = true" @mouseout="mouseover = false">
         <NoItems
             :flag="!store.tracklist.length"
-            :title="'No songs in queue'"
-            :description="'When you start playing songs, they will appear here.'"
+            :title="t('RightSidebar.NoQueueTitle')"
+            :description="t('RightSidebar.NoQueueDescription')"
             :icon="QueueSvg"
         />
         <RecycleScroller
@@ -31,6 +31,7 @@
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { useI18n } from "vue-i18n";
 
 import useQStore from '@/stores/queue'
 import useInterface from '@/stores/interface'
@@ -41,6 +42,8 @@ import QueueActions from './Queue/QueueActions.vue'
 import TrackItem from '@/components/shared/TrackItem.vue'
 import QueueSvg from '@/assets/icons/queue.svg'
 import PlayingFrom from '../NowPlaying/PlayingFrom.vue'
+
+const { t } = useI18n();
 
 const itemHeight = 64
 const paddingTop = 16

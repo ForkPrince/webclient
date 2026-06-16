@@ -1,10 +1,10 @@
 <template>
     <div class="backup-restore">
-        <button class="backupnow" @click="doBackup">Backup</button>
+        <button class="backupnow" @click="doBackup">{{ t('Settings.Backup.Title') }}</button>
         <div class="separator"></div>
-        <h4>Restore backup</h4>
+        <h4>{{ t('Settings.Backup.RestoreBackup') }}</h4>
         <div class="helptext">
-            You have {{ backups.length }} backup{{ backups.length !== 1 ? 's' : '' }} in your backup directory.
+            {{ t('Settings.Backup.BackupCount', { count: backups.length }) }}
         </div>
         <div></div>
         <br />
@@ -22,20 +22,24 @@
                 </div>
                 <div class="buttons">
                     <DeleteSvg @click="() => deleteBackup(backup.name)" />
-                    <button class="restore" @click="() => restore(backup.name)">Restore</button>
+                    <button class="restore" @click="() => restore(backup.name)">{{ t('Settings.Backup.RestoreButton') }}<</button>
                 </div>
             </div>
         </div>
-        <button class="restore-all" @click="() => restore()">Restore All</button>
+        <button class="restore-all" @click="() => restore()">{{ t('Settings.Backup.RestoreAllButton') }}<</button>
     </div>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
+
 import { backupNow, getBackups, restoreBackup, deleteBackup as deleteBackupReq } from '@/requests/settings'
 import { onMounted, ref } from 'vue'
 import { useToast } from '@/stores/notification'
 import DeleteSvg from '@/assets/icons/delete.svg'
 import { pruralize } from '@/utils'
+
+const { t } = useI18n();
 
 const toast = useToast()
 
@@ -90,21 +94,21 @@ function getBackupStatsString(backup: Backup): string {
     const separator = '\u00A0•\u00A0'
 
     if (backup.playlists > 0) {
-        parts.push(`${backup.playlists} ${pruralize('playlist', backup.playlists)}`)
+        parts.push((backup.playlists !== 1 ? t('Settings.Backup.PlaylistCountPlural', { count: backup.playlists }) : t('Settings.Backup.PlaylistCount', { count: backup.playlists })))
     }
 
     if (backup.playlists > 0 && backup.scrobbles > 0) {
         parts.push(separator)
     }
 
-    parts.push(`${backup.scrobbles} ${pruralize('scrobble', backup.scrobbles)}`)
+    parts.push(backup.scrobbles !== 1 ? t('Settings.Backup.ScrobbleCountPlural', { count: backup.scrobbles }) : t('Settings.Backup.ScrobbleCount', { count: backup.scrobbles }))
 
     if (backup.scrobbles + backup.playlists > 0 && backup.favorites > 0) {
         parts.push(separator)
     }
 
     if (backup.favorites > 0) {
-        parts.push(`${backup.favorites} ${pruralize('favorite', backup.favorites)}`)
+        parts.push(backup.favorites !== 1 ? t('Settings.Backup.FavoriteCountPlural', { count: backup.favorites }) : t('Settings.Backup.FavoriteCount', { count: backup.favorites }))
     }
 
     if (backup.scrobbles + backup.playlists + backup.favorites > 0 && backup.collections > 0) {
@@ -112,7 +116,7 @@ function getBackupStatsString(backup: Backup): string {
     }
 
     if (backup.collections > 0) {
-        parts.push(`${backup.collections} ${pruralize('collection', backup.collections)}`)
+        parts.push((backup.collections !== 1 ? t('Settings.Backup.CollectionCountPlural', { count: backup.collections }) : t('Settings.Backup.CollectionCount', { count: backup.collections })))
     }
 
     return parts.join(' ')
