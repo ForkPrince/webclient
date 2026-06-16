@@ -1,8 +1,8 @@
 <template>
     <div class="stats-charts">
         <GenericHeader>
-            <template #name>Charts</template>
-            <template #description>Your top artists, albums, and tracks</template>
+            <template #name>{{t('Charts.ChartsTitle')}}</template>
+            <template #description>{{t('Charts.ChartsDescription')}}</template>
         </GenericHeader>
         <br>
         <div class="chartitemgroupsgrid">
@@ -14,6 +14,10 @@
 <script setup lang="ts">
 import GenericHeader from '@/components/shared/GenericHeader.vue'
 import ChartItemGroup from './ChartItemGroup.vue'
+
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <style lang="scss">

@@ -26,7 +26,7 @@
             </div>
             <div class="title">{{ t('FavoritesCard.FavoriteTracks')}}</div>
             <div class="fcount">
-                <b>{{ t('FavoritesCard.TrackCount', {count: item.count}, item.count) }}</b>
+                <b>{{ t('Common.TrackCount', {count: item.count}, item.count) }}</b>
             </div>
         </div>
     </RouterLink>

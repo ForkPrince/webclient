@@ -1,12 +1,15 @@
 <template>
     <span class="see-all">
         <RouterLink :to="route">
-            <b>{{ text || `SEE ALL` }}</b>
+            <b>{{ text || t('Common.SeeAll').toUpperCase() }}</b>
         </RouterLink>
     </span>
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 defineProps<{
     route: string
     text?: string

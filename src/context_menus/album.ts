@@ -12,6 +12,10 @@ import { AddToQueueIcon, DeleteIcon, PlayNextIcon, PlusIcon } from '@/icons'
 import { Album, Collection, Option, Playlist, Track } from '@/interfaces'
 import { get_find_on_social, getAddToCollectionOptions, getAddToPlaylistOptions } from './utils'
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 export default async (album?: Album) => {
     const albumStore = useAlbum()
 
@@ -20,7 +24,7 @@ export default async (album?: Album) => {
     }
 
     const play_next = <Option>{
-        label: 'Play next',
+        label: t('Menus.Album.PlayNext'),
         action: async () => {
             let tracks: Track[] = []
 
@@ -36,7 +40,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_queue = <Option>{
-        label: 'Add to queue',
+        label: t('Menus.Album.AddToQueue'),
         action: async () => {
             let tracks: Track[] = []
 
@@ -57,7 +61,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_playlist: Option = {
-        label: 'Add to Playlist',
+        label: t('Menus.Album.AddToPlaylist'),
         children: () =>
             getAddToPlaylistOptions(AddToPlaylistAction, {
                 albumhash: album.albumhash,
@@ -71,7 +75,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_page: Option = {
-        label: 'Add to Collection',
+        label: t('Menus.Album.AddToCollection'),
         children: () =>
             getAddToCollectionOptions(addToPageAction, {
                 collection: null,
@@ -83,7 +87,7 @@ export default async (album?: Album) => {
     }
 
     const remove_from_page: Option = {
-        label: 'Remove item',
+        label: t('Menus.Album.RemoveFromCollection'),
         action: async () => {
             const success = await addOrRemoveItemFromCollection(
                 parseInt(router.currentRoute.value.params.collection as string),

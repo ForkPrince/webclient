@@ -10,8 +10,8 @@
     "Settings": "Settings",
     "Default": "Default",
     "Title": "Title",
-    "Album": "Album",
-    "Artist": "Artist",
+    "Album": "Album | Albums",
+    "Artist": "Artist | Artists",
     "ReleaseDate": "Release Date",
     "DateAdded": "Date Added",
     "LastPlayed": "Last Played",
@@ -36,6 +36,22 @@
     "Rescan": "Rescan",
     "Descending": "Descending",
     "Ascending": "Ascending",
+    "TrackCount": "{count} track | {count} tracks",
+    "NoTracks": "'No tracks'",
+    "HiSpace": "Hi ",
+    "Lyrics": "Lyrics",
+    "Play": "Play",
+    "SeeAll": "See All",
+    "Unknown": "Unknown",
+    "New": "New",
+    "Albums": "Albums",
+    "Track": "Track | Tracks",
+    "Periods": {
+      "Year": "Year | Years",
+      "Week": "Week | Weeks",
+      "Month": "Month | Months",
+      "AllTime": "All Time"
+    },
     "FileName": "File Name",
     "SwingMusic": "Swing Music"
   },
@@ -321,7 +337,37 @@
   },
   "FavoritesCard": {
     "FavoriteTracks": "Favorite Tracks",
-    "TrackCount": "{count} track | {count} tracks",
     "PlaylistUpper": "PLAYLIST"
+  },
+  "MasterFlag": {
+    "MasterAudioBitrate": "Master audio bitrate - "
+  },
+  "TrackItem": {
+    "AddToFavorites": "Add to favorites",
+    "RemoveFromFavorites": "Remove from favorites",
+    "RemoveFromQueue": "Remove from queue"
+  },
+  "ChartItem": {
+    "ArtistPlays": "{count} track plays"
+  },
+  "ChartItemGroup": {
+    "FetchingData": "fetching data...",
+    "NoDataFound": "No {per} data found for this period"
+  },
+  "Charts": {
+    "ChartsTitle": "Charts",
+    "ChartsDescription": "Your top artists, albums, and tracks"
+  },
+  "Modal": {
+    "DeletePlaylist": "Are you sure you want to permanently delete this playlist?"
+  },
+  "Menus": {
+    "Album": {
+      "AddToQueue": "Add to queue",
+      "PlayNext": "Play next",
+      "AddToPlaylist": "Add to Playlist",
+      "AddToCollection": "Add to Collection",
+      "RemoveFromCollection": "Remove item"
+    }
   }
 }

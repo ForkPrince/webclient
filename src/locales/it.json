@@ -10,8 +10,8 @@
     "Settings": "Impostazioni",
     "Default": "Default",
     "Title": "Titolo",
-    "Album": "Album",
-    "Artist": "Artista",
+    "Album": "Album | Albums",
+    "Artist": "Artista | Artisti",
     "ReleaseDate": "Data di rilascio",
     "DateAdded": "Data di aggiunta",
     "LastPlayed": "Ultima riproduzione",
@@ -34,8 +34,23 @@
     "experimental": "sperimentale",
     "new": "nuovo",
     "Rescan": "Riscansiona",
-    "Descending": "Scendendo",
-    "Ascending": "Crescendo",
+    "Descending": "Decrescente",
+    "Ascending": "Crescente",
+    "TrackCount": "{count} traccia | {count} tracce",
+    "NoTracks": "'Nessuna traccia'",
+    "HiSpace": "Ciao ",
+    "Lyrics": "Testo canzone",
+    "Play": "Riproduci",
+    "SeeAll": "Vis. Tutti",
+    "Unknown": "Sconosciuto",
+    "New": "Nuova",
+    "Track": "Traccia | Tracce",
+    "Periods": {
+      "Year": "Anno | Anni",
+      "Week": "Settimana | Settimane",
+      "Month": "Mese | Mesi",
+      "AllTime": "Sempre"
+    },
     "FileName": "Nome File",
     "SwingMusic": "Swing Music"
   },
@@ -321,7 +336,37 @@
   },
   "FavoritesCard": {
     "FavoriteTracks": "Tracce preferite",
-    "TrackCount": "{count} traccia | {count} tracce",
     "PlaylistUpper": "PLAYLIST"
+  },
+  "MasterFlag": {
+    "MasterAudioBitrate": "Bitrate audio sorgente -"
+  },
+  "TrackItem": {
+    "AddToFavorites": "Aggiungi ai preferiti",
+    "RemoveFromFavorites": "Rimuovi dai preferiti",
+    "RemoveFromQueue": "Rimuovi dalla coda"
+  },
+  "ChartItem": {
+    "ArtistPlays": "{count} ascolti totali"
+  },
+  "ChartItemGroup": {
+    "FetchingData": "recupero dati...",
+    "NoDataFound": "Nessun dato trovato per il periodo specificato: {per}"
+  },
+  "Charts": {
+    "ChartsTitle": "Grafici",
+    "ChartsDescription": "Gli artisti, album e canzoni più ascoltate"
+  },
+  "Modal": {
+    "DeletePlaylist": "Sei sicuro di voler cancellare questa playlist in modo definitivo?"
+  },
+  "Menus": {
+    "Album": {
+      "AddToQueue": "Aggiungi in coda",
+      "PlayNext": "Riproduci dopo la corrente",
+      "AddToPlaylist": "Aggiungi a playlist",
+      "AddToCollection": "Aggiungi a collezione",
+      "RemoveFromCollection": "Rimuovi oggetto"
+    }
   }
 }

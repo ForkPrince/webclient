@@ -1,6 +1,6 @@
 <template>
     <div class="v-scroll-page" :class="{ isSmall }" style="height: 100%">
-        <NoItems :flag="!tracks.length" :title="'No tracks'" :description="desc" :icon="noitemsicon" />
+        <NoItems :flag="!tracks.length" :title="t('Common.NoTracks')" :description="desc" :icon="noitemsicon" />
         <DynamicScroller
             id="album-scroller"
             style="height: 100%"
@@ -40,6 +40,9 @@ import NoItems from '@/components/shared/NoItems.vue'
 import SongItem from '@/components/shared/SongItem.vue'
 import AlbumsFetcher from '@/components/ArtistView/AlbumsFetcher.vue'
 import { dropSources } from '@/enums'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps<{
     tracks: Track[]
