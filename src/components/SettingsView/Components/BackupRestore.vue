@@ -94,21 +94,21 @@ function getBackupStatsString(backup: Backup): string {
     const separator = '\u00A0•\u00A0'
 
     if (backup.playlists > 0) {
-        parts.push((backup.playlists !== 1 ? t('Settings.Backup.PlaylistCountPlural', { count: backup.playlists }) : t('Settings.Backup.PlaylistCount', { count: backup.playlists })))
+        parts.push(t('Settings.Backup.PlaylistCount', { count: backup.playlists }, backup.playlists))
     }
 
     if (backup.playlists > 0 && backup.scrobbles > 0) {
         parts.push(separator)
     }
 
-    parts.push(backup.scrobbles !== 1 ? t('Settings.Backup.ScrobbleCountPlural', { count: backup.scrobbles }) : t('Settings.Backup.ScrobbleCount', { count: backup.scrobbles }))
+    parts.push(t('Settings.Backup.ScrobbleCount', { count: backup.scrobbles }, backup.scrobbles))
 
     if (backup.scrobbles + backup.playlists > 0 && backup.favorites > 0) {
         parts.push(separator)
     }
 
     if (backup.favorites > 0) {
-        parts.push(backup.favorites !== 1 ? t('Settings.Backup.FavoriteCountPlural', { count: backup.favorites }) : t('Settings.Backup.FavoriteCount', { count: backup.favorites }))
+        parts.push(t('Settings.Backup.FavoriteCount', { count: backup.favorites }, backup.favorites))
     }
 
     if (backup.scrobbles + backup.playlists + backup.favorites > 0 && backup.collections > 0) {
@@ -116,7 +116,7 @@ function getBackupStatsString(backup: Backup): string {
     }
 
     if (backup.collections > 0) {
-        parts.push((backup.collections !== 1 ? t('Settings.Backup.CollectionCountPlural', { count: backup.collections }) : t('Settings.Backup.CollectionCount', { count: backup.collections })))
+        parts.push(t('Settings.Backup.CollectionCount', { count: backup.collections }, backup.collections))
     }
 
     return parts.join(' ')

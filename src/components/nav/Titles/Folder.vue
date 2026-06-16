@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 import { Routes } from '@/router'
 
@@ -34,6 +35,9 @@ import BreadCrumbNav from '@/components/FolderView/BreadCrumbNav.vue'
 import DropDown from '@/components/shared/DropDown.vue'
 import useFolder from '@/stores/pages/folder'
 import { computed } from 'vue'
+
+
+const { t } = useI18n();
 
 const router = useRouter()
 const folder = useFolder()
@@ -48,20 +52,20 @@ interface SortItem {
 }
 
 const items: SortItem[] = [
-    { key: 'default', title: 'Default' },
-    { key: 'title', title: 'Title' },
-    { key: 'filepath', title: 'File Name' },
-    { key: 'album', title: 'Album' },
-    // { key: 'albumartists', title: 'Album Artist' },
-    { key: 'artists', title: 'Artist' },
-    // { key: 'bitrate', title: 'Bitrate' },
-    { key: 'date', title: 'Release Date' },
-    // { key: 'disc', title: 'Disc' },
-    // { key: 'duration', title: 'Duration' },
-    { key: 'last_mod', title: 'Date Added' },
-    { key: 'lastplayed', title: 'Last Played' },
-    { key: 'playcount', title: 'Play Count' },
-    { key: 'playduration', title: 'Play Duration' },
+    { key: 'default', title: t('Common.Default') },
+    { key: 'title', title: t('Common.Title') },
+    { key: 'filepath', title: t('Common.FileName') },
+    { key: 'album', title:  t('Common.Album') },
+    // { key: 'albumartists', title: t('Common.AlbumArtist')} },
+    { key: 'artists', title: t('Common.Artist') },
+    // { key: 'bitrate', title: t('Common.Bitrate') },
+    { key: 'date', title: t('Common.ReleaseDate') },
+    // { key: 'disc', title: t('Common.Disc') },
+    // { key: 'duration', title: t('Common.Duration') },
+    { key: 'last_mod', title: t('Common.DateAdded') },
+    { key: 'lastplayed', title: t('Common.LastPlayed') },
+    { key: 'playcount', title: t('Common.PlayCount') },
+    { key: 'playduration', title: t('Common.PlayDuration') },
 ]
 
 const handleSortKeySet = (item: SortItem) => {

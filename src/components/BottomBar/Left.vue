@@ -7,7 +7,7 @@
         />
         <RouterLink
             v-else
-            title="Go to Now Playing"
+            title="{{t('BottomBar.GoToNowPlaying')}}"
             :to="{
                 name: Routes.nowPlaying,
                 params: {

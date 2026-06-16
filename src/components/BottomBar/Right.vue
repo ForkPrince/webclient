@@ -11,12 +11,12 @@
             <RepeatOneSvg v-if="settings.repeat == 'one'" />
             <RepeatAllSvg v-else />
         </button>
-        <button class="shuffle" title="Shuffle" @click="queue.shuffleQueue">
+        <button class="shuffle" :title=t('BottomBar.Shuffle') @click="queue.shuffleQueue">
             <ShuffleSvg />
         </button>
         <HeartSvg
             v-if="!hideHeart"
-            title="Favorite"
+            :title=t('BottomBar.Favorite') 
             :state="queue.currenttrack?.is_favorite"
             @handleFav="() => $emit('handleFav')"
         />
@@ -28,7 +28,6 @@ import useQueue from '@/stores/queue'
 import useSettings from '@/stores/settings'
 import { useI18n } from "vue-i18n";
 
-const { t } = useI18n();
 
 import RepeatOneSvg from '@/assets/icons/repeat-one.svg'
 import RepeatAllSvg from '@/assets/icons/repeat.svg'
@@ -36,6 +35,8 @@ import ShuffleSvg from '@/assets/icons/shuffle.svg'
 import HeartSvg from '../shared/HeartSvg.vue'
 import LyricsButton from '../shared/LyricsButton.vue'
 import Volume from './Volume.vue'
+
+const { t } = useI18n();
 
 const queue = useQueue()
 const settings = useSettings()

@@ -1,20 +1,20 @@
 <template>
     <div class="profiledrop rounded-md pad-sm shadow-lg noSelect">
         <div class="info item">
-            <div class="username ellip2">Hi {{ auth.user.firstname || auth.user.username }}</div>
+            <div class="username ellip2">{{t('ProfileDropdown.HiUser', { user: auth.user.firstname || auth.user.username })}}</div>
         </div>
         <div class="separator"></div>
         <div class="item scan" @click="triggerScan">
-            <div class="label">Quick scan</div>
+            <div class="label">{{ t('ProfileDropdown.QuickScan')}}</div>
             <ReloadSvg />
         </div>
         <div class="item" @click="modal.showSettingsModal">
-            <div class="label">Settings</div>
+            <div class="label">{{ t('Common.Settings')}}</div>
             <SettingsSvg />
         </div>
         <div class="separator"></div>
         <div class="item critical logout" @click="auth.logout">
-            <div class="label">Log out</div>
+            <div class="label">{{t('Common.LogOut')}}</div>
             <LogoutSvg />
         </div>
     </div>
@@ -28,6 +28,10 @@ import LogoutSvg from '@/assets/icons/logout.svg'
 import ReloadSvg from '@/assets/icons/reload.svg'
 import SettingsSvg from '@/assets/icons/settings.svg'
 import { triggerScan } from '@/requests/settings/rootdirs'
+
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const auth = useAuth()
 const modal = useModal()

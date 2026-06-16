@@ -14,7 +14,7 @@
         <div id="ginner" ref="inputRef" tabindex="0">
             <button
                 v-auto-animate
-                :title="tabs.current === tabs.tabs.search ? t('RightSidebar.BackToQueue') : t('RightSidebar.GoToSearch')"
+                :title="tabs.current === tabs.tabs.search ? t('SearchInput.BackToQueue') : t('SearchInput.GoToSearch')"
                 :class="{ no_bg: on_nav }"
                 @click.prevent="handleButton"
             >

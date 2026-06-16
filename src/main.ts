@@ -24,10 +24,11 @@ import "vue-virtual-scroller/dist/vue-virtual-scroller.css";
 
 const app = createApp(App);
 import en from './locales/en.json';
+import it from './locales/it.json';
 import ko from './locales/ko.json';
 
 const userLocale = navigator.language.split('-')[0];
-const supportedLocales = ['en', 'ko'];
+const supportedLocales = ['en', 'it', 'ko'];
 const fallbackLocale = 'en';
 const locale = supportedLocales.includes(userLocale) ? userLocale : fallbackLocale;
 
@@ -36,6 +37,7 @@ const i18n = createI18n({
   locale: locale,
   messages: {
     en: en,
+    it: it,
     ko: ko
   },
 });

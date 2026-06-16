@@ -6,7 +6,7 @@
                 :class="{ showDropDown }"
                 :title="
                     reverse !== 'hide'
-                        ? `sort by: ${current.title} ${reverse ? 'Descending' : 'Ascending'}`.toUpperCase()
+                        ? t('DropDown.SortByUppercase', {title: current.title.toUpperCase(), order: reverse ? t('Common.Descending').toUpperCase() : t('Common.Ascending').toUpperCase()})
                         : undefined
                 "
                 @click.prevent="handleOpener"
@@ -31,8 +31,11 @@
 <script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
 import { Ref, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import ArrowSvg from '@/assets/icons/arrow.svg'
+
+const { t } = useI18n()
 
 const showDropDown = ref(false)
 const dropOptionsRef: Ref<HTMLElement | undefined> = ref()

@@ -26,9 +26,9 @@
                 </div>
                 <div v-if="res_type === 'artist'" class="artists flex">
                     {{ item.albumcount }}
-                    {{ item.albumcount === 1 ? 'album' : 'albums' }} •
+                    {{ t('Common.album', item.albumcount)}} •
                     {{ item.trackcount }}
-                    {{ item.trackcount === 1 ? 'track' : 'tracks' }}
+                    {{ t('Common.track', item.trackcount)}}
                 </div>
                 <div v-if="res_type === 'track'" class="artists flex">
                     <ArtistName :artists="item.artists" :albumartists="item.albumartists" />
@@ -82,6 +82,10 @@ import { formatSeconds } from '@/utils'
 import PlayBtn from '@/components/shared/PlayBtn.vue'
 import { playSources } from '@/enums'
 import { formatDate } from '@/utils/dates'
+
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const search = useSearchStore()
 

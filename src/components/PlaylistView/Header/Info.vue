@@ -20,7 +20,7 @@
         <br />
       </span>
     </div>
-    <div class="type">Playlist</div>
+    <div class="type">{{ t('Common.Playlist')}}</div>
   </div>
 </template>
 <script setup lang="ts">

@@ -3,7 +3,7 @@
         <div class="head" :class="{ selected }">
             <button
                 class="back rounded-sm"
-                title="Back to selection"
+                title="{{ t('AuthLogin.BackToSelection') }}"
                 @click="resetSelected"
                 :style="{
                     visibility: shownUsers.length > 1 ? 'visible' : 'hidden',
@@ -12,12 +12,12 @@
                 <span>back</span> <ArrowSvg />
             </button>
             <Logo />
-            <button class="back back2 rounded-sm" title="Back to selection"><span>back</span> <ArrowSvg /></button>
+            <button class="back back2 rounded-sm" title="{{ t('AuthLogin.BackToSelection') }}"><span>{{ t('AuthLogin.Back') }}</span> <ArrowSvg /></button>
         </div>
 
         <div class="alcontent">
             <div class="helptext" v-if="!selected">
-                <div class="h2">Welcome back</div>
+                <div class="h2">{{ t('AuthLogin.WelcomeBack') }}</div>
             </div>
             <div class="selected-user" v-if="selected">
                 <User
@@ -32,14 +32,14 @@
             <form class="passinput" v-if="selected" v-auto-animate @submit.prevent="loginUser">
                 <!-- Only show username input if there's no user list -->
                 <Input
-                    placeholder="Enter username"
+                    placeholder="{{ t('AuthLogin.EnterUsername') }}"
                     v-if="selected.username === ''"
                     input-id="loginuserinput"
                     @input="(input: string) => username = input"
                 />
                 <Input
                     type="password"
-                    placeholder="Enter password"
+                    placeholder="{{ t('AuthLogin.EnterPassword') }}"
                     input-id="loginpassinput"
                     @input="(input: string) => password = input"
                 />
@@ -48,7 +48,7 @@
             </form>
         </div>
         <div v-if="guestAllowed" class="guestlink" @click="() => guestLogin()">
-            <span>Or continue as guest </span>
+            <span>{{ t('AuthLogin.ContinueAsGuest') }} </span>
         </div>
     </div>
 </template>
@@ -64,6 +64,9 @@ import ArrowSvg from '../../assets/icons/expand.svg'
 import Logo from '../Logo.vue'
 import Input from '../shared/Input.vue'
 import User from '../shared/LoginUserCard.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n();
 
 const auth = useAuth()
 

@@ -10,7 +10,7 @@
       />
     </div>
     <div v-if="isSmallPhone" class="stats2">
-      {{ new Date(album.date * 1000).getFullYear() }} {{ !album.is_single ? `• ${album.trackcount} ${$t('AlbumView.TrackCountPlural')}` : "" }} •
+      {{ new Date(album.date * 1000).getFullYear() }} {{ !album.is_single ? `• ${album.trackcount > 1 ? t('AlbumView.TrackCountPlural') : t('AlbumView.TrackCount')}` : "" }} •
       {{ formatSeconds(album.duration, true) }}
     </div>
   </div>

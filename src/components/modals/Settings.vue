@@ -19,7 +19,7 @@
                     </button>
                     {{ currentGroup?.displayName || currentGroup?.title }}
                     <span v-if="currentGroup?.experimental" class="badge experimental circular">
-                        {{ currentGroup?.experimental ? 'experimental' : '' }}
+                        {{ currentGroup?.experimental ? t('Settings.Experimental') : '' }}
                     </span>
                 </div>
                 <div v-if="currentGroup?.desc" class="desc">
@@ -40,6 +40,9 @@ import { isSmallPhone } from '@/stores/content-width'
 import { computed, ref } from 'vue'
 import Content from './settings/Content.vue'
 import Sidebar from './settings/Sidebar.vue'
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const emit = defineEmits<{
     (e: 'setTitle', title: string): void
