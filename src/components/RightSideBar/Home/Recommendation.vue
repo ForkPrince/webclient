@@ -1,6 +1,6 @@
 <template>
   <div class="r-tracks rounded bg-primary">
-    <div class="heading">{{ t('RightSidebar.SimilarTracks') }}</div>
+    <div class="heading">{{ $t('RightSidebar.SimilarTracks') }}</div>
     <div class="tracks">
       <div v-for="song in songs" :key="song.artist" class="song-item">
         <img src="" class="rounded" loading="lazy"/>
@@ -14,10 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
-
 const songs = [
   {
     title: "Imagine",

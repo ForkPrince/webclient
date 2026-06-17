@@ -24,6 +24,9 @@ import { Ref, onMounted, ref } from 'vue'
 import QRCodeStyling from 'qr-code-styling'
 import { sendPairRequest } from '@/requests/auth'
 import { useI18n } from 'vue-i18n';
+//Here just to force the component to rerender on locale changes
+import { useCookies } from '@vueuse/integrations/useCookies';
+const cookies = useCookies(['locale']);
 
 const { t } = useI18n();
 

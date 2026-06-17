@@ -756,5 +756,12 @@
       "Title": "Statistiche",
       "Description": "Le tue statistiche d'ascolto nell'ultima settimana"
     }
+  },
+  "Languages": {
+    "en_US": "🇺🇸 Inglese (Stati Uniti)",
+    "ko": "Coreano",
+    "it_IT": "🇮🇹 Italiano (Italia)",
+    "ChooseLang": "Scegli la tua lingua preferita",
+    "WarnAppReload": "(impostare la lingua forza un refresh dell'app)"
   }
 }

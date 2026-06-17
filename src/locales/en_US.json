@@ -757,5 +757,12 @@
       "Title": "Stats",
       "Description": "Your listening stats for the past week"
     }
+  },
+  "Languages": {
+    "en_US": "🇺🇸 English (United States)",
+    "ko": "Korean",
+    "it_IT": "🇮🇹 Italian (Italy)",
+    "ChooseLang": "Choose your preferred language",
+    "WarnAppReload": "(setting the language triggers an app reload)"
   }
 }

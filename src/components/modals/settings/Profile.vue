@@ -9,6 +9,18 @@
                 <span v-for="role in auth.user.roles" :key="role" class="role"> {{ role }}</span>
             </div>
         </div>
+        <div class="updateprof">
+            <div class="locale-changer">
+                <label>{{ t('Languages.ChooseLang') }}</label>
+                <select class="language" v-model="$i18n.locale" @change="updateLang">
+                    <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ $t('Languages.'+ locale) }}</option>
+                </select>
+            </div>                
+            <button v-if="setLang" @click="setCookie">
+                {{ $t('Profile.SetLanguage') }}
+            </button>
+            <label class="warning" v-if="setLang">{{ $t('Languages.WarnAppReload') }}</label>
+        </div>
         <form v-auto-animate class="updateprof" @submit.prevent="handleSubmit">
             <div class="names">
                 <label for="username">{{ $t('Profile.Username')}}<</label>
@@ -16,14 +28,6 @@
                     :placeholder="adding_user ? t('Profile.Username')  : auth.user.username"
                     @input="input => (username = input)"
                 />
-            </div>
-            <div class="lang">
-                <label for="insertlang">{{ $t('Profile.SelectLanguage') }}</label>
-                <Input :placeholder="$t('Common.Autodetect')" @input="input => (lang = input)" />
-                <label class="error" v-if="langErrorText">{{ langErrorText }}</label>
-                <button v-if="setLang">
-                    {{ $t('Profile.SetLanguage') }}
-                </button>
             </div>
             <label for="pswd">{{ adding_user ? $t('Profile.PasswordAction', {action: $t('Common.Create')}) 
                 : $t('Profile.PasswordAction', {action: $t('Common.Change')}) }}</label>
@@ -43,13 +47,16 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n';
-import { supportedLocales } from '@/i18n'
+import { useRouter } from 'vue-router';
+import { useCookies } from '@vueuse/integrations/useCookies';
 
 import Avatar from '@/components/shared/Avatar.vue'
 import Input from '@/components/shared/Input.vue'
 import { User } from '@/interfaces'
 import useAuth from '@/stores/auth'
 
+const cookies = useCookies(['locale']);
+const router = useRouter();
 const { t, locale } = useI18n();
 
 const props = defineProps<{
@@ -64,7 +71,7 @@ const auth = useAuth()
 
 const username = ref('')
 const password = ref('')
-const lang = ref('')
+const langIns = ref(false)
 const confirmPassword = ref('')
 
 const showSubmit = computed(() => {
@@ -80,15 +87,20 @@ const showSubmit = computed(() => {
     )
 })
 const setLang = computed(()=> {
-    return (langErrorText.value == '' && lang.value != '')
+    return (langIns.value)
 })
 
-const langErrorText = computed(() => {
-    if (lang.value == '' || supportedLocales.includes(lang.value)){
-        return ''
-    }
-    else return t('Profile.LangNotCurrentlySupported')
-})
+const setCookie = function() {
+    cookies.set('locale', locale.value)
+    langIns.value = false
+    //FIXME: Feels like a hack to force reload the whole app; but parts of the UI doesn't update it properly.
+    //Adding cookies dependencies to all components might be the only alternative.
+    router.go(0);
+}
+
+const updateLang = function() {
+    langIns.value = true
+}
 
 const errorText = computed(() => {
     // if password has not changed, no error
@@ -138,6 +150,7 @@ async function updateProfile() {
         username.value = ''
         password.value = ''
         confirmPassword.value = ''
+        langIns.value = false
     }
 }
 
@@ -186,6 +199,15 @@ onMounted(async () => {
             color: $gray1;
         }
 
+        select {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: $white;
+        }
+
         input {
             width: 100%;
             padding: 0.5rem;
@@ -206,6 +228,12 @@ onMounted(async () => {
 
         .error {
             color: $red;
+        }
+
+        .warning {
+            width: 100%;
+            color: $yellow;
+            text-align: center;
         }
 
         button {
