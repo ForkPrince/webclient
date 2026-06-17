@@ -16,9 +16,9 @@ import { onMounted, ref } from "vue";
 import { addRootDirs, getRootDirs } from "@/requests/settings/rootdirs";
 import useModalStore from "@/stores/modal";
 import useSettingsStore from "@/stores/settings";
-import { useI18n } from "vue-i18n";
+import { useT } from "@/i18n";
 
-const { t } = useI18n();
+const { t } = useT();
 
 const settings = useSettingsStore();
 

@@ -82,10 +82,9 @@ import PlusSvg from '@/assets/icons/plus.svg'
 import Avatar from '@/components/shared/Avatar.vue'
 import Profile from '../Profile.vue'
 import ToggleSetting from './ToggleSetting.vue'
+import { useT } from '@/i18n.js'
 
-import { useI18n } from 'vue-i18n';
-
-const { t } = useI18n();
+const { t } = useT();
 
 const auth = useAuth()
 const toast = useToast()

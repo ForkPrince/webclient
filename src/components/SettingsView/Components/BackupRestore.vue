@@ -31,15 +31,13 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-
 import { backupNow, getBackups, restoreBackup, deleteBackup as deleteBackupReq } from '@/requests/settings'
 import { onMounted, ref } from 'vue'
 import { useToast } from '@/stores/notification'
 import DeleteSvg from '@/assets/icons/delete.svg'
-import { pruralize } from '@/utils'
+import { useT } from "@/i18n";
 
-const { t } = useI18n();
+const { t } = useT();
 
 const toast = useToast()
 
@@ -61,7 +59,7 @@ async function doBackup() {
     const res = await backupNow()
 
     if (res.status === 200) {
-        toast.showSuccess('Backup created')
+        toast.showSuccess(t('Settings.Backup.BackupSuccess'))
         backups.value.unshift(res.data)
     } else {
         toast.showError(res.data.msg)

@@ -61,8 +61,6 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-
 import { paths } from '@/config'
 import { Routes } from '@/router'
 import { getShift } from '@/utils/colortools/shift'
@@ -82,7 +80,6 @@ import ExplicitIcon from '@/assets/icons/explicit.svg'
 import ImageLoader from '@/components/shared/ImageLoader.vue'
 import ArtistName from '@/components/shared/ArtistName.vue'
 
-const { t } = useI18n();
 const queue = useQStore()
 const colors = useColorStore()
 const settings = useSettingsStore()

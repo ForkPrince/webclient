@@ -1,7 +1,7 @@
 <template>
     <div v-if="album_disc.is_album_disc_number" class="album_disc_header no-select">
         <div class="disc_number">
-            Disc {{ album_disc.album_page_disc_number }}
+            {{ $t('AlbumView.DiskNumber', { num: album_disc.album_page_disc_number }) }}
             <span @click="$emit('playDisc', album_disc.album_page_disc_number || 0)" class="play">
                 <PlaySvg /> {{ $t('AlbumView.PlayDisc') }} {{ album_disc.album_page_disc_number }}</span
             >
@@ -13,9 +13,6 @@
 <script setup lang="ts">
 import PlaySvg from '@/assets/icons/play.svg'
 import { AlbumDisc } from '@/interfaces'
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 defineProps<{
     album_disc: AlbumDisc

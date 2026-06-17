@@ -67,9 +67,9 @@ import AlbumCard from "@/components/shared/AlbumCard.vue";
 import GenericHeader from "@/components/shared/GenericHeader.vue";
 import GenericTabs from "@/components/shared/GenericTabs.vue";
 import NoItems from "@/components/shared/NoItems.vue";
-import { useI18n } from "vue-i18n";
+import { useT } from "@/i18n";
 
-const { t } = useI18n();
+const { t } = useT();
 const route = useRoute();
 const artist = useArtistDiscography();
 

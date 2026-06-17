@@ -21,7 +21,6 @@
 
 <script setup lang="ts">
 import { nextTick, onMounted } from 'vue'
-import { useI18n } from "vue-i18n"
 import useAuth from '@/stores/auth'
 
 import { playSources } from '@/enums'
@@ -32,8 +31,9 @@ import updatePageTitle from '@/utils/updatePageTitle'
 import Browse from '@/components/HomeView/Browse.vue'
 import PageItem from '@/components/shared/CardScroller.vue'
 import GenericHeader from '@/components/shared/GenericHeader.vue'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 const home = useHome()
 const auth = useAuth()
 

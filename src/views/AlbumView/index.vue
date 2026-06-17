@@ -47,9 +47,9 @@ import Stats from '@/components/Stats/Stats.vue'
 
 import { dropSources } from '@/enums'
 import { isSmall } from '@/stores/content-width'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 const album = useAlbumStore()
 const queue = useQueueStore()

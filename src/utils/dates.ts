@@ -1,7 +1,11 @@
 /**
- * Formats a timestamp into a date string of the format "Month day, year"
+ * Formats a timestamp into a date string of the locale format 
+ * requested by the user.
  * @returns formatted date
  */
+
+import { locale } from "@/i18n"
+
 export function formatDate(timestamp: number, yearOnly = false) {
     // format date as Month day, year
     const date = new Date(timestamp * 1000)
@@ -12,5 +16,6 @@ export function formatDate(timestamp: number, yearOnly = false) {
         return date.getFullYear()
     }
 
-    return date.toLocaleDateString('en-US', options)
+    // Replace _ to - in order to make them BCP47/RCF5646 compliant language tags.
+    return date.toLocaleDateString(locale.replace('_', '-'), options)
 }

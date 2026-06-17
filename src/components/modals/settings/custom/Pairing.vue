@@ -26,9 +26,9 @@ import { sendPairRequest } from '@/requests/auth'
 import { useI18n } from 'vue-i18n';
 //Here just to force the component to rerender on locale changes
 import { useCookies } from '@vueuse/integrations/useCookies';
-const cookies = useCookies(['locale']);
+import { useT } from '@/i18n';
 
-const { t } = useI18n();
+const { t } = useT();
 
 const qrLoaded = ref(false)
 // @ts-expect-error

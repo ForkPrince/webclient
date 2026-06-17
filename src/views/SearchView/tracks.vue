@@ -35,9 +35,9 @@ import SearchSvg from '@/assets/icons/search.svg'
 import AlbumsFetcher from '@/components/ArtistView/AlbumsFetcher.vue'
 import NoItems from '@/components/shared/NoItems.vue'
 import SongItem from '@/components/shared/SongItem.vue'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 const queue = useQueue()
 const search = useSearch()

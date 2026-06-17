@@ -65,9 +65,9 @@ import SongItem from '@/components/shared/SongItem.vue'
 import { xl } from '@/composables/useBreakpoints'
 import AlbumsFetcher from '@/components/ArtistView/AlbumsFetcher.vue'
 import { getFiles } from '@/requests/folders'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 const queue = useQueue()
 const folder = useFolder()
 const settings = useSettings()

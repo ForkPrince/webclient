@@ -85,7 +85,14 @@
     "LogIn": "Accedi",
     "Autodetect": "autorileva",
     "FileName": "Nome File",
-    "SwingMusic": "Swing Music"
+    "SwingMusic": "Swing Music",
+    "selected": "selezionato",
+    "AppTitle": "Swing Music",
+    "Username": "Nome utente",
+    "Password": "Password",
+    "ConfirmPass": "Conferma password",
+    "CreateAccount": "Crea account",
+    "Continue": "Continua"
   },
   "AlbumView": {
     "AlbumBy": "Album by ",
@@ -94,7 +101,8 @@
       "GenreExists": "Generi",
       "GenreDoesNotExist": "Nessun genere"
     },
-    "PlayDisc": "Riproduci disco"
+    "PlayDisc": "Riproduci disco",
+    "DiskNumber": "Disco {num}"
   },
   "ArtistView": {
     "Title": "Artista",
@@ -217,7 +225,9 @@
       "FavoriteCount": "{count} preferito | {count} preferiti",
       "CollectionCount": "{count} collezione | {count} collezioni",
       "RestoreButton": "Ripristina",
-      "RestoreAllButton": "Ripristina tutto"
+      "RestoreAllButton": "Ripristina tutto",
+      "BackupSuccess": "Backup creato",
+      "ThankYouMessage": "Ti ringrazio per aver sponsorizzato Swing Music!"
     },
     "List": {
       "RootNotConfigured": "Cartella radice non impostata. Usa il pulsante \"Configure\" per impostarla"
@@ -396,7 +406,13 @@
           "Description": "Rimuovi riferimenti riguardo eventuali remaster dai titoli delle canzoni "
         }
       },
-      "ArtistsDesc": "Personalizza le impostazioni degli artisti"
+      "ArtistsDesc": "Personalizza le impostazioni degli artisti",
+      "Artists": {
+        "SeparatorTitle": "Inserisci i separatori separati da virgole",
+        "SeparatorDesc": "Saranno usati per separare artisti e artisti degli album",
+        "ArticleAwareTitle": "Ordinamento intelligente articoli",
+        "ArticleAwareDesc": "Ignora articoli (p.e. The, A, An) nell'ordinamento del nome degli artisti"
+      }
     },
     "Plugins": {
       "LastFM": {
@@ -433,6 +449,12 @@
           "Desc": "Non mostrare testi non verificati (licenza premium richiesta)"
         }
       }
+    },
+    "License": {
+      "GithubSponsorTitle": "Benefit GitHub Sponsor",
+      "NoGithubLogin": "Il premium di Swing Music è disponibile per tutti i donatori su Github Sponsor. Accedici per averne l'accesso.",
+      "ThanksCustName": "Ciao @{cust}! Hai accesso a Swing Music Premium.",
+      "ThanksWithHearts": "Grazie per il tuo supporto. ❤️❤️"
     }
   },
   "Favorites": {
@@ -654,7 +676,7 @@
   },
   "Stores": {
     "Tracklist": {
-      "AddTrackToQueue": "Aggiunte {n} tracce alla coda"
+      "AddTrackToQueue": "Aggiunta {n} traccia alla coda | Aggiunte {n} tracce alla coda"
     },
     "Auth": {
       "UserAddedSucc": "Utente aggiunto con successo!",
@@ -676,6 +698,11 @@
       "SearchFrom": "Cerca per: \"{source}\"",
       "FavoriteTracks": "Tracce preferite",
       "NoSource": "👻 Nessuna sorgente"
+    },
+    "FormatTime": {
+      "Second": "{sec} secondo | {sec} secondi",
+      "Hour": "{hrs} ora | {hrs} ore",
+      "Minute": "{mnt} minuto | {mnt} minuti"
     }
   },
   "Views": {
@@ -737,7 +764,8 @@
     },
     "LyricView": {
       "Unsynced": "non sincronizzata",
-      "NoLyricsFound": "<div>Non hai il testo</div><div>di questa canzone</div>",
+      "NoLyricsFoundFirst": "Non hai il testo",
+      "NoLyricsFoundSecond": "di questa canzone",
       "Searching": "Cercando...",
       "SearchOnline": "Cerca online"
     },
@@ -763,5 +791,38 @@
     "it_IT": "🇮🇹 Italiano (Italia)",
     "ChooseLang": "Scegli la tua lingua preferita",
     "WarnAppReload": "(impostare la lingua forza un refresh dell'app)"
+  },
+  "Onboarding": {
+    "CreateAccountTitle": "Crea account",
+    "CreateAccountDesc": "Questo account sarà usato per amministrare il server.",
+    "ErrorPassTooShort": "La password deve essere lunga almeno 8 caratteri",
+    "ErrorPassDoNotMatch": "Le password non corrispondono",
+    "FilePicker": {
+      "Help": "Usa (⌘/Ctrl o Shift) + click per selezionare cartelle multiple",
+      "Selected": "{sel} selezionate",
+      "ThisFolderHelp": ". (questa cartella)"
+    },
+    "Finish": {
+      "TitleDone": "Hai finito! 🎉",
+      "TitleAlmostDone": "Ci sei quasi!",
+      "ConfirmButton": "Clicca il pulsante sotto per proseguire nella tua libreria.",
+      "Processing": "Swing Music sta scansionando le tue cartelle selezionate. Attendi ..."
+    },
+    "RootDirs": {
+      "ErrorSelectRootFolder": "Seleziona una cartella radice",
+      "Title": "Configura cartelle musicali",
+      "TitleDesc": "Dove vuoi che Swing Music cerchi le tue tracce musicali?",
+      "HomeDir": "Cartella home",
+      "HomeDirDesc": "Scansiona tutte le cartelle in ",
+      "SpecificFolder": "Cartella specifica",
+      "FolderSelected": "{n} cartella selezionata | {n} cartelle selezionate",
+      "FolderSelectedDesc": "Seleziona cartella per effettuarne la scansione",
+      "AddFolders": "Aggiungi cartelle"
+    },
+    "Welcome": {
+      "Title": "Benvenuto a",
+      "Tagline": "Clicca il pulsante sotto per creare il tuo primo account",
+      "GetStarted": "Iniziamo"
+    }
   }
 }

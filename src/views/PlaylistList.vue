@@ -1,7 +1,7 @@
 <template>
     <div id="p-view" class="content-page">
         <Header>
-            <template #name>{{$t('Views.PlaylistList.Title') }}</template>
+            <template #name>{{ $t('Views.PlaylistList.Title') }}</template>
             <template #description>
                 {{ $t('Views.PlaylistList.Description', {n: pStore.playlists.length}) }}
                 <br />
@@ -24,7 +24,7 @@
         <PlaylistCardGroup
             v-if="playlists.length"
             :playlists="playlists"
-            :title="query ? $t('Common.SearchResults') : `${pinnedPlaylists.length ? $t('Views.PlaylistList.OtherPlaylists') : $t('Views.PlaylistList.AllPlaylists')}`"
+            :title="query ? $t('Common.SearchResults') : `${ pinnedPlaylists.length ? $t('Views.PlaylistList.OtherPlaylists') : $t('Views.PlaylistList.AllPlaylists') }`"
         />
         <NoItems
             :flag="!(playlists.length + pinnedPlaylists.length)"
@@ -49,9 +49,9 @@ import PlaylistCardGroup from '@/components/PlaylistsList/PlaylistCardGroup.vue'
 import Header from '@/components/shared/GenericHeader.vue'
 import NoItems from '@/components/shared/NoItems.vue'
 import useModalStore from '@/stores/modal'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 const pStore = usePStore()
 const { showNewPlaylistModal } = useModalStore()

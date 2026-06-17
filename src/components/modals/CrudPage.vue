@@ -23,9 +23,9 @@ import { Collection } from '@/interfaces'
 import { createNewCollection, deleteCollection, updateCollection } from '@/requests/collections'
 import { router } from '@/router'
 import { NotifType, Notification } from '@/stores/notification'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n();
+const { t } = useT();
 
 const props = defineProps<{
     collection?: Collection

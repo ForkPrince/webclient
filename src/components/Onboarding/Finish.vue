@@ -1,12 +1,12 @@
 <template>
     <div class="onboardingfinish">
         <div class="heading">
-            <span v-if="isFinished">You're all set! 🎉</span>
-            <span v-else>You're almost there!</span>
+            <span v-if="isFinished">{{ $t('Onboarding.Finish.TitleDone')}}</span>
+            <span v-else>{{ $t('Onboarding.Finish.TitleAlmostDone') }}</span>
         </div>
         <div class="description">
-            <span v-if="isFinished">Click the button below to continue to your library.</span
-            ><span v-else>Swing Music is scanning your music folders. Please wait ...</span>
+            <span v-if="isFinished">{{ $t('Onboarding.Finish.ConfirmButton') }}</span
+            ><span v-else>{{ $t('Onboarding.Finish.Processing') }}</span>
         </div>
         <br />
         <div class="progress">

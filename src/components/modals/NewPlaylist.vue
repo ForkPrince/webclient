@@ -29,9 +29,9 @@ import {
 import { NotifType, Notification } from "@/stores/notification";
 import usePlaylistStore from "@/stores/pages/playlists";
 import useTracklist from "@/stores/queue/tracklist";
-import { useI18n } from "vue-i18n";
+import { useT } from "@/i18n";
 
-const { t } = useI18n();
+const { t } = useT();
 
 const props = defineProps<{
   trackhash?: string;

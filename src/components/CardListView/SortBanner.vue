@@ -22,9 +22,9 @@ import { useRoute } from 'vue-router'
 import { useAlbumList, useArtistList } from '@/stores/pages/itemlist'
 import SortKey from './SortKey.vue'
 import ChartSvg from '@/assets/icons/chart.svg'
-import { useI18n } from "vue-i18n";
+import { useT } from '@/i18n.js'
 
-const { t } = useI18n();
+const { t } = useT();
 
 const route = useRoute()
 const store = route.name === Routes.AlbumList ? useAlbumList() : useArtistList()

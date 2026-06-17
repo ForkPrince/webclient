@@ -20,9 +20,9 @@
 
 <script setup lang="ts">
 
-import { useI18n } from 'vue-i18n';
+import { useT } from '@/i18n';
 
-const { t } = useI18n();
+const { t } = useT();
 
 function resolveButtonTabName(id: string): string {
     switch (id){

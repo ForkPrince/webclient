@@ -85,7 +85,14 @@
     "LogIn": "Login",
     "Autodetect": "autodetect",
     "FileName": "File Name",
-    "SwingMusic": "Swing Music"
+    "SwingMusic": "Swing Music",
+    "selected": "selected",
+    "AppTitle": "Swing Music",
+    "Username": "Username",
+    "Password": "Password",
+    "ConfirmPass": "Confirm Password",
+    "CreateAccount": "Create account",
+    "Continue": "Continue"
   },
   "AlbumView": {
     "AlbumBy": "Album by ",
@@ -94,7 +101,8 @@
       "GenreExists": "Genres",
       "GenreDoesNotExist": "No Genres"
     },
-    "PlayDisc": "Play Disc"
+    "PlayDisc": "Play Disc",
+    "DiskNumber": "Disc {num}"
   },
   "ArtistView": {
     "Title": "Artist",
@@ -217,7 +225,9 @@
       "FavoriteCount": "{count} favorite | {count} favorites",
       "CollectionCount": "{count} collection",
       "RestoreButton": "Restore",
-      "RestoreAllButton": "Restore All"
+      "RestoreAllButton": "Restore All",
+      "BackupSuccess": "Backup created",
+      "ThankYouMessage": "Thank you for sponsoring Swing Music!"
     },
     "List": {
       "RootNotConfigured": "Root directories not configured. Use the \"Configure\" button above to configure"
@@ -396,7 +406,13 @@
           "Description": "Remove remaster information from track titles if possible"
         }
       },
-      "ArtistsDesc": "Customize artist settings"
+      "ArtistsDesc": "Customize artist settings",
+      "Artists": {
+        "SeparatorTitle": "Enter separators separated by a comma",
+        "SeparatorDesc": "These will be used to separate artists and album artists",
+        "ArticleAwareTitle": "Article aware sorting",
+        "ArticleAwareDesc": "Ignore articles (e.g. The, A, An) when sorting artist names"
+      }
     },
     "Plugins": {
       "LastFM": {
@@ -433,6 +449,12 @@
           "Desc": "Do not show lyrics unverified lyrics (premium required)"
         }
       }
+    },
+    "License": {
+      "GithubSponsorTitle": "GitHub Sponsor Benefits",
+      "NoGithubLogin": "Swing Music Premium is available to all our GitHub Sponsors. Log in with GitHub to get access.",
+      "ThanksCustName": "Hello @{cust}! You have access to Swing Music Premium.",
+      "ThanksWithHearts": "Thank you for your support. ❤️❤️"
     }
   },
   "Favorites": {
@@ -655,7 +677,7 @@
   },
   "Stores": {
     "Tracklist": {
-      "AddTrackToQueue": "Added {n} tracks to queue"
+      "AddTrackToQueue": "Added {n} track to queue | Added {n} tracks to queue"
     },
     "Auth": {
       "UserAddedSucc": "User added successfully!",
@@ -677,6 +699,11 @@
       "SearchFrom": "Search for: \"{source}\"",
       "FavoriteTracks": "Favorite tracks",
       "NoSource": "👻 No source"
+    },
+    "FormatTime": {
+      "Second": "{sec} Second | {sec} Seconds",
+      "Hour": "{hrs} hr | {hrs} hrs",
+      "Minute": "{mnt} minute | {mnt} minutes"
     }
   },
   "Views": {
@@ -738,7 +765,8 @@
     },
     "LyricView": {
       "Unsynced": "unsynced",
-      "NoLyricsFound": "<div>You don't have</div><div>the lyrics for this song</div>",
+      "NoLyricsFoundFirst": "You don't have",
+      "NoLyricsFoundSecond": "the lyrics for this song",
       "Searching": "Searching...",
       "SearchOnline": "Search online"
     },
@@ -764,5 +792,38 @@
     "it_IT": "🇮🇹 Italian (Italy)",
     "ChooseLang": "Choose your preferred language",
     "WarnAppReload": "(setting the language triggers an app reload)"
+  },
+  "Onboarding": {
+    "CreateAccountTitle": "Create account",
+    "CreateAccountDesc": "This account will be used to manage your server.",
+    "ErrorPassTooShort": "Password must be at least 8 characters",
+    "ErrorPassDoNotMatch": "Passwords do not match",
+    "FilePicker": {
+      "Help": "Use (⌘/Ctrl or Shift) + Click to select multiple folders",
+      "Selected": "{sel} Selected",
+      "ThisFolderHelp": ". (this folder)"
+    },
+    "Finish": {
+      "TitleDone": "You're all set! 🎉",
+      "TitleAlmostDone": "You're almost there!",
+      "ConfirmButton": "Click the button below to continue to your library.",
+      "Processing": "Swing Music is scanning your music folders. Please wait ..."
+    },
+    "RootDirs": {
+      "ErrorSelectRootFolder": "Please select a root directory",
+      "Title": "Configure music folders",
+      "TitleDesc": "Where do you want Swing Music to look for music?",
+      "HomeDir": "Home directory",
+      "HomeDirDesc": "Scan all folders in ",
+      "SpecificFolder": "Specific directory",
+      "FolderSelected": "{n} folder selected | {n} folders selected",
+      "FolderSelectedDesc": "Select folder to scan for music",
+      "AddFolders": "Add Folders"
+    },
+    "Welcome": {
+      "Title": "Welcome to",
+      "Tagline": "Click the button below to let's create your account",
+      "GetStarted": "Get Started"
+    }
   }
 }

@@ -15,9 +15,9 @@ import { getAllSettings } from "@/requests/settings";
 import updatePageTitle from "@/utils/updatePageTitle";
 
 import Content from "../components/SettingsView/Content.vue";
-import { useI18n } from "vue-i18n";
+import { useT } from "@/i18n";
 
-const { t } = useI18n();
+const { t } = useT();
 
 const store = useSettingsStore();
 

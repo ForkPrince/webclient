@@ -42,9 +42,9 @@ import Header from '@/components/ArtistView/Header.vue'
 import TopTracks from '@/components/ArtistView/TopTracks.vue'
 import CardScroller from '@/components/shared/CardScroller.vue'
 import Stats from '@/components/Stats/Stats.vue'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 const route = useRoute()
 

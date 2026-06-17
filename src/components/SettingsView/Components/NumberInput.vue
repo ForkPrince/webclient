@@ -6,11 +6,11 @@
 </template>
 
 <script setup lang="ts">
+import { useT } from '@/i18n';
 import { useToast } from '@/stores/notification'
 import { ref } from 'vue'
-import { useI18n } from "vue-i18n";
 
-const { t } = useI18n();
+const { t } = useT();
 
 const toast = useToast()
 

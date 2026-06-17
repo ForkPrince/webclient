@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useI18n } from "vue-i18n";
+import { useT } from "@/i18n";
 
 import { Album } from "@/interfaces";
 import { isSmallPhone } from "@/stores/content-width";
@@ -26,7 +26,7 @@ import { formatSeconds } from "@/utils";
 
 import ArtistName from "@/components/shared/ArtistName.vue";
 
-const { t } = useI18n();
+const { t } = useT();
 
 const props = defineProps<{
   album: Album;

@@ -7,11 +7,8 @@
 <script setup lang="ts">
 import { nextTick, onMounted } from "vue";
 import { onBeforeRouteUpdate } from "vue-router";
-import { useI18n } from "vue-i18n";
 
 import { updateCardWidth } from "@/stores/content-width";
-
-const { t } = useI18n();
 
 const props = defineProps<{
   show_text?: boolean;

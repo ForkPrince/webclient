@@ -1,7 +1,7 @@
 <template>
     <div class="now-playing-info">
         <div class="text">
-            <div class="title">{{ queue.currenttrack?.title || $t('Common.SwingMusic') }}</div>
+            <div class="title">{{ queue.currenttrack?.title || $t('Common.AppTitle') }}</div>
             <div class="artist">
                 <ArtistName
                     v-if="queue.currenttrack"

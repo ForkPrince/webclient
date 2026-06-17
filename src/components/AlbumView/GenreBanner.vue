@@ -27,11 +27,8 @@
 import useAlbumStore from "@/stores/pages/album";
 import useArtistStore from "@/stores/pages/artist";
 import { computed, onMounted } from "vue";
-import { useI18n } from "vue-i18n";
 
 import { getShift } from "@/utils/colortools/shift";
-
-const { t } = useI18n();
 
 const album = useAlbumStore();
 const store = useArtistStore();

@@ -9,7 +9,7 @@ const userLocale = navigator.language;
 export const supportedLocales = ['en_US', 'it_IT', 'ko'];
 const fallbackLocale = 'en_US';
 const cookies = useCookies();
-const locale = supportedLocales.includes(userLocale) ? userLocale : fallbackLocale;
+export const locale = supportedLocales.includes(userLocale) ? userLocale : fallbackLocale;
 
 const i18n = createI18n({
   legacy: false,

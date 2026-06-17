@@ -34,9 +34,9 @@ import { triggerScan } from "@/requests/settings/rootdirs";
 import { Routes } from "@/router";
 import { album_card_with } from "@/stores/content-width";
 import useDialog from "@/stores/modal";
-import { useI18n } from "vue-i18n";
+import { useT } from "@/i18n";
 
-const { t } = useI18n();
+const { t } = useT();
 
 const browselist = [
   {
@@ -87,7 +87,7 @@ const browselist = [
     class: "favorite",
   },
   // {
-  //   title: "Settings",
+  //   title: t('Common.Settings'),
   //   route: null,
   //   icon: SettingsIcon,
   //   action: () => {

@@ -8,17 +8,18 @@
             <div class="info">
                 <div class="header">
                     <b
-                        ><span v-if="!licenseInfo">GitHub Sponsor Benefits</span
-                        ><span v-else>Thank you for sponsoring Swing Music!</span></b
+                        ><span v-if="!licenseInfo">{{ $t('Settings.License.GithubSponsorTitle') }}</span
+                        ><span v-else>{{ $t('Settings.Backup.ThankYouMessage') }}</span></b
                     >
                 </div>
                 <div class="desc">
                     <span v-if="!licenseInfo">
-                        Swing Music Premium is available to all our GitHub Sponsors. Log in with GitHub to get access.
+                        {{ $t('Settings.License.NoGithubLogin') }}
+                        
                     </span>
                     <span v-else>
-                        Hello @{{ licenseInfo.customer.name }}! You have access to Swing Music Premium. <br />
-                        Thank you for your support. ❤️❤️</span
+                        {{ $t('Settings.License.ThanksCustName', {cust: licenseInfo.customer.name}) }}<br />
+                        {{ $t('Settings.License.ThanksWithHearts') }}</span
                     >
 
                     <!-- <br /><br /> -->

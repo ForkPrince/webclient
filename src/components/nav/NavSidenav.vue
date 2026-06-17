@@ -3,7 +3,7 @@
         <div class="sidenav_header">
             <a @click="closeSidenav" class="sidenav_logo" href="#">
                 <div class="art"><LogoSvg /></div>
-                <div class="title">Swing Music</div>
+                <div class="title">{{ $t('Common.AppTitle') }}</div>
             </a>
         </div>
         <div class="sidenav_content scrollable">

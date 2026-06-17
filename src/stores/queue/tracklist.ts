@@ -125,7 +125,7 @@ export default defineStore('tracklist', {
             this.insertAt(tracks, this.tracklist.length)
 
             const Toast = useToast()
-            Toast.showNotification(t("Stores.Tracklist.AddTrackToQueue", {n: tracks.length}), NotifType.Success)
+            Toast.showNotification(t("Stores.Tracklist.AddTrackToQueue", {n: tracks.length}, tracks.length), NotifType.Success)
         },
         insertAt(tracks: Track[], index: number) {
             this.tracklist.splice(index, 0, ...tracks)
@@ -185,7 +185,7 @@ export default defineStore('tracklist', {
             this.tracklist.splice(currentindex + 1, 0, ...tracks)
 
             const Toast = useToast()
-            Toast.showNotification(t("Stores.Tracklist.AddTrackToQueue", {n: tracks.length}), NotifType.Success)
+            Toast.showNotification(t("Stores.Tracklist.AddTrackToQueue", {n: tracks.length}, tracks.length), NotifType.Success)
         },
     },
     getters: {

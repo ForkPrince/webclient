@@ -58,9 +58,9 @@ import TopTracks from '@/components/ArtistView/TopTracks.vue'
 import CardScroller from '@/components/shared/CardScroller.vue'
 import GenericHeader from '@/components/shared/GenericHeader.vue'
 import NoItems from '@/components/shared/NoItems.vue'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 const recentFavs: Ref<RecentFavResult[]> = ref([])
 const favAlbums: Ref<Album[]> = ref([])

@@ -26,7 +26,6 @@
 <script setup lang="ts">
 import useQueue from '@/stores/queue'
 import useSettings from '@/stores/settings'
-import { useI18n } from "vue-i18n";
 
 
 import RepeatOneSvg from '@/assets/icons/repeat-one.svg'
@@ -35,8 +34,6 @@ import ShuffleSvg from '@/assets/icons/shuffle.svg'
 import HeartSvg from '../shared/HeartSvg.vue'
 import LyricsButton from '../shared/LyricsButton.vue'
 import Volume from './Volume.vue'
-
-const { t } = useI18n();
 
 const queue = useQueue()
 const settings = useSettings()

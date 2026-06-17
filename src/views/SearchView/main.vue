@@ -32,9 +32,9 @@ import Tabs from "@/components/RightSideBar/Search/TabsWrapper.vue";
 import CardGridPage from "./CardGridPage.vue";
 import TopResults from "./TopResults.vue";
 import TracksPage from "./tracks.vue";
-import { useI18n } from "vue-i18n";
+import { useT } from "@/i18n";
 
-const { t } = useI18n(); 
+const { t } = useT(); 
 
 const settings = useSettings();
 const search = useSearchStore();

@@ -43,7 +43,8 @@
     </div>
     <div v-if="!lyrics.lyrics || lyrics.lyrics.length == 0" class="nolyrics">
         <LyricsHead />
-        {{ $t('Views.LyricView.NoLyricsFound') }}
+        <div>{{ $t('Views.LyricView.NoLyricsFoundFirst') }}</div>
+        <div>{{ $t('Views.LyricView.NoLyricsFoundSecond') }}</div>
         <!-- <div class="trackinfo">
           {{ queue.currenttrack.title }}
         </div> -->

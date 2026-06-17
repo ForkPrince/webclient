@@ -32,9 +32,6 @@ import { getTextColor } from '@/utils/colortools/shift'
 import { Artist } from '@/interfaces'
 import formatSeconds from '@/utils/useFormatSeconds'
 import Buttons from './Buttons.vue'
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 defineProps<{
     artist: Artist
