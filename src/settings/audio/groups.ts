@@ -6,8 +6,8 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 // const use_legacy_streaming_endpoint: Setting = {
-//     title: 'Use legacy streaming',
-//     desc: 'Enable if you experience issues with playback',
+//     title: t('Settings.Audio.LegacyStreaming.Title'),
+//     desc: t("Settings.Audio.LegacyStreaming.Description"),
 //     type: SettingType.binary,
 //     state: () => settings().use_legacy_streaming_endpoint,
 //     action: () => settings().toggleUseLegacyStreamingEndpoint(),
@@ -22,8 +22,8 @@ const use_silence: Setting = {
 }
 
 const use_crossfade: Setting = {
-    title: 'Enable crossfade',
-    desc: 'Fade out the current track while fading in the next track',
+    title: t('Settings.Audio.UseCrossfade.Title'),
+    desc: t('Settings.Audio.UseCrossfade.Description'),
     type: SettingType.binary,
     state: () => settings().use_crossfade,
     action: () => settings().toggleCrossfade(),
@@ -32,8 +32,8 @@ const use_crossfade: Setting = {
 }
 
 const crossfade: Setting = {
-    title: 'Crossfade duration',
-    desc: 'Duration of the crossfade in seconds',
+    title: t('Settings.Audio.CrossfadeDuration.Title'),
+    desc: t('Settings.Audio.CrossfadeDuration.Description'),
     type: SettingType.locked_number_input,
     state: () => settings().crossfade_duration_seconds,
     action: (duration: number) => settings().setCrossfadeDuration(duration),
@@ -43,34 +43,34 @@ const crossfade: Setting = {
 
 // const streaming_quality_options = [
 //     {
-//         title: 'Original',
+//         title: t("Settings.Audio.StreamingQuality.Original"),
 //         key: 'original',
 //     },
 //     // {
-//     //     title: 'High (1024kbps) (FLAC)',
+//     //     title: t("Settings.Audio.StreamingQuality.1024Flac"),
 //     //     key: '1024',
 //     // },
 //     // {
-//     //     title: 'Medium (640kbps) (FLAC)',
+//     //     title: t("Settings.Audio.StreamingQuality.640Flac"),
 //     //     key: '640',
 //     // },
 //     {
-//         title: '320kbps',
+//         title: t('Settings.Audio.StreamingQuality.320'),
 //         key: '320',
 //     },
 //     {
-//         title: '128kbps',
+//         title: t("Settings.Audio.StreamingQuality.128"),
 //         key: '128',
 //     },
 //     {
-//         title: '96kbps',
+//         title: t("Settings.Audio.StreamingQuality.96"),
 //         key: '96',
 //     },
 // ]
 
 // const transcoding: Setting = {
-//     title: 'Streaming quality',
-//     desc: 'Choose the streaming quality of the music',
+//     title: t("Settings.Audio.StreamingQuality.Title"),
+//     desc: t("Settings.Audio.StreamingQuality.Description"),
 //     type: SettingType.streaming_quality,
 //     state: () => streaming_quality_options.find(option => option.key === settings().streaming_quality),
 //     action: (quality: {

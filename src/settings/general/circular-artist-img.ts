@@ -5,11 +5,15 @@ import { isSmallPhone } from "@/stores/content-width";
 
 import useSettingsStore from "@/stores/settings";
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 const settings = useSettingsStore;
 
 export default <Setting>{
-  title: "Simple artist page header",
-  desc: "Disable the default gradient layout and use a simple circular image",
+  title: t("Settings.General.CircularArtist.Title"),
+  desc: t("Settings.General.CircularArtist.Description"),
   type: SettingType.binary,
   state: () => settings().useCircularArtistImg,
   action: () => settings().toggleUseCircularArtistImg(),

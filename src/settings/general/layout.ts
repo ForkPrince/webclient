@@ -3,10 +3,14 @@ import { Setting } from "@/interfaces/settings";
 
 import useSettingsStore from "@/stores/settings";
 
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+
 const settings = useSettingsStore;
 
 const use_alt_layout: Setting = {
-  title: "Use no sidebar layout",
+  title: t("Settings.General.UseNoSidebarTitle"),
   type: SettingType.binary,
   state: () => settings().is_alt_layout,
   action: () => settings().toggleLayout(),

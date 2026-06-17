@@ -25,6 +25,7 @@ export const nowPlayingStrings = {
 export const appWidthStrings = {
   settings: {
     extend: t("Settings.AppWidth.Extend"),
+    extend_desc: t("Settings.AppWidth.ExtendDesc")
   },
 } as S;
 
