@@ -15,15 +15,15 @@
       <TopItem />
     </div>
     <div v-if="search.top_results.tracks.length">
-      <h3 class="h3">{{ $t('Search.Tracks') }}</h3>
+      <h3 class="h3">{{ $t('Common.Track', 2) }}</h3>
       <TopTracks />
     </div>
     <div v-if="search.top_results.artists.length">
-      <h3 class="h3">{{ $t('Search.Artists') }}</h3>
+      <h3 class="h3">{{ $t('Common.Artist', 2) }}</h3>
       <TopArtists />
     </div>
     <div v-if="search.top_results.albums.length">
-      <h3 class="h3">{{ $t('Search.Albums') }}</h3>
+      <h3 class="h3">{{ $t('Common.Album', 2) }}</h3>
       <TopAlbums />
     </div>
   </div>

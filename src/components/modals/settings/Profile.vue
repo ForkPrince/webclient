@@ -17,6 +17,14 @@
                     @input="input => (username = input)"
                 />
             </div>
+            <div class="lang">
+                <label for="insertlang">{{ $t('Profile.SelectLanguage') }}</label>
+                <Input :placeholder="$t('Common.Autodetect')" @input="input => (lang = input)" />
+                <label class="error" v-if="langErrorText">{{ langErrorText }}</label>
+                <button v-if="setLang">
+                    {{ $t('Profile.SetLanguage') }}
+                </button>
+            </div>
             <label for="pswd">{{ adding_user ? $t('Profile.PasswordAction', {action: $t('Common.Create')}) 
                 : $t('Profile.PasswordAction', {action: $t('Common.Change')}) }}</label>
             <Input type="password" placeholder="✶✶✶✶✶✶✶✶" @input="input => (password = input)" />
@@ -35,13 +43,14 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n';
+import { supportedLocales } from '@/i18n'
 
 import Avatar from '@/components/shared/Avatar.vue'
 import Input from '@/components/shared/Input.vue'
 import { User } from '@/interfaces'
 import useAuth from '@/stores/auth'
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const props = defineProps<{
     adding_user?: boolean
@@ -55,6 +64,7 @@ const auth = useAuth()
 
 const username = ref('')
 const password = ref('')
+const lang = ref('')
 const confirmPassword = ref('')
 
 const showSubmit = computed(() => {
@@ -68,6 +78,16 @@ const showSubmit = computed(() => {
         (!confirmPassword.value.length || (confirmPassword.value && !errorText.value)) &&
         (payload.value.username || payload.value.password)
     )
+})
+const setLang = computed(()=> {
+    return (langErrorText.value == '' && lang.value != '')
+})
+
+const langErrorText = computed(() => {
+    if (lang.value == '' || supportedLocales.includes(lang.value)){
+        return ''
+    }
+    else return t('Profile.LangNotCurrentlySupported')
 })
 
 const errorText = computed(() => {

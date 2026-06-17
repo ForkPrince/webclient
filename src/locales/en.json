@@ -18,10 +18,6 @@
     "PlayCount": "Play Count",
     "PlayDuration": "Play Duration",
     "top": "top",
-    "tracks": "tracks",
-    "albums": "albums",
-    "artists": "artists",
-    "Titles": {},
     "LogOut": "Log out",
     "BuiltBy": "built by @cwilvx ↗",
     "Playlist": "Playlist",
@@ -37,14 +33,13 @@
     "Descending": "Descending",
     "Ascending": "Ascending",
     "TrackCount": "{count} track | {count} tracks",
-    "NoTracks": "'No tracks'",
+    "NoTracks": "No tracks",
     "HiSpace": "Hi ",
     "Lyrics": "Lyrics",
     "Play": "Play",
     "SeeAll": "See All",
     "Unknown": "Unknown",
     "New": "New",
-    "Albums": "Albums",
     "Track": "Track | Tracks",
     "Periods": {
       "Year": "Year | Years",
@@ -60,8 +55,6 @@
     "Appearance": "Appearance",
     "Library": "Library",
     "Folders": "Folders",
-    "Tracks": "Tracks",
-    "Artists": "Artists",
     "Backup": "Backup",
     "Modify": "Modify",
     "Configure": "Configure",
@@ -76,7 +69,6 @@
     "All": "All",
     "SearchResults": "Search Results",
     "Playlists": "Playlists",
-    "EpAndSingles": "Appearances",
     "Appearances": "Appearances",
     "Compilations": "Compilation | Compilations",
     "Singles": "EP & Singles",
@@ -91,13 +83,13 @@
     "TopResult": "Top Result",
     "NoTrackResults": "No track results",
     "LogIn": "Login",
+    "Autodetect": "autodetect",
     "FileName": "File Name",
     "SwingMusic": "Swing Music"
   },
   "AlbumView": {
     "AlbumBy": "Album by ",
-    "TrackCount": "Track",
-    "TrackCountPlural": "Tracks",
+    "TrackCount": "Track | Tracks",
     "GenreBanner": {
       "GenreExists": "Genres",
       "GenreDoesNotExist": "No Genres"
@@ -106,10 +98,6 @@
   },
   "ArtistView": {
     "Title": "Artist",
-    "TrackCount": "Track",
-    "TrackCountPlural": "Tracks",
-    "AlbumCount": "Album",
-    "AlbumCountPlural": "Albums",
     "NoTracks": "No tracks",
     "RepeatOptions": {
       "All": "Repeat all",
@@ -150,8 +138,7 @@
     }
   },
   "FolderView": {
-    "FileCount": "File | Files",
-    "FileCountPlural": "Files"
+    "FileCount": "File | Files"
   },
   "HomeView": {
     "Title": "Home",
@@ -195,13 +182,7 @@
     "Queue": "Queue",
     "GoToPlaySource": "Go to play source"
   },
-  "PlaylistsList": {
-    "TrackCount": "Track | Tracks",
-    "TrackCountPlural": "Tracks"
-  },
   "PlaylistView": {
-    "TrackCount": "Track",
-    "TrackCountPlural": "Tracks",
     "LastUpdated": "Last Updated {date}",
     "Edit": "Edit",
     "AllTracks": "All Tracks"
@@ -219,9 +200,6 @@
     "NoTracksTitle": "No tracks",
     "NoResultsDescription": "We can't find any results for your search.",
     "TopResult": "Top Result",
-    "Tracks": "Tracks",
-    "Artists": "Artists",
-    "Albums": "Albums",
     "BackToQueue": "Back to Queue",
     "GoToSearch": "Go to Search",
     "SearchPlaceholder": "Start typing to search",
@@ -533,7 +511,10 @@
     "Username": "Username",
     "PasswordAction": "{action} password",
     "ConfirmPassword": "Confirm password",
-    "AddUser": "Add user"
+    "AddUser": "Add user",
+    "SelectLanguage": "Insert the preferred language",
+    "SetLanguage": "Set language",
+    "LangNotCurrentlySupported": "Language not currently supported"
   },
   "UpdatePlaylist": {
     "Name": "Playlist name",
@@ -542,9 +523,9 @@
     "ImagePosition": "Adjust image position • {pos} %"
   },
   "NavTitles": {
-    "ArtistTracks": "'Artist Tracks'",
-    "NowPlaying": "'Now Playing'",
-    "Settings": "'Settings'"
+    "ArtistTracks": "Artist Tracks",
+    "NowPlaying": "Now Playing",
+    "Settings": "Settings"
   },
   "ProfileDropdown": {
     "QuickScan": "Quick scan",
@@ -712,9 +693,6 @@
     "Favorites": {
       "Title": "Favorites",
       "CountStats": "{tra} Tracks • {alb} Albums • {art} Artists",
-      "Recents": "`Recents`",
-      "Tracks": "'Tracks'",
-      "Albums": "Albums",
       "NoFavoritesFound": "No favorites found",
       "Description": "You can add tracks, albums and artists to your favorites by clicking the heart icon"
     },
@@ -733,7 +711,7 @@
       "mixes": "mixes",
       "MixesBasedOnListening": "{n} mixes • Based on artists you have been listening to",
       "SavedMixes": "Saved mixes",
-      "OtherMixes": "Other {type } mixes"
+      "OtherMixes": "Other {type} mixes"
     },
     "MixView": {
       "MixNotFound": "404: Mix not found"

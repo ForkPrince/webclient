@@ -3,7 +3,6 @@
   "AlbumView": {
     "AlbumBy": "",
     "TrackCount": "트랙",
-    "TrackCountPlural": "트랙",
     "GenreBanner": {
       "GenreExists": "장르",
       "GenreDoesNotExist": "장르 없음"
@@ -11,10 +10,6 @@
   },
   "ArtistView": {
     "Title": "아티스트",
-    "TrackCount": "트랙",
-    "TrackCountPlural": "트랙",
-    "AlbumCount": "앨범",
-    "AlbumCountPlural": "앨범",
     "NoTracks": "트랙 없음",
     "RepeatOptions": {
       "All": "전체 반복",
@@ -47,8 +42,7 @@
     }
   },
   "FolderView": {
-    "FileCount": "파일",
-    "FileCountPlural": "파일"
+    "FileCount": "파일"
   },
   "HomeView": {
     "Title": "홈",
@@ -90,13 +84,8 @@
     "Queue": "대기열",
     "GoToPlaySource": "재생 소스로 이동"
   },
-  "PlaylistsList": {
-    "TrackCount": "트랙",
-    "TrackCountPlural": "트랙"
-  },
+  "PlaylistsList": {},
   "PlaylistView": {
-    "TrackCount": "트랙",
-    "TrackCountPlural": "트랙",
     "LastUpdated": "{date}에 마지막으로 업데이트됨",
     "Edit": "편집",
     "AllTracks": "모든 트랙"
@@ -113,9 +102,6 @@
     "NoTracksTitle": "트랙 없음",
     "NoResultsDescription": "검색 결과를 찾을 수 없습니다.",
     "TopResult": "최고 결과",
-    "Tracks": "트랙",
-    "Artists": "아티스트",
-    "Albums": "앨범",
     "BackToQueue": "대기열로 돌아가기",
     "GoToSearch": "검색으로 이동",
     "SearchPlaceholder": "검색어를 입력하세요"

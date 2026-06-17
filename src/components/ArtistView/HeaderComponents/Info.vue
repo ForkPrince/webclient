@@ -12,10 +12,10 @@
             </div>
             <div class="stats">
                 <span v-if="artist.trackcount">
-                    {{ artist.trackcount.toLocaleString() }} {{ `${artist.trackcount == 1 ? $t('ArtistView.TrackCount') : $t('ArtistView.TrackCountPlural')} • ` }}
+                    {{ artist.trackcount.toLocaleString() }} {{ `${ $t('Common.Track', artist.trackcount) } • `}}
                 </span>
                 <span v-if="artist.albumcount">
-                    {{ artist.albumcount.toLocaleString() }} {{ `${artist.albumcount == 1 ? $t('ArtistView.AlbumCount') : $t('ArtistView.AlbumCountPlural')} • ` }}
+                    {{ artist.albumcount.toLocaleString() }} {{ `${ $t('Common.Album', artist.albumcount) } • ` }}
                 </span>
                 <span v-if="artist.duration">
                     {{ `${formatSeconds(artist.duration, true)}` }}

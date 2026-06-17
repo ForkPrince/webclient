@@ -17,7 +17,7 @@
             <TopTracks
                 :tracks="favTracks"
                 :route="'/favorites/tracks'"
-                :title="$t('Common.Tracks')"
+                :title="$t('Common.Track', 2)"
                 :play-handler="handlePlay"
                 :source="dropSources.favorite"
                 :total="count.tracks"
@@ -27,14 +27,14 @@
         <CardScroller
             v-if="favAlbums.length"
             :items="favAlbums.map(i => ({ type: 'album', item: i }))"
-            :title="$t('Common.Albums')"
+            :title="$t('Common.Album', 2)"
             :route="'/favorites/albums'"
         />
 
         <CardScroller
             v-if="favArtists.length"
             :items="favArtists.map(i => ({ type: 'artist', item: i }))"
-            :title="$t('Common.Artists')"
+            :title="$t('Common.Artist', 2)"
             :route="'/favorites/artists'"
         />
 

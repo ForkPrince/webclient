@@ -18,10 +18,6 @@
     "PlayCount": "Numero di riproduzioni",
     "PlayDuration": "Durata di riproduzione",
     "top": "migliori",
-    "tracks": "tracce",
-    "albums": "albums",
-    "artists": "artisti",
-    "Titles": {},
     "LogOut": "Scollegati",
     "BuiltBy": "creato da @cwilvx ↗",
     "Playlist": "Playlist",
@@ -37,7 +33,7 @@
     "Descending": "Decrescente",
     "Ascending": "Crescente",
     "TrackCount": "{count} traccia | {count} tracce",
-    "NoTracks": "'Nessuna traccia'",
+    "NoTracks": "Nessuna traccia",
     "HiSpace": "Ciao ",
     "Lyrics": "Testi canzoni",
     "Play": "Riproduci",
@@ -59,9 +55,6 @@
     "Appearance": "Aspetto",
     "Library": "Libreria",
     "Folders": "Cartelle",
-    "Tracks": "Tracce",
-    "Albums": "Albums",
-    "Artists": "Artisti",
     "Backup": "Backup",
     "Modify": "Modifica",
     "Configure": "Configura",
@@ -90,13 +83,13 @@
     "TopResult": "Risultati migliori",
     "NoTrackResults": "Nessun risultato trovato nelle tracce",
     "LogIn": "Accedi",
+    "Autodetect": "autorileva",
     "FileName": "Nome File",
     "SwingMusic": "Swing Music"
   },
   "AlbumView": {
     "AlbumBy": "Album by ",
-    "TrackCount": "Traccia",
-    "TrackCountPlural": "Tracce",
+    "TrackCount": "Traccia | Tracce",
     "GenreBanner": {
       "GenreExists": "Generi",
       "GenreDoesNotExist": "Nessun genere"
@@ -105,10 +98,6 @@
   },
   "ArtistView": {
     "Title": "Artista",
-    "TrackCount": "Traccia",
-    "TrackCountPlural": "Tracce",
-    "AlbumCount": "Album",
-    "AlbumCountPlural": "Albums",
     "NoTracks": "Nessuna traccia",
     "RepeatOptions": {
       "All": "Ripeti tutte",
@@ -149,8 +138,7 @@
     }
   },
   "FolderView": {
-    "FileCount": "File | Files",
-    "FileCountPlural": "Files"
+    "FileCount": "File | Files"
   },
   "HomeView": {
     "Title": "Home",
@@ -194,13 +182,7 @@
     "Queue": "Coda",
     "GoToPlaySource": "Vai alla posizione della traccia"
   },
-  "PlaylistsList": {
-    "TrackCount": "Traccia | Tracce",
-    "TrackCountPlural": "Tracce"
-  },
   "PlaylistView": {
-    "TrackCount": "Traccia",
-    "TrackCountPlural": "Tracce",
     "LastUpdated": "Aggiornato in {date}",
     "Edit": "Modifica",
     "AllTracks": "Tutte le tracce"
@@ -218,9 +200,6 @@
     "NoTracksTitle": "nessuna traccia",
     "NoResultsDescription": "Non riesco a trovare nessuna traccia con i parametri specificati.",
     "TopResult": "Miglior risultato",
-    "Tracks": "Tracce",
-    "Artists": "Artisti",
-    "Albums": "Album",
     "BackToQueue": "Ritorna alla coda",
     "GoToSearch": "Vai alla ricerca",
     "SearchPlaceholder": "Scrivi per cercare",
@@ -249,7 +228,7 @@
       "UpdateFailed": "Aggiornamento fallito"
     },
     "About": {
-      "Developer": "Swing Music è un atto d'amore sviluppato su GitHub a {link}. Se questo software ti piace, una stellina sul progetto sarebbe molto apprezzata. Spero tu l'apprezzi tanto quanto mi son divertito a scriverla da zero. 😁🤗",
+      "Developer": "Swing Music è un atto d'amore sviluppato su GitHub all'indirizzo {link}. Se questo software ti piace, una stellina sul progetto sarebbe molto apprezzata. Spero tu l'apprezzi tanto quanto mi son divertito a scriverla da zero. 😁🤗",
       "LinksTitle": "Links",
       "LinksDocs": "Docs",
       "LinksGitHub": "Stellina su GitHub",
@@ -532,7 +511,10 @@
     "Username": "Nome utente",
     "PasswordAction": "{action} password",
     "ConfirmPassword": "Conferma password",
-    "AddUser": "Aggiungi utente"
+    "AddUser": "Aggiungi utente",
+    "SelectLanguage": "Inserisci la lingua desiderata",
+    "SetLanguage": "Imposta lingua",
+    "LangNotCurrentlySupported": "Lingua non supportata attualmente"
   },
   "UpdatePlaylist": {
     "Name": "Nome playlist",
@@ -541,9 +523,9 @@
     "ImagePosition": "Modifica posizione immagine • {pos} %"
   },
   "NavTitles": {
-    "ArtistTracks": "'Tracce Artisti'",
-    "NowPlaying": "'In riproduzione'",
-    "Settings": "'Impostazioni'"
+    "ArtistTracks": "Tracce Artisti",
+    "NowPlaying": "In riproduzione",
+    "Settings": "Impostazioni"
   },
   "ProfileDropdown": {
     "QuickScan": "Scan. veloce",
@@ -710,8 +692,6 @@
     "Favorites": {
       "Title": "Preferiti",
       "CountStats": "{tra} Tracce • {alb} Albums • {art} Artisti",
-      "Recents": "'Recenti'",
-      "Tracks": "'Tracce'",
       "NoFavoritesFound": "Nessun preferito trovato",
       "Description": "Puoi aggiungere tracce, albums e artisti ai tuoi preferiti cliccando sull'icona a forma di cuoricino"
     },
