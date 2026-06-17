@@ -1,6 +1,6 @@
 <template>
   <div class="root-dirs-prompt">
-    <h3 class="t-center">{{t('RootDirsPrompt.WhereToLook')}}</h3>
+    <h3 class="t-center">{{ $t('RootDirsPrompt.WhereToLook') }}</h3>
     <div class="options-group">
       <div v-for="option in options" :key="option.id" v-motion-slide-bottom class="option" @click="option.action()">
         <b>{{ option.title }}</b>

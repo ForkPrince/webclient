@@ -36,7 +36,7 @@
             />
             <div v-if="modal.component == modal.options.deletePlaylist">
                 <ConfirmModal
-                    :text="t('Modal.DeletePlaylist')"
+                    :text="$t('Modal.DeletePlaylist')"
                     :cancel-action="modal.hideModal"
                     :confirm-action="deletePlaylist"
                 />
@@ -61,10 +61,6 @@ import RootDirsPrompt from './modals/RootDirsPrompt.vue'
 import SetRootDirs from './modals/SetRootDirs.vue'
 import Settings from './modals/Settings.vue'
 import UpdatePlaylist from './modals/updatePlaylist.vue'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 const modal = useModalStore()
 const router = useRouter()

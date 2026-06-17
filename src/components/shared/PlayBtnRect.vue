@@ -10,7 +10,7 @@
         @click="playFrom(source)"
     >
         <playBtnSvg />
-        <div class="text">{{t('Common.Play')}}</div>
+        <div class="text">{{ $t('Common.Play') }}</div>
     </button>
 </template>
 
@@ -20,10 +20,6 @@ import { getShift } from '@/utils/colortools/shift'
 
 import playBtnSvg from '@/assets/icons/play.svg'
 import { playFrom } from '@/helpers/usePlayFrom'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 defineProps<{
     source: playSources

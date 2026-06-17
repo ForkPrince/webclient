@@ -1,7 +1,7 @@
 <template>
   <div class="bin-drop-area t-center rounded-sm">
     <div class="bin-count circular">10</div>
-    {{ t('Bubbles.DropHere') }}
+    {{ $t('Bubbles.DropHere') }}
     <br />
   </div>
 </template>

@@ -14,7 +14,7 @@
                 @playThis="playHandler(index)"
             />
         </div>
-        <div v-if="!tracks.length" class="error">{{ t('ArtistView.NoTracks') }}</div>
+        <div v-if="!tracks.length" class="error">{{ $t('ArtistView.NoTracks') }}</div>
     </div>
 </template>
 

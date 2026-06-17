@@ -1,7 +1,7 @@
 <template>
     <div class="homepageview content-page">
         <GenericHeader>
-            <template #name>{{ t('HomeView.Title') }}</template>
+            <template #name>{{ $t('HomeView.Title') }}</template>
             <template #description>{{ getGreetings(auth.user.username) }}</template>
         </GenericHeader>
         <Browse />

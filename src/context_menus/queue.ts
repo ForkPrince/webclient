@@ -7,10 +7,9 @@ import { Option, Playlist } from "@/interfaces";
 import { getAddToPlaylistOptions } from "./utils";
 import { addTracksToPlaylist } from "@/requests/playlists";
 import { DeleteIcon, PlaylistIcon, PlusIcon } from "@/icons";
+import { useT } from "@/i18n";
 
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
+const { t } = useT();
 
 function getQueueName(from: From) {
   switch (from.type) {

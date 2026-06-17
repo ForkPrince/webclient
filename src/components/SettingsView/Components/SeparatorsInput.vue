@@ -9,16 +9,13 @@
           </b></span
         >
       </div>
-      <button>{{ t('Settings.Save') }}</button>
+      <button>{{ $t('Settings.Save') }}</button>
     </form>
   </div>
 </template>
 
 <script setup lang="ts">
 import { Ref, computed, onMounted, ref } from "vue";
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 const separatorinput: Ref<HTMLInputElement | null> = ref(null);
 const input = ref("");

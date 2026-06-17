@@ -1,9 +1,8 @@
 import { Setting } from '@/interfaces/settings'
 import { SettingType } from '../enums'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT()
 
 const automatic_backups: Setting = {
     title: t("Settings.General.Backups.AutomaticBackups.Title"),

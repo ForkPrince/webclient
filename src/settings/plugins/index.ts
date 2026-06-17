@@ -1,5 +1,3 @@
-import { useI18n } from 'vue-i18n'
-
 import lyrics from './lyrics'
 import lastfm from './lastfm'
 import { loggedInUserIsAdmin } from '../utils'
@@ -7,8 +5,9 @@ import { SettingCategory } from '@/interfaces/settings'
 
 import LyricsSvg from '@/assets/icons/lyrics.svg?raw'
 import LastfmSvg from '@/assets/icons/lastfm.svg?raw'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 export default <SettingCategory>{
     title: t("Common.Plugins"),

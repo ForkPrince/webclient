@@ -1,9 +1,9 @@
 import useSettings from '@/stores/settings'
 import { Setting } from '@/interfaces/settings'
 import { SettingType } from '../enums'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 const authorize = <Setting>{
     title: t("Settings.Plugins.LastFM.Authorize.Title"),

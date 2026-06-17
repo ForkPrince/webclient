@@ -13,7 +13,7 @@
                         albumhash: queue.currenttrack?.albumhash || ' ',
                     },
                 }"
-                :title="t('NowPlaying.GoToAlbum')"
+                :title="$t('NowPlaying.GoToAlbum')"
                 class="np-image"
             >
                 <ImageLoader
@@ -37,7 +37,7 @@
             </div>
         </div>
         <!-- <TrackContext /> -->
-        <!-- <h3 v-if="queue.next" class="nowplaying_title">{{ t('NowPlaying.UpNext') }}<</h3>
+        <!-- <h3 v-if="queue.next" class="nowplaying_title">{{ $t('NowPlaying.UpNext') }}<</h3>
         <SongItem
             v-if="queue.next"
             :track="queue.next"
@@ -45,7 +45,7 @@
             :source="dropSources.folder"
             @play-this="queue.playNext"
         />
-        <h3 class="nowplaying_title">{{ t('NowPlaying.Queue') }}<</h3> -->
+        <h3 class="nowplaying_title">{{ $t('NowPlaying.Queue') }}<</h3> -->
     </div>
 </template>
 
@@ -57,9 +57,6 @@ import { Routes } from '@/router'
 import { isMobile, isSmallPhone } from '@/stores/content-width'
 import useQueueStore from '@/stores/queue'
 import { formatSeconds } from '@/utils'
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 import Progress from '@/components/LeftSidebar/NP/Progress.vue'
 import Buttons from '../BottomBar/Right.vue'

@@ -5,9 +5,9 @@
         <div class="noitems rounded-sm" v-if="items.length === 0">
             <div v-if="loading" class="loading">
                 <div class="spinner"></div>
-                <span>{{ t('ChartItemGroup.FetchingData')}}</span>
+                <span>{{ $t('ChartItemGroup.FetchingData')}}</span>
             </div>
-            <div v-if="!loading && loaded">{{t('ChartItemGroup.NoDataFound', {per: settings.statsgroup.slice(0, -1)})}}</div>
+            <div v-if="!loading && loaded">{{ $t('ChartItemGroup.NoDataFound', {per: settings.statsgroup.slice(0, -1)}) }}</div>
         </div>
         <ChartItem
             v-for="(item, index) in items"
@@ -42,10 +42,6 @@ import ChartItem from './ChartItem.vue'
 import ChartsHeader from './ChartsHeader.vue'
 import ArrowSvg from '@/assets/icons/arrow.svg'
 import CalendarSvg from '@/assets/icons/calendar.svg'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 const settings = useSettings()
 

@@ -1,3 +1,4 @@
+import { useT } from "@/i18n";
 import { SettingType } from "../enums";
 import { Setting } from "@/interfaces/settings";
 
@@ -5,9 +6,8 @@ import { isSmallPhone } from "@/stores/content-width";
 
 import useSettingsStore from "@/stores/settings";
 
-import { useI18n } from 'vue-i18n'
+const { t } = useT();
 
-const { t } = useI18n()
 
 const settings = useSettingsStore;
 

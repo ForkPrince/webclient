@@ -11,10 +11,9 @@ import { addAlbumToPlaylist } from '@/requests/playlists'
 import { AddToQueueIcon, DeleteIcon, PlayNextIcon, PlusIcon } from '@/icons'
 import { Album, Collection, Option, Playlist, Track } from '@/interfaces'
 import { get_find_on_social, getAddToCollectionOptions, getAddToPlaylistOptions } from './utils'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT();
 
 export default async (album?: Album) => {
     const albumStore = useAlbum()
@@ -87,7 +86,7 @@ export default async (album?: Album) => {
     }
 
     const remove_from_page: Option = {
-        label:t('Menus.Common.RemoveFromCollection'),
+        label: t('Menus.Common.RemoveFromCollection'),
         action: async () => {
             const success = await addOrRemoveItemFromCollection(
                 parseInt(router.currentRoute.value.params.collection as string),

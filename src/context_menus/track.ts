@@ -11,10 +11,9 @@ import usePlaylistStore from '@/stores/pages/playlist'
 import useQueueStore from '@/stores/queue'
 import useTracklist from '@/stores/queue/tracklist'
 import { getAddToPlaylistOptions, get_find_on_social } from './utils'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT();
 
 /**
  * Returns a list of context menu items for a track.

@@ -1,8 +1,8 @@
 <template>
     <div class="last-updated">
-        <span v-if="!isHeaderSmall" class="status">{{ t('PlaylistView.LastUpdated', { date: playlist.info._last_updated }) }}</span>
+        <span v-if="!isHeaderSmall" class="status">{{ $t('PlaylistView.LastUpdated', { date: playlist.info._last_updated }) }}</span>
         <div v-if="Number.isInteger(playlist.info.id)" class="edit">
-            &#160;&#160;|&#160;&#160; <span @click="editPlaylist">{{ t('PlaylistView.Edit') }}</span>&#160;&#160;
+            &#160;&#160;|&#160;&#160; <span @click="editPlaylist">{{ $t('PlaylistView.Edit') }}</span>&#160;&#160;
             {{ Number.isInteger(playlist.info.id) ? ' | ' : '' }}
             <DeleteSvg class="edit" @click="deletePlaylist" />
         </div>

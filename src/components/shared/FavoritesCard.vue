@@ -21,12 +21,12 @@
         </div>
         <div class="info">
             <div class="rhelp playlist">
-                <span class="help">{{ t('FavoritesCard.PlaylistUpper')}}</span>
+                <span class="help">{{ $t('FavoritesCard.PlaylistUpper') }}</span>
                 <span class="time">{{ item.time }}</span>
             </div>
-            <div class="title">{{ t('FavoritesCard.FavoriteTracks')}}</div>
+            <div class="title">{{ $t('FavoritesCard.FavoriteTracks') }}</div>
             <div class="fcount">
-                <b>{{ t('Common.TrackCount', {count: item.count}, item.count) }}</b>
+                <b>{{ $t('Common.TrackCount', {count: item.count}, item.count) }}</b>
             </div>
         </div>
     </RouterLink>
@@ -37,10 +37,6 @@ import { paths } from '@/config'
 import { Routes } from '@/router'
 import { playSources } from '@/enums'
 import PlayBtn from '../shared/PlayBtn.vue'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 defineProps<{
     item: {

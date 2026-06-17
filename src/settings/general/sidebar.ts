@@ -1,12 +1,12 @@
+import { useT } from "@/i18n";
 import { SettingType } from "../enums";
 import { Setting } from "@/interfaces/settings";
-import { useI18n } from "vue-i18n";
 
 import useSettingsStore from "@/stores/settings";
 
 const settings = useSettingsStore;
 
-const { t } = useI18n()
+const { t } = useT();
 
 const use_sidebar: Setting = {
   title: t("Settings.General.Sidebar.Title"),

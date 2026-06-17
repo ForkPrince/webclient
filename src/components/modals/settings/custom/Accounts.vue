@@ -12,10 +12,10 @@
             />
         </div>
         <div class="ahead">
-            <div class="h2">{{t('Accounts.AllUsers')}}</div>
+            <div class="h2">{{ $t('Accounts.AllUsers') }}</div>
             <button class="adduser" @click="showAddUser = true">
                 <PlusSvg />
-                {{ t('Accounts.NewUser') }}
+                {{ $t('Accounts.NewUser') }}
             </button>
         </div>
         <TransitionGroup name="list">

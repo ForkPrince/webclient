@@ -8,11 +8,11 @@
                 {{ mix.description }}
             </div>
             <div class="bunchofstuff">
-                {{ mix.trackcount }} {{ mix.trackcount === 1 ? t('Mixes.track', 1) : t('Mixes.track', mix.trackcount) }} ▸ {{ mix.duration }}
+                {{ mix.trackcount }} {{ $t('Mixes.track', mix.trackcount) }} ▸ {{ mix.duration }}
             </div>
             <div class="buttons">
                 <PlayBtnRect :source="playSources.mix" :bg_color="'#fff'" @click.prevent="$emit('playThis')" />
-                <button class="savebtn" :title="mix.saved ? t('Mixes.SavedMix') : t('Mixes.SaveMix')" @click="saveMix">
+                <button class="savebtn" :title="mix.saved ? $t('Mixes.SavedMix') : $t('Mixes.SaveMix')" @click="saveMix">
                     <SaveFilledSvg v-if="mix.saved" />
                     <SaveSvg v-else />
                 </button>
@@ -24,15 +24,12 @@
 <script setup lang="ts">
 import { FullMix } from '@/interfaces'
 import MixImage from './MixImage.vue'
-import { useI18n } from 'vue-i18n'
 import PlayBtnRect from '../shared/PlayBtnRect.vue'
 import SaveSvg from '@/assets/icons/bookmark.svg'
 import SaveFilledSvg from '@/assets/icons/bookmark.fill.svg'
 import { playSources } from '@/enums'
 import useAxios from '@/requests/useAxios'
 import { paths } from '@/config'
-
-const { t } = useI18n();
 
 const props = defineProps<{
     mix: FullMix

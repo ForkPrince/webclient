@@ -5,10 +5,9 @@ import { SearchIcon } from '@/icons'
 import { Album, Collection, Option, Playlist } from '@/interfaces'
 import { getAllCollections } from '@/requests/collections'
 import { getAllPlaylists } from '@/requests/playlists'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT()
 
 export const separator: Option = {
     type: 'separator',

@@ -1,6 +1,6 @@
 <template>
     <div class="itemsortby">
-        <div class="tt select circular">{{ t('CardList.SortBy') }}</div>
+        <div class="tt select circular">{{ $t('CardList.SortBy') }}</div>
         <div class="left group">
             <SortKey
                 :items="($route.name == Routes.AlbumList ? albumitems : artistitems).concat(items)"

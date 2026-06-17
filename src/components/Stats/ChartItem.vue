@@ -4,11 +4,11 @@
         <div class="index">{{ index }}</div>
         <img :src="getItemImage(item)" class="chartimage" :class="name" />
         <div class="iteminfo">
-            <div class="title" :title="t(mapToText(item.name))" v-if="isArtist">
-                {{ t(mapToText(item.name)) }} <MasterFlag v-if="item.trend?.is_new" :text="item.trend?.is_new ? t('Common.New') : ''" :bitrate="1900"/>
+            <div class="title" :title="$t(mapToText(item.name))" v-if="isArtist">
+                {{ $t(mapToText(item.name)) }} <MasterFlag v-if="item.trend?.is_new" :text="item.trend?.is_new ? $t('Common.New') : ''" :bitrate="1900"/>
             </div>
             <div class="title" :title="item.title" v-if="isAlbumOrTrack">
-                {{ item.title }} <MasterFlag v-if="item.trend?.is_new" :text="item.trend?.is_new ? t('Common.New') : ''" :bitrate="1900"/>
+                {{ item.title }} <MasterFlag v-if="item.trend?.is_new" :text="item.trend?.is_new ? $t('Common.New') : ''" :bitrate="1900"/>
             </div>
             <div class="artist" v-if="isAlbumOrTrack">
                 <ArtistName
@@ -17,7 +17,7 @@
                 />
             </div>
             <div class="artist" v-if="isArtist">
-                {{ t('ChartItem.ArtistPlays', { count: item.extra['playcount'] }) }}
+                {{ $t('ChartItem.ArtistPlays', { count: item.extra['playcount'] }) }}
             </div>
         </div>
         <div class="helptext">
@@ -35,10 +35,6 @@ import ArrowSvg from '@/assets/icons/arrow.svg'
 import ArtistName from '../shared/ArtistName.vue'
 import { Routes } from '@/router'
 import MasterFlag from '../shared/MasterFlag.vue'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 type name = 'artist' | 'album' | 'track'
 type ChartItem = Artist | Album | Track

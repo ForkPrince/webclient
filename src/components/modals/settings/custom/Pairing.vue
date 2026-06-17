@@ -12,7 +12,7 @@
             <div class="spinner"></div>
         </div>
         <p class="desc">
-            {{ t('Pairing.ScanQRCode') }}
+            {{ $t('Pairing.ScanQRCode') }}
         </p>
 
         <div class="serverurl rounded">{{ url }}</div>

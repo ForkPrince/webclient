@@ -9,7 +9,7 @@
     </div>
     <div class="set-root-dirs-browser">
       <h4 v-if="no_more_dirs">
-        <span class="folder_icon">📂</span> {{ t('SetRootDirs.NoSubFolders') }}
+        <span class="folder_icon">📂</span> {{ $t('SetRootDirs.NoSubFolders') }}
       </h4>
       <div class="scrollable">
         <div class="content">
@@ -24,8 +24,8 @@
         </div>
       </div>
       <div class="buttons">
-        <button class="btn-active select-here" @click="selectHere"> {{ t('SetRootDirs.SelectThisFolder') }} </button>
-        <button class="btn-active finish" @click="submitFolders"> {{ t('SetRootDirs.AddAllChecked') }} ({{ getNewDirs().length }})</button>
+        <button class="btn-active select-here" @click="selectHere"> {{ $t('SetRootDirs.SelectThisFolder') }} </button>
+        <button class="btn-active finish" @click="submitFolders"> {{ $t('SetRootDirs.AddAllChecked') }} ({{ getNewDirs().length }})</button>
       </div>
     </div>
   </div>
@@ -42,10 +42,6 @@ import { createSubPaths } from "@/utils";
 
 import BreadCrumbNav from "../FolderView/BreadCrumbNav.vue";
 import FolderItem from "../FolderView/FolderItem.vue";
-
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 const settings = useSettingsStore();
 

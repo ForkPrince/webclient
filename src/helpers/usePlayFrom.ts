@@ -14,10 +14,9 @@ import { getArtistTracks } from '@/requests/artists'
 import { getFavTracks } from '@/requests/favorite'
 import { getFiles } from '@/requests/folders'
 import { getPlaylist } from '@/requests/playlists'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT()
 
 export async function utilPlayFromArtist(index: number = 0) {
     const queue = useQueue()

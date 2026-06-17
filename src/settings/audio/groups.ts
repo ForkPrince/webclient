@@ -1,9 +1,10 @@
 import { Setting } from '@/interfaces/settings'
 import settings from '@/stores/settings'
 import { SettingType } from '../enums'
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n';
 
-const { t } = useI18n()
+const { t } = useT();
+
 
 // const use_legacy_streaming_endpoint: Setting = {
 //     title: t('Settings.Audio.LegacyStreaming.Title'),

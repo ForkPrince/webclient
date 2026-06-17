@@ -2,10 +2,9 @@ import { paths } from '@/config'
 import { Album, StatItem, Track } from '@/interfaces'
 import { NotifType, useToast } from '@/stores/notification'
 import useAxios from './useAxios'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT();
 
 const {
     album: albumUrl,

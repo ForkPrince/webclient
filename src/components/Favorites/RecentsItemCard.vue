@@ -20,7 +20,7 @@
       {{ fav.type === "artist" ? fav.item.name : fav.item.title }}
     </div>
     <div class="label ellip" :class="{ on_artist: fav.type === 'artist' }">
-      {{ fav.type === "album" ? fav.item.artist : t('Favorites.Album')}}
+      {{ fav.type === "album" ? fav.item.artist : $t('Favorites.Album')}}
     </div>
   </RouterLink>
 </template>

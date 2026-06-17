@@ -5,18 +5,18 @@
         <button
             class="repeat"
             :class="{ 'repeat-disabled': settings.repeat == 'none' }"
-            :title="settings.repeat == 'all' ? t('BottomBar.RepeatOptions.All') : settings.repeat == 'one' ? t('BottomBar.RepeatOptions.One') : t('BottomBar.RepeatOptions.None')"
+            :title="settings.repeat == 'all' ? $t('BottomBar.RepeatOptions.All') : settings.repeat == 'one' ? $t('BottomBar.RepeatOptions.One') : $t('BottomBar.RepeatOptions.None')"
             @click="settings.toggleRepeatMode"
         >
             <RepeatOneSvg v-if="settings.repeat == 'one'" />
             <RepeatAllSvg v-else />
         </button>
-        <button class="shuffle" :title=t('BottomBar.Shuffle') @click="queue.shuffleQueue">
+        <button class="shuffle" :title="$t('BottomBar.Shuffle')" @click="queue.shuffleQueue">
             <ShuffleSvg />
         </button>
         <HeartSvg
             v-if="!hideHeart"
-            :title=t('BottomBar.Favorite') 
+            :title="$t('BottomBar.Favorite')"
             :state="queue.currenttrack?.is_favorite"
             @handleFav="() => $emit('handleFav')"
         />

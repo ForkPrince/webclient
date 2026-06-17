@@ -1,11 +1,12 @@
 import { Setting } from "@/interfaces/settings";
 import { SettingType } from "../enums";
-import { useI18n } from "vue-i18n";
 
 import useSettingsStore from "@/stores/settings";
+import { useT } from "@/i18n";
+
+const { t } = useT();
 
 const settings = useSettingsStore;
-const { t } = useI18n();
 
 const process_featured_artists: Setting = {
   title: t("Settings.General.Tracks.ProcessFeatArtists.Title"),

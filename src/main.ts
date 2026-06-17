@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import { createI18n } from 'vue-i18n'
 
 import { MotionPlugin } from "@vueuse/motion";
 import WrapBalancer from "vue-wrap-balancer";
@@ -22,33 +21,16 @@ import vTooltip from "./directives/vTooltip";
 import "./assets/scss/index.scss";
 import "vue-virtual-scroller/dist/vue-virtual-scroller.css";
 
-const app = createApp(App);
-import en from './locales/en.json';
-import it from './locales/it.json';
-import ko from './locales/ko.json';
-
-const userLocale = navigator.language.split('-')[0];
-const supportedLocales = ['en', 'it', 'ko'];
-const fallbackLocale = 'en';
-const locale = supportedLocales.includes(userLocale) ? userLocale : fallbackLocale;
-
-const i18n = createI18n({
-  legacy: false,
-  locale: locale,
-  messages: {
-    en: en,
-    it: it,
-    ko: ko
-  },
-});
+import i18n from "./i18n";
 
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
+const app = createApp(App);
 
 app.use(pinia);
 app.use(router);
 app.use(autoAnimatePlugin);
-app.use(VWave);
+app.use(VWave, {});
 app.use(i18n);
 app.use(MotionPlugin);
 

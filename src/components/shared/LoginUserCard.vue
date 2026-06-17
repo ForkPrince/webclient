@@ -2,7 +2,7 @@
     <div class="loginuser rounded-sm" :class="{ selected }">
         <Avatar :name="user.username" />
         <div class="username">
-            {{ (selected ? t('Common.HiSpace') : '') + user.username }}
+            {{ (selected ? $t('Common.HiSpace') : '') + user.username }}
         </div>
     </div>
 </template>
@@ -10,10 +10,6 @@
 <script setup lang="ts">
 import { UserSimplified } from '@/interfaces'
 import Avatar from '../shared/Avatar.vue'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 defineProps<{
     user: UserSimplified

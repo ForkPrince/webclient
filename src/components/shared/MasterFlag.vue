@@ -2,7 +2,7 @@
   <span
     v-if="bitrate > 1024"
     class="master-flag"
-    :title="!text ? t('MasterFlag.MasterAudioBitrate') + `${bitrate} Kbps` : ''"
+    :title="!text ? $t('MasterFlag.MasterAudioBitrate') + `${bitrate} Kbps` : ''"
     :style="{
       backgroundColor: bg_color ? (fill ? bg_color : 'transparent') : 'rgba(184, 108, 21, 0.281)',
       color: text_color ? (fill ? text_color : '') : 'rgb(255, 153, 0)',
@@ -13,10 +13,6 @@
 </template>
 
 <script setup lang="ts">
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 defineProps<{
   bitrate: number;

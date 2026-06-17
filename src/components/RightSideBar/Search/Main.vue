@@ -1,8 +1,6 @@
 <template>
   <div class="right-search">
     <TabsWrapper :tabs="tabs" :current-tab="currentTab" :tab-content="true" @switchTab="switchTab">
-      <!-- TODO: The code relies on the tabs names, so it can't be translated yet. -->
-      <!-- <Tab :name=t(resolveTab(currentTab)) /> -->
       <Tab :name=currentTab />
     </TabsWrapper>
   </div>
@@ -15,9 +13,6 @@ import useSearchStore from "@/stores/search";
 import Tab from "./Tab.vue";
 import TabsWrapper from "./TabsWrapper.vue";
 
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 const search = useSearchStore();
 
@@ -30,20 +25,6 @@ function switchTab(tab: string) {
   search.switchTab(tab);
 }
 
-function resolveTab(tab: string): string {
-  switch (tab) {
-    case 'top':
-      return 'TabNames.top';
-    case 'tracks':
-      return 'TabNames.tracks';
-    case 'albums':
-      return 'TabNames.albums';
-    case 'artists':
-      return 'TabNames.artists';
-    default:
-      return 'TabNames.unknown';
-  }
-}
 </script>
 
 <style lang="scss">

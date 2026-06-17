@@ -1,10 +1,9 @@
-import { useI18n } from 'vue-i18n'
-
 import { SettingType } from '../enums'
 import AvatarSvg from '@/assets/icons/phone.svg?raw'
 import { SettingCategory } from '@/interfaces/settings'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 export default <SettingCategory>{
     groups: [

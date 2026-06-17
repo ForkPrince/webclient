@@ -1,6 +1,9 @@
 import { defineStore } from "pinia";
 import { NotifType } from "../enums";
 import { Notif } from "../interfaces";
+import { useT } from "@/i18n";
+
+const { t } = useT();
 
 const useToast = defineStore("notification", {
   state: () => ({
@@ -24,7 +27,7 @@ const useToast = defineStore("notification", {
       this.showNotification(text, NotifType.Success);
     },
     showGenericError(){
-      this.showError("Failed! Something went wrong!")
+      this.showError(t("Common.NotificationError"))
     }
   },
 });

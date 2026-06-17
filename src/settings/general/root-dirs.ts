@@ -1,5 +1,3 @@
-import { useI18n } from 'vue-i18n'
-
 import { Setting } from '@/interfaces/settings'
 import { addRootDirs as editRootDirs, triggerScan } from '@/requests/settings/rootdirs'
 import { SettingType } from '../enums'
@@ -8,8 +6,9 @@ import { manageRootDirsStrings as data } from '../strings'
 import useModalStore from '@/stores/modal'
 import settings from '@/stores/settings'
 import { router, Routes } from '@/router'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 const text = data.settings
 

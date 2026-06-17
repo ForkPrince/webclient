@@ -69,6 +69,27 @@
     "Finish": "Termina",
     "Disconnect": "Scollega",
     "Connect": "Collega",
+    "Discography": "Discografia {artist}",
+    "Recents": "Recenti",
+    "Pinned": "Fissato",
+    "Other": "Altre",
+    "All": "Tutte",
+    "SearchResults": "Risultati della ricerca",
+    "Playlists": "Playlists",
+    "Appearances": "Comparse",
+    "Compilations": "Raccolta | Raccolte",
+    "Singles": "EP & Singles",
+    "SimilarArtists": "Artisti simili",
+    "Delete": "Elimina",
+    "NowPlaying": "In riproduzione",
+    "artist": "artista | artisti",
+    "mix": "mix | mixes",
+    "Search": "Trova",
+    "NoResults": "Nessun risultato",
+    "NoSearchResults": "Non riesco a trovare nessun risultato per la tua ricerca.",
+    "TopResult": "Risultati migliori",
+    "NoTrackResults": "Nessun risultato trovato nelle tracce",
+    "LogIn": "Accedi",
     "FileName": "Nome File",
     "SwingMusic": "Swing Music"
   },
@@ -128,7 +149,7 @@
     }
   },
   "FolderView": {
-    "FileCount": "File",
+    "FileCount": "File | Files",
     "FileCountPlural": "Files"
   },
   "HomeView": {
@@ -174,7 +195,7 @@
     "GoToPlaySource": "Vai alla posizione della traccia"
   },
   "PlaylistsList": {
-    "TrackCount": "Traccia",
+    "TrackCount": "Traccia | Tracce",
     "TrackCountPlural": "Tracce"
   },
   "PlaylistView": {
@@ -202,7 +223,8 @@
     "Albums": "Album",
     "BackToQueue": "Ritorna alla coda",
     "GoToSearch": "Vai alla ricerca",
-    "SearchPlaceholder": "Scrivi per cercare"
+    "SearchPlaceholder": "Scrivi per cercare",
+    "top": "Top"
   },
   "Settings": {
     "Save": "Salva",
@@ -230,8 +252,8 @@
       "Developer": "Swing Music è un atto d'amore sviluppato su GitHub a {link}. Se questo software ti piace, una stellina sul progetto sarebbe molto apprezzata. Spero tu l'apprezzi tanto quanto mi son divertito a scriverla da zero. 😁🤗",
       "LinksTitle": "Links",
       "LinksDocs": "Docs",
-      "LinksGitHub": "Lascia una stella su GitHub",
-      "LinksIssue": "Segnala un problema (preferibilmente in inglese)",
+      "LinksGitHub": "Stellina su GitHub",
+      "LinksIssue": "Segnala un problema (in inglese)",
       "LinksContribute": "Contribuisci",
       "GetInTouchTitle": "Rimani in contatto",
       "GetInTouchDescription": "Se apprezzi il mio lavoro, e ti piacerebbe salutarmi, mi farebbe piacere un contatto (in inglese).",
@@ -524,7 +546,7 @@
     "Settings": "'Impostazioni'"
   },
   "ProfileDropdown": {
-    "QuickScan": "Scansione veloce",
+    "QuickScan": "Scan. veloce",
     "HiUser": "Ciao {user}"
   },
   "SearchInput": {
@@ -567,7 +589,7 @@
     "NoDataFound": "Nessun dato trovato per il periodo specificato: {per}"
   },
   "Charts": {
-    "ChartsTitle": "Grafici",
+    "ChartsTitle": "Classifiche",
     "ChartsDescription": "Gli artisti, album e canzoni più ascoltate"
   },
   "Modal": {
@@ -641,11 +663,118 @@
       "BannerImageRemovedError": "Non riesco a rimuovere l'immagine del banner"
     },
     "RootDirs": {
-      "ErrorAdding": "Errore aggiungendo la cartelle radici",
+      "ErrorAdding": "Errore aggiungendo le cartelle radici",
       "Success": "Cartelle radici configurate",
       "ErrorRemoving": "Errore rimuovendo le cartelle radici",
       "ScanError": "Errore durante l'avviamento della scansione",
       "ScanStarted": "Nuova scansione avviata"
+    }
+  },
+  "Stores": {
+    "Tracklist": {
+      "AddTrackToQueue": "Aggiunte {n} tracce alla coda"
+    },
+    "Auth": {
+      "UserAddedSucc": "Utente aggiunto con successo!",
+      "GuestUserAdded": "Utente ospite aggiunto con successo!",
+      "ProfileUpdated": "Profilo aggiornato con successo!",
+      "UserDeleted": "Utente {user} cancellato con successo!"
+    },
+    "Player": {
+      "AutoplayBlockedError": "Tocca ovunque la pagina per riprovare (autoplay bloccato)",
+      "PlayerErrorWithArg": "Errore player: {msg}",
+      "LoadErrorWithArg": "Non riesco a caricare: {queue}"
+    },
+    "Queue": {
+      "AddedTrack": "Aggiunta una traccia alla coda"
+    }
+  },
+  "Utils": {
+    "PlayingFrom": {
+      "SearchFrom": "Cerca per: \"{source}\"",
+      "FavoriteTracks": "Tracce preferite",
+      "NoSource": "👻 Nessuna sorgente"
+    }
+  },
+  "Views": {
+    "ArtistDiscography": {
+      "NoContributions": "Nessun contributo",
+      "NoContributionsDesc": "Nessun {type} trovato per {artist}",
+      "Contributions": "Contribuzioni",
+      "AllAlbums": "Tutti gli albums"
+    },
+    "FavCardScroller": {
+      "Title": "{item} preferiti",
+      "Desc": "Hai {nelem} {type} preferito | Hai {nelem} {type} preferiti"
+    },
+    "Favorites": {
+      "Title": "Preferiti",
+      "CountStats": "{tra} Tracce • {alb} Albums • {art} Artisti",
+      "Recents": "'Recenti'",
+      "Tracks": "'Tracce'",
+      "NoFavoritesFound": "Nessun preferito trovato",
+      "Description": "Puoi aggiungere tracce, albums e artisti ai tuoi preferiti cliccando sull'icona a forma di cuoricino"
+    },
+    "FavoriteTracks": {
+      "Description": "Hai {n_tr} canzone preferita | Hai {n_tr} canzoni preferite",
+      "Title": "Tracce preferite"
+    },
+    "FolderView": {
+      "FolderIsEmpty": "Cartella vuota",
+      "NoResultFound": "Nessun risultato trovato",
+      "NoIndexedTracks": "La cartella che hai aperto non ha nessuna traccia indicizzata. Aggiungi canzoni a questa cartella e riprova",
+      "NoTracksForQuery": "Nessuna cartella o traccia in questa specifica cartella corrisponde alla query: {query}"
+    },
+    "MixLisView": {},
+    "MixListView": {
+      "mixes": "mixes",
+      "MixesBasedOnListening": "{n} mixes • In base agli artisti che hai ascoltato ultimamente",
+      "SavedMixes": "Mixes salvati",
+      "OtherMixes": "Altri mixes di {type}"
+    },
+    "MixView": {
+      "MixNotFound": "404: Mix non trovato"
+    },
+    "NotFound": {
+      "Error": "404! Pagina non trovata!"
+    },
+    "PlaylistList": {
+      "Title": "Playlists",
+      "Description": "Hai {n} playlists nella tua libreria",
+      "SearchPlaylist": "Cerca playlists",
+      "NoPlaylistsFound": "Nessuna playlist trovata",
+      "OtherPlaylists": "Altre playlists",
+      "AllPlaylists": "Tutte le playlists",
+      "NoItemDescription": "Puoi creare una playlist facendo click con il tasto destro su una traccia e selezionando l'opzione \"aggiungi a playlist\""
+    },
+    "Header": {
+      "TotalAlbumAndArtists": "Hai {tot} {what} nella tua libreria"
+    },
+    "AlbumViews": {
+      "MoreFrom": "Altro da {art}",
+      "OtherVersions": "Altre edizioni",
+      "RelatedAlbums": "Albums correlati"
+    },
+    "LyricView": {
+      "Unsynced": "non sincronizzata",
+      "NoLyricsFound": "<div>Non hai il testo</div><div>di questa canzone</div>",
+      "Searching": "Cercando...",
+      "SearchOnline": "Cerca online"
+    },
+    "PlaylistView": {
+      "NoTracks": "Nessuna traccia in questa playlist",
+      "AddMoreDesc": "Aggiungine altre facendo click con il tasto destro del mouse e seleziona \"aggiungi a playlist\""
+    },
+    "SearchView": {
+      "NoResults": "Nessun risultato per {page}",
+      "TypeToSearch": "Inizia a scrivere per cercare per {what}",
+      "ResultsForQuery": "I risultati per {query} verranno mostrati qua",
+      "TypeToSearchTracks": "Inizia a scrivere per cercare nelle tracce",
+      "NoResultsDesc": "I risultati compaiono qua"
+    },
+    "Stats": {
+      "Title": "Statistiche",
+      "Description": "Le tue statistiche d'ascolto nell'ultima settimana"
     }
   }
 }

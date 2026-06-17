@@ -1,7 +1,7 @@
 <template>
     <div class="now-playing-info">
         <div class="text">
-            <div class="title">{{ queue.currenttrack?.title || t('Common.SwingMusic') }}</div>
+            <div class="title">{{ queue.currenttrack?.title || $t('Common.SwingMusic') }}</div>
             <div class="artist">
                 <ArtistName
                     v-if="queue.currenttrack"
@@ -9,7 +9,7 @@
                     :albumartists="queue.currenttrack?.albumartists || ''"
                 />
                 <span v-else class="artist author">
-                    <a href="https://github.com/cwilvx" target="_blank">{{ t('Common.BuiltBy')}}</a>
+                    <a href="https://github.com/cwilvx" target="_blank">{{ $t('Common.BuiltBy')}}</a>
                 </span>
             </div>
         </div>
@@ -22,7 +22,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useI18n } from "vue-i18n";
 
 import ArtistName from '../shared/ArtistName.vue'
 import HeartSvg from '../shared/HeartSvg.vue'
@@ -30,8 +29,6 @@ import HeartSvg from '../shared/HeartSvg.vue'
 import OptionSvg from '@/assets/icons/more.svg'
 import { showTrackContextMenu } from '@/helpers/contextMenuHandler'
 import useQueueStore from '@/stores/queue'
-
-const { t } = useI18n();
 
 const context_menu_showing = ref(false)
 

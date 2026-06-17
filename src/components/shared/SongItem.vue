@@ -24,7 +24,7 @@
         </div>
 
         <TrackAlbum
-            :album="track.album || t('Common.Unknown')"
+            :album="track.album || $t('Common.Unknown')"
             :albumhash="track.albumhash || ''"
             :hide_album="hide_album || false"
         />
@@ -58,10 +58,6 @@ import TrackDuration from './SongItem/TrackDuration.vue'
 import TrackIndex from './SongItem/TrackIndex.vue'
 import TrackTitle from './SongItem/TrackTitle.vue'
 import useSettings from '@/stores/settings'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 const settings = useSettings()
 const context_menu_showing = ref(false)

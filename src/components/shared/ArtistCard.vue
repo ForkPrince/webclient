@@ -28,7 +28,7 @@
             {{ artist.name }}
         </div>
         <div v-if="artist.help_text && artist.trackcount" class="racount t-center">
-            {{ t('ArtistCard.TrackCount', {count: artist.trackcount}, artist.trackcount) }}
+            {{ $t('ArtistCard.TrackCount', {count: artist.trackcount}, artist.trackcount) }}
         </div>
     </RouterLink>
 </template>
@@ -42,10 +42,6 @@ import { playSources } from '@/enums'
 import PlayBtn from './PlayBtn.vue'
 import { ref } from 'vue'
 import { showArtistContextMenu } from '@/helpers/contextMenuHandler'
-
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 
 const imguri = paths.images.artist.medium
 const contextMenuFlag = ref(false)

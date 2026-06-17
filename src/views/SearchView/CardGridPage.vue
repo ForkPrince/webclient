@@ -1,8 +1,8 @@
 <template>
     <NoItems
         v-if="showNoItemsComponent"
-        :title="`No ${page} results`"
-        :description="'Results should appear here'"
+        :title="$t('Views.SearchView.NoResults', {page: page})"
+        :description="$t('Views.SearchView.NoResultsDesc')"
         :icon="SearchSvg"
         :flag="!items.length"
     />

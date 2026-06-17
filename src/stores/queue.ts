@@ -12,6 +12,9 @@ import useLyrics from './lyrics'
 import { NotifType, useToast } from './notification'
 import useTracklist from './queue/tracklist'
 import useSettings from './settings'
+import { useT } from '@/i18n'
+
+const { t } = useT();
 
 export default defineStore('Queue', {
     state: () => ({
@@ -150,7 +153,7 @@ export default defineStore('Queue', {
 
             const nextindex = this.currentindex + 1
             insertAt([track], nextindex)
-            Toast.showNotification(`Added 1 track to queue`, NotifType.Success)
+            Toast.showNotification(t("Stores.Queue.AddedTrack"), NotifType.Success)
         },
         clearQueue() {
             const store = useTracklist()

@@ -7,7 +7,7 @@
         />
         <RouterLink
             v-else
-            title="{{t('BottomBar.GoToNowPlaying')}}"
+            :title="$t('BottomBar.GoToNowPlaying')"
             :to="{
                 name: Routes.nowPlaying,
                 params: {
@@ -37,7 +37,7 @@
         >
             <div v-tooltip class="title">
                 <TextLoader
-                    :text="queue.currenttrack?.title || t('BottomBar.PlaceholderTitle') "
+                    :text="queue.currenttrack?.title || $t('BottomBar.PlaceholderTitle') "
                     :duration="1000"
                     :fade-duration="1000"
                     :direction="queue.direction"
@@ -51,7 +51,7 @@
             </div>
             <ArtistName
                 :artists="queue.currenttrack?.artists || []"
-                :albumartists="queue.currenttrack?.albumartists || t('BottomBar.PlaceholderArtist')""
+                :albumartists="queue.currenttrack?.albumartists || $t('BottomBar.PlaceholderArtist')""
                 class="artist"
             />
         </div>

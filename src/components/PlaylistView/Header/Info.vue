@@ -9,7 +9,7 @@
       <PlayBtnRect :source="playSources.playlist" :bg_color="btn_color" />
     </div>
     <div class="duration">
-      {{ playlist.info.count.toLocaleString() + ` ${playlist.info.count == 1 ? t('PlaylistView.TrackCount') : t('PlaylistView.TrackCountPlural')}` }}
+      {{ playlist.info.count.toLocaleString() + $t('Common.Track', playlist.info.count) }}
       •
       {{ formatSeconds(playlist.info.duration, true) }}
     </div>
@@ -20,7 +20,7 @@
         <br />
       </span>
     </div>
-    <div class="type">{{ t('Common.Playlist')}}</div>
+    <div class="type">{{ $t('Common.Playlist') }}</div>
   </div>
 </template>
 <script setup lang="ts">
@@ -31,9 +31,6 @@ import PlayBtnRect from "@/components/shared/PlayBtnRect.vue";
 import usePStore from "@/stores/pages/playlist";
 import { balanceText } from "@/utils/balanceText";
 import { Ref, ref } from "vue";
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 const playlist = usePStore();
 

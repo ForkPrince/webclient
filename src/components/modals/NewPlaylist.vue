@@ -1,17 +1,17 @@
 <template>
   <form class="playlist-modal" @submit="create">
-    <label for="name">{{ t('NewPlaylist.PlaylistName')}}</label>
+    <label for="name">{{ $t('NewPlaylist.PlaylistName') }}</label>
     <br />
     <input
       id="modal-playlist-name-input"
       type="search"
       class="rounded-sm"
       name="name"
-      placeholder="{{ t('NewPlaylist.NamePlaceholder')}}"
+      :placeholder="$t('NewPlaylist.NamePlaceholder')"
       spellcheck="false"
     />
     <br /><br />
-    <button type="submit">{{t('NewPlaylist.CreateButton')}}</button>
+    <button type="submit">{{ $t('NewPlaylist.CreateButton') }}</button>
   </form>
 </template>
 

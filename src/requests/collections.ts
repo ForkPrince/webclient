@@ -2,10 +2,9 @@ import { paths } from '@/config'
 import { Album, Artist, Collection, Mix, Playlist } from '@/interfaces'
 import { Notification, NotifType } from '@/stores/notification'
 import useAxios from './useAxios'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT();
 
 const { base: baseCollectionUrl } = paths.api.collections
 

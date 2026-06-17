@@ -1,5 +1,3 @@
-import { useI18n } from 'vue-i18n'
-
 import useSettings from '@/stores/settings'
 import { loggedInUserIsAdmin } from '../utils'
 
@@ -25,8 +23,9 @@ import FolderSvg from '@/assets/icons/folder.svg?raw'
 import TrackSvg from '@/assets/icons/mic.svg?raw'
 import AppearanceSvg from '@/assets/icons/paintbrush.svg?raw'
 import CloudUploadSvg from '@/assets/icons/cloud-upload.svg?raw'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 const npStrings = strings.nowPlayingStrings
 const rootRootStrings = strings.manageRootDirsStrings
 

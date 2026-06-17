@@ -1,9 +1,8 @@
-import { useI18n } from 'vue-i18n'
-
 import { SettingCategory } from '@/interfaces/settings'
 import { SettingType } from '../enums'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 export default <SettingCategory>{
     groups: [

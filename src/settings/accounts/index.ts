@@ -4,9 +4,9 @@ import { SettingCategory } from '@/interfaces/settings'
 import AvatarSvg from '@/assets/icons/avatar.svg?raw'
 import { SettingType } from '../enums'
 
-import { useI18n } from 'vue-i18n'
+import { useT } from '@/i18n'
 
-const { t } = useI18n()
+const { t } = useT()
 
 export default <SettingCategory>{
     show_if: loggedInUserIsAdmin,

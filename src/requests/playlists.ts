@@ -3,10 +3,9 @@ import { Artist, Playlist, Track } from '@/interfaces'
 import { NotifType, Notification, useToast } from '@/stores/notification'
 import useAxios from './useAxios'
 import useFolder from '@/stores/pages/folder'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT();
 
 const { new: newPlaylistUrl, base: basePlaylistUrl, artists: playlistArtistsUrl } = paths.api.playlist
 

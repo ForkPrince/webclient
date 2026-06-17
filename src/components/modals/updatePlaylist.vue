@@ -6,7 +6,7 @@
         autocomplete="off"
         @submit.prevent="update_playlist"
     >
-        <label for="name">{{ t('UpdatePlaylist.Name')}}</label>
+        <label for="name">{{ $t('UpdatePlaylist.Name') }}</label>
         <input
             id="modal-playlist-name-input"
             v-model="pname"
@@ -17,7 +17,7 @@
             @keypress.enter.prevent="update_playlist"
         />
 
-        <label for="image">{{t('Common.Image')}}</label>
+        <label for="image">{{ $t('Common.Image') }}</label>
         <input
             id="update-pl-image-upload"
             ref="dropZoneRef"
@@ -30,7 +30,7 @@
         <div id="upload" class="boxed rounded-sm">
             <div class="clickable" tabindex="0" @click="selectFiles" @keydown.space.enter.stop="selectFiles">
                 <ImageIcon />
-                {{ t('UpdatePlaylist.CoverAction', {action: playlist.has_image ? t('Common.update') : t('Common.upload')}) }}
+                {{ $t('UpdatePlaylist.CoverAction', {action: playlist.has_image ? $t('Common.update') : $t('Common.upload')}) }}
             </div>
             <div
                 id="update-pl-img-preview"
@@ -45,13 +45,13 @@
                 </div>
             </div>
         </div>
-        <label v-if="playlist.has_image && !playlist.settings.square_img">{{t('Common.Settings')}}</label>
+        <label v-if="playlist.has_image && !playlist.settings.square_img">{{ $t('Common.Settings') }}</label>
         <div v-if="image || playlist.has_image" class="banner-settings rounded-sm">
-            <div>{{ t('UpdatePlaylist.SquareCover') }}</div>
+            <div>{{ $t('UpdatePlaylist.SquareCover') }}</div>
             <Switch :state="playlist.settings.square_img || false" @click="pStore.toggleSquareImage" />
         </div>
         <div v-if="playlist.has_image && !playlist.settings.square_img" class="boxed banner-position-adjust rounded-sm">
-            <div class="t-center">{{t('UpdatePlaylist.ImagePosition', {pos: pStore.info.settings.banner_pos }) }}</div>
+            <div class="t-center">{{ $t('UpdatePlaylist.ImagePosition', {pos: pStore.info.settings.banner_pos }) }}</div>
             <div class="buttons">
                 <button @click.stop.prevent="pStore.minusBannerPos">
                     <ExpandSvg />
@@ -63,7 +63,7 @@
         </div>
 
         <button type="submit">
-            {{ clicked ? t('Common.Saving') : t('Common.Update')}}
+            {{ clicked ? $t('Common.Saving') : $t('Common.Update') }}
         </button>
     </form>
 </template>
@@ -80,10 +80,6 @@ import ExpandSvg from '@/assets/icons/expand.svg'
 import ImageIcon from '@/assets/icons/image.svg'
 
 import Switch from '../SettingsView/Components/Switch.vue'
-
-import { useI18n } from 'vue-i18n';
-
-const { t } = useI18n();
 
 const pStore = usePStore()
 const { info: playlist } = storeToRefs(pStore)

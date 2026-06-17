@@ -69,6 +69,28 @@
     "Finish": "Finish",
     "Disconnect": "Disconnect",
     "Connect": "Connect",
+    "Discography": "Discography {artist}",
+    "Recents": "Recents",
+    "Pinned": "Pinned",
+    "Other": "Other",
+    "All": "All",
+    "SearchResults": "Search Results",
+    "Playlists": "Playlists",
+    "EpAndSingles": "Appearances",
+    "Appearances": "Appearances",
+    "Compilations": "Compilation | Compilations",
+    "Singles": "EP & Singles",
+    "SimilarArtists": "Similar artists",
+    "Delete": "Delete",
+    "NowPlaying": "Now Playing",
+    "artist": "artist | artists",
+    "mix": "mix | mixes",
+    "Search": "Search",
+    "NoResults": "No results",
+    "NoSearchResults": "We can't find any results for your search.",
+    "TopResult": "Top Result",
+    "NoTrackResults": "No track results",
+    "LogIn": "Login",
     "FileName": "File Name",
     "SwingMusic": "Swing Music"
   },
@@ -128,7 +150,7 @@
     }
   },
   "FolderView": {
-    "FileCount": "File",
+    "FileCount": "File | Files",
     "FileCountPlural": "Files"
   },
   "HomeView": {
@@ -174,7 +196,7 @@
     "GoToPlaySource": "Go to play source"
   },
   "PlaylistsList": {
-    "TrackCount": "Track",
+    "TrackCount": "Track | Tracks",
     "TrackCountPlural": "Tracks"
   },
   "PlaylistView": {
@@ -202,7 +224,8 @@
     "Albums": "Albums",
     "BackToQueue": "Back to Queue",
     "GoToSearch": "Go to Search",
-    "SearchPlaceholder": "Start typing to search"
+    "SearchPlaceholder": "Start typing to search",
+    "top": "Top"
   },
   "Settings": {
     "Save": "Save",
@@ -647,6 +670,114 @@
       "ErrorRemoving": "Error removing root dirs",
       "ScanError": "Error triggering scan",
       "ScanStarted": "Rescan started"
+    }
+  },
+  "Stores": {
+    "Tracklist": {
+      "AddTrackToQueue": "Added {n} tracks to queue"
+    },
+    "Auth": {
+      "UserAddedSucc": "User added successfully!",
+      "GuestUserAdded": "Guest user added successfully!",
+      "ProfileUpdated": "Profile updated successfully!",
+      "UserDeleted": "{user} deleted successfully!"
+    },
+    "Player": {
+      "AutoplayBlockedError": "Tap anywhere in the page and try again (autoplay blocked)",
+      "PlayerErrorWithArg": "Player Error: {msg}",
+      "LoadErrorWithArg": "Can't load: {queue}"
+    },
+    "Queue": {
+      "AddedTrack": "Added 1 track to queue"
+    }
+  },
+  "Utils": {
+    "PlayingFrom": {
+      "SearchFrom": "Search for: \"{source}\"",
+      "FavoriteTracks": "Favorite tracks",
+      "NoSource": "👻 No source"
+    }
+  },
+  "Views": {
+    "ArtistDiscography": {
+      "NoContributions": "No contributions",
+      "NoContributionsDesc": "No {type} found for {artist}",
+      "Contributions": "Contributions",
+      "AllAlbums": "All Albums"
+    },
+    "FavCardScroller": {
+      "Title": "Favorite {item}S",
+      "Desc": "You have {nelem} favorited {type} | You have {nelem} favorited {type}s"
+    },
+    "Favorites": {
+      "Title": "Favorites",
+      "CountStats": "{tra} Tracks • {alb} Albums • {art} Artists",
+      "Recents": "`Recents`",
+      "Tracks": "'Tracks'",
+      "Albums": "Albums",
+      "NoFavoritesFound": "No favorites found",
+      "Description": "You can add tracks, albums and artists to your favorites by clicking the heart icon"
+    },
+    "FavoriteTracks": {
+      "Description": "You have {n_tr} favorited track | You have {n_tr} favorited tracks",
+      "Title": "Favorite Tracks"
+    },
+    "FolderView": {
+      "FolderIsEmpty": "Folder is empty",
+      "NoResultFound": "No results found",
+      "NoIndexedTracks": "The folder you are trying to access has no indexed tracks. Please add tracks to this folder and try again",
+      "NoTracksForQuery": "No tracks or folders in this immediate directory matched the query: {query}"
+    },
+    "MixLisView": {},
+    "MixListView": {
+      "mixes": "mixes",
+      "MixesBasedOnListening": "{n} mixes • Based on artists you have been listening to",
+      "SavedMixes": "Saved mixes",
+      "OtherMixes": "Other {type } mixes"
+    },
+    "MixView": {
+      "MixNotFound": "404: Mix not found"
+    },
+    "NotFound": {
+      "Error": "404! Page Not Found!"
+    },
+    "PlaylistList": {
+      "Title": "Playlists",
+      "Description": "You have {n} playlists in your library",
+      "SearchPlaylist": "Search playlists",
+      "NoPlaylistsFound": "No playlists found",
+      "OtherPlaylists": "Other playlists",
+      "AllPlaylists": "All playlists",
+      "NoItemDescription": "You can create a playlist by right clicking on a track and selecting the \"Add to Playlist\" option"
+    },
+    "Header": {
+      "TotalAlbumAndArtists": "You have {tot} {what} in your library"
+    },
+    "AlbumViews": {
+      "MoreFrom": "More from {art}",
+      "OtherVersions": "Other versions",
+      "RelatedAlbums": "Related Albums"
+    },
+    "LyricView": {
+      "Unsynced": "unsynced",
+      "NoLyricsFound": "<div>You don't have</div><div>the lyrics for this song</div>",
+      "Searching": "Searching...",
+      "SearchOnline": "Search online"
+    },
+    "PlaylistView": {
+      "NoTracks": "No tracks in this playlist",
+      "AddMoreDesc": "Add tracks to this playlist by right clicking on a track and selecting \"add to playlist\""
+    },
+    "SearchView": {
+      "NoResults": "No {page} results",
+      "TypeToSearch": "Start typing to search for {what}",
+      "ResultsForQuery": "Results for {query} should appear here",
+      "TypeToSearchTracks": "Start typing to search for tracks",
+      "NoResultsDesc": "Results should appear here"
+    },
+    "Stats": {
+      "Title": "Stats",
+      "Description": "Your listening stats for the past week"
     }
   }
 }

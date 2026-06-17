@@ -1,9 +1,9 @@
 <template>
   <div class="settingscontent">
     <GenericHeader>
-      <template #name>{{t('Common.Settings')}}</template>
+      <template #name>{{ $t('Common.Settings') }}</template>
       <template #description>
-        {{ t('Content.SettingsDesc') }}
+        {{ $t('Content.SettingsDesc') }}
       </template>
     </GenericHeader>
     <GenericTabs
@@ -42,10 +42,6 @@ import Group from "./Group.vue";
 import About from "./About.vue";
 import GenericTabs from "@/components/shared/GenericTabs.vue";
 import GenericHeader from "@/components/shared/GenericHeader.vue";
-
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 const route = useRoute();
 const settings = useSettings();

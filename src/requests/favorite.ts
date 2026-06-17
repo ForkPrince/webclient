@@ -4,10 +4,9 @@ import useAxios from './useAxios'
 
 import { Album, Artist, Track } from '@/interfaces'
 import { useToast as notif } from '@/stores/notification'
+import { useT } from '@/i18n'
 
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
+const { t } = useT();
 
 export async function addFavorite(favtype: favType, itemhash: string) {
     const { error } = await useAxios({

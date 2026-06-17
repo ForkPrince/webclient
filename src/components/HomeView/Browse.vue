@@ -1,6 +1,6 @@
 <template>
   <div class="homebrowse">
-    <div class="btitle"><b>{{ t('HomeView.Browse.Title') }}</b></div>
+    <div class="btitle"><b>{{ $t('HomeView.Browse.Title') }}</b></div>
     <div class="browselist">
       <RouterLink
         v-for="i in browselist"

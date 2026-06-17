@@ -15,14 +15,14 @@
                         <span class="ellip">
                             {{ setting.title }}
                             <span v-if="setting.experimental" class="badge experimental circular">
-                                {{ setting.experimental ? t('Common.experimental') : '' }}
+                                {{ setting.experimental ? $t('Common.experimental') : '' }}
                             </span>
                             <span v-if="setting.new" class="badge new circular">
-                                {{ setting.new ? t('Common.new') : '' }}
+                                {{ setting.new ? $t('Common.new') : '' }}
                             </span>
                         </span>
                         <button v-if="setting.type == SettingType.root_dirs" @click="setting.action">
-                            <ReloadSvg height="1.5rem" /> <span>{{ t('Common.Rescan') }}</span>
+                            <ReloadSvg height="1.5rem" /> <span>{{ $t('Common.Rescan') }}</span>
                         </button>
                     </div>
                     <div v-if="setting.desc" class="desc">
@@ -96,8 +96,6 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
 import { SettingGroup } from '@/interfaces/settings'
 import { SettingType } from '@/settings/enums'
 
@@ -117,8 +115,6 @@ import About from './About.vue'
 import BackupRestore from './Components/BackupRestore.vue'
 import SecretInput from './Components/SecretInput.vue'
 import License from './Components/License.vue'
-
-const { t } = useI18n()
 
 defineProps<{
     group: SettingGroup

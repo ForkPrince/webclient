@@ -7,7 +7,7 @@
   >
     <div class="scrollable">
       <div class="rounded pad-sm genre-pill">
-        {{ genres.length ? t('AlbumView.GenreBanner.GenreExists') : t('AlbumView.GenreBanner.GenreDoesNotExist') }}
+        {{ genres.length ? $t('AlbumView.GenreBanner.GenreExists') : $t('AlbumView.GenreBanner.GenreDoesNotExist') }}
       </div>
       <div
         v-for="genre in genres"

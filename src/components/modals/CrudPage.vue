@@ -1,20 +1,20 @@
 <template>
     <form action="" v-if="delete">
         <br>
-        <div>{{ t('CrudPage.DeleteDescription')}}</div>
+        <div>{{ $t('CrudPage.DeleteDescription')}}</div>
         <br />
-        <button @click.prevent="submit" class="critical">{{ t('CrudPage.DeleteButton') }}</button>
+        <button @click.prevent="submit" class="critical">{{ $t('CrudPage.DeleteButton') }}</button>
     </form>
     <form class="playlist-modal" @submit.prevent="submit" v-else>
-        <label for="name">{{t('CrudPage.CollectionName')}}</label>
+        <label for="name">{{ $t('CrudPage.CollectionName') }}</label>
         <br />
         <input type="search" class="rounded-sm" id="name" :value="collection?.name" />
         <br />
-        <label for="description">{{ t('CrudPage.Description') }}</label>
+        <label for="description">{{ $t('CrudPage.Description') }}</label>
         <br />
         <input type="search" class="rounded-sm" id="description" :value="collection?.extra.description" />
         <br /><br />
-        <button type="submit">{{ collection ? t('CrudPage.Update') : t('CrudPage.Create') }}</button>
+        <button type="submit">{{ collection ? $t('CrudPage.Update') : $t('CrudPage.Create') }}</button>
     </form>
 </template>
 

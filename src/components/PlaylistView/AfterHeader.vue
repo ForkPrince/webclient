@@ -1,13 +1,8 @@
 <template>
     <div class="p-after-header">
-        <div>{{ t('PlaylistView.AllTracks') }}</div>
+        <div>{{ $t('PlaylistView.AllTracks') }}</div>
     </div>
 </template>
-<script setup lang="ts">
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
-</script>
 <style lang="scss">
 .isSmall .p-after-header {
     padding-left: 0.5rem;

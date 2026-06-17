@@ -1,10 +1,10 @@
 <template>
     <div class="backup-restore">
-        <button class="backupnow" @click="doBackup">{{ t('Settings.Backup.Title') }}</button>
+        <button class="backupnow" @click="doBackup">{{ $t('Settings.Backup.Title') }}</button>
         <div class="separator"></div>
-        <h4>{{ t('Settings.Backup.RestoreBackup') }}</h4>
+        <h4>{{ $t('Settings.Backup.RestoreBackup') }}</h4>
         <div class="helptext">
-            {{ t('Settings.Backup.BackupCount', { count: backups.length }) }}
+            {{ $t('Settings.Backup.BackupCount', { count: backups.length }) }}
         </div>
         <div></div>
         <br />
@@ -22,11 +22,11 @@
                 </div>
                 <div class="buttons">
                     <DeleteSvg @click="() => deleteBackup(backup.name)" />
-                    <button class="restore" @click="() => restore(backup.name)">{{ t('Settings.Backup.RestoreButton') }}<</button>
+                    <button class="restore" @click="() => restore(backup.name)">{{ $t('Settings.Backup.RestoreButton') }}<</button>
                 </div>
             </div>
         </div>
-        <button class="restore-all" @click="() => restore()">{{ t('Settings.Backup.RestoreAllButton') }}<</button>
+        <button class="restore-all" @click="() => restore()">{{ $t('Settings.Backup.RestoreAllButton') }}<</button>
     </div>
 </template>
 

@@ -3,7 +3,7 @@
         <div class="disc_number">
             Disc {{ album_disc.album_page_disc_number }}
             <span @click="$emit('playDisc', album_disc.album_page_disc_number || 0)" class="play">
-                <PlaySvg /> {{t('AlbumView.PlayDisc')}} {{ album_disc.album_page_disc_number }}</span
+                <PlaySvg /> {{ $t('AlbumView.PlayDisc') }} {{ album_disc.album_page_disc_number }}</span
             >
         </div>
         <div class="play"></div>

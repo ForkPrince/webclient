@@ -26,7 +26,7 @@
       {{ name(folder.path) }}
     </div>
     <div class="rtcount">
-      <b>{{ t('Common.TrackCount', {count: folder.count}, folder.count) }}</b>
+      <b>{{ $t('Common.TrackCount', {count: folder.count}, folder.count) }}</b>
     </div>
   </RouterLink>
 </template>
@@ -35,9 +35,6 @@
 import { playSources } from "@/enums";
 import { Routes } from "@/router";
 import PlayBtn from "../shared/PlayBtn.vue";
-import { useI18n } from "vue-i18n";
-
-const { t } = useI18n();
 
 defineProps<{
   folder: {
