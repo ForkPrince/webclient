@@ -24,7 +24,7 @@ export default async (album?: Album) => {
     }
 
     const play_next = <Option>{
-        label: t('Menus.Album.PlayNext'),
+        label: t('Menus.Common.PlayNext'),
         action: async () => {
             let tracks: Track[] = []
 
@@ -40,7 +40,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_queue = <Option>{
-        label: t('Menus.Album.AddToQueue'),
+        label: t('Menus.Common.AddToQueue'),
         action: async () => {
             let tracks: Track[] = []
 
@@ -61,7 +61,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_playlist: Option = {
-        label: t('Menus.Album.AddToPlaylist'),
+        label: t('Menus.Common.AddToPlaylist'),
         children: () =>
             getAddToPlaylistOptions(AddToPlaylistAction, {
                 albumhash: album.albumhash,
@@ -75,7 +75,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_page: Option = {
-        label: t('Menus.Album.AddToCollection'),
+        label: t('Menus.Common.AddToCollection'),
         children: () =>
             getAddToCollectionOptions(addToPageAction, {
                 collection: null,
@@ -87,7 +87,7 @@ export default async (album?: Album) => {
     }
 
     const remove_from_page: Option = {
-        label: t('Menus.Album.RemoveFromCollection'),
+        label:t('Menus.Common.RemoveFromCollection'),
         action: async () => {
             const success = await addOrRemoveItemFromCollection(
                 parseInt(router.currentRoute.value.params.collection as string),

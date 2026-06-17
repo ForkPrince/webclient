@@ -3,6 +3,10 @@ import { Album, StatItem, Track } from '@/interfaces'
 import { NotifType, useToast } from '@/stores/notification'
 import useAxios from './useAxios'
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 const {
     album: albumUrl,
     albumartists: albumArtistsUrl,
@@ -36,7 +40,7 @@ const getAlbumData = async (albumhash: string, albumlimit: number) => {
     })
 
     if (status == 204) {
-        useToast().showNotification('Album not created yet!', NotifType.Error)
+        useToast().showNotification(t('Requests.Album.AlbumNotCreatedYet'), NotifType.Error)
     }
 
     return data as AlbumData

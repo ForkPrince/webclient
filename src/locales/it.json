@@ -51,6 +51,11 @@
       "Month": "Mese | Mesi",
       "AllTime": "Sempre"
     },
+    "added": "aggiunto",
+    "removed": "rimosso",
+    "NotificationErrorWithArg": "Fallito: {error}",
+    "NotificationError": "È avvenuto un errore!",
+    "NotificationFunnyError": "È successo qualcosa di divertentemente inaspettato!",
     "FileName": "Nome File",
     "SwingMusic": "Swing Music"
   },
@@ -217,9 +222,59 @@
       "LinksContribute": "Contribuisci",
       "GetInTouchTitle": "Rimani in contatto",
       "GetInTouchDescription": "Se apprezzi il mio lavoro, e ti piacerebbe salutarmi, mi farebbe piacere un contatto (in inglese).",
-      "SendEmail": "Manda Email"
+      "SendEmail": "Manda Email",
+      "Title": "Riguardo a",
+      "LicenseTitle": "Licenza",
+      "LicenseDesc": "Gestisci la tua chiave di licenza, la tua sottoscrizione e i tuoi dispositivi autorizzati.",
+      "LicenseDisplayName": "Licenza e sottoscrizione"
     },
-    "Experimental": "sperimentale"
+    "Experimental": "sperimentale",
+    "NowPlaying": {
+      "Title": "In riproduzione",
+      "Description": "Impostazioni riguardo la canzone in riproduzione",
+      "AlbumArt": "Mostra l'immagine di copertina nella barra di sinistra"
+    },
+    "AppWidth": {
+      "Extend": "Larghezza piena"
+    },
+    "Sidebar": {
+      "UseSidebar": "Mostra la barra di destra"
+    },
+    "ContextChildren": {
+      "ShowMode": "Mostra i menu del tasto destro su"
+    },
+    "MasterFlag": {
+      "Show": "Flag master"
+    },
+    "ShowFolders": {
+      "As": "Mostra cartelle come"
+    },
+    "RootDirs": {
+      "Title": "Cartelle radici",
+      "Description": "Impostazioni riguardo le tue cartelle radici",
+      "Change": "Cambia le tue cartelle radici",
+      "Current": "Cartelle radici attuali"
+    },
+    "Accounts": {
+      "Title": "Accounts",
+      "Desc": "Accedi alla app mobile usando un QR code"
+    },
+    "Pairing": {
+      "Title": "Collega dispositivo"
+    },
+    "Profile": {
+      "Title": "Profilo",
+      "Desc": "Gestisci il tuo profilo e le informazioni di login"
+    },
+    "Audio": {
+      "Title": "Audio",
+      "Playback": "Riproduzione",
+      "PlaybackDesc": "Impostazioni riguado la riproduzione audio",
+      "UseSilence": {
+        "Title": "Rimozione del silenzio tra le tracce",
+        "Description": "Salta automaticante il silenzio audio tra le tracce"
+      }
+    }
   },
   "Favorites": {
     "Album": "Album"
@@ -361,12 +416,79 @@
     "DeletePlaylist": "Sei sicuro di voler cancellare questa playlist in modo definitivo?"
   },
   "Menus": {
-    "Album": {
+    "Album": {},
+    "Artist": {
+      "PlayNext": "Riproduci dopo la corrente"
+    },
+    "Common": {
+      "AddToCollection": "Aggiungi a collezione",
+      "AddToPlaylist": "Aggiungi a playlist",
       "AddToQueue": "Aggiungi in coda",
       "PlayNext": "Riproduci dopo la corrente",
-      "AddToPlaylist": "Aggiungi a playlist",
-      "AddToCollection": "Aggiungi a collezione",
-      "RemoveFromCollection": "Rimuovi oggetto"
+      "RemoveFromCollection": "Rimuovi oggetto",
+      "RemoveFromPlaylist": "Rimuovi dalla playlist",
+      "RemoveFromQueue": "Rimuovi dalla coda"
+    },
+    "PlayList": {
+      "RemoveFromPlaylist": "Rimuovi dalla playlist"
+    },
+    "Queue": {
+      "ArtistName": "Questo è {hash}",
+      "PlaylistName": "{name} 2.0",
+      "SearchName": "Risultati di ricerca per {query}",
+      "FavoritesName": "Preferiti",
+      "ClearQueue": "Svuota coda",
+      "AddQueueToPlaylist": "Aggiungi la coda alla playlist"
+    },
+    "Track": {
+      "GoToFolder": "Vai alla cartella",
+      "GoToArtist": "Vai all'artista",
+      "OpenInFiles": "Apri in file",
+      "GoToAlbum": "Vai all'album",
+      "DeleteTrack": "Cancella traccia"
+    },
+    "Utils": {
+      "NewPlaylist": "Nuova playlist",
+      "NewCollection": "Nuova collezione",
+      "SearchOn": "Cerca su"
+    }
+  },
+  "UsePlayFrom": {
+    "AlbumTracksNotFound": "Tracce album non trovate",
+    "ArtistTracksNotFound": "Tracce artista non trovate",
+    "FolderTracksNotFound": "Tracce della cartella non trovate"
+  },
+  "Requests": {
+    "Album": {
+      "AlbumNotCreatedYet": "Album non ancora creato!"
+    },
+    "Artists": {
+      "ArtistNotFound": "Artista non trovato"
+    },
+    "Collections": {
+      "AddOrRemCollSuccess": "{payload} {command} dalla pagina",
+      "CollectionAlreadyPresent": "{payload} è già presente nella collezione"
+    },
+    "Playlists": {
+      "CreatedSuccesfully": "Playlist creata correttamente!",
+      "AlreadyExists": "Questa playlist esiste già",
+      "NotFound": "Playlist non trovata",
+      "TrackAlreadyPresent": "La traccia è gia presente nella playlist",
+      "AddedToPlaylist": "Aggiunto a {name}",
+      "ErrUnsupportedImage": "Fallito: immagine non supportata",
+      "Updated": "Playlist aggiornata!",
+      "Deleted": "Playlist cancellata",
+      "TrackRemoved": "Traccie rimosse",
+      "TrackRemovedError": "Non riesco a rimuovere le tracce",
+      "BannerImageRemoved": "Immagine del banner rimossa",
+      "BannerImageRemovedError": "Non riesco a rimuovere l'immagine del banner"
+    },
+    "RootDirs": {
+      "ErrorAdding": "Errore aggiungendo la cartelle radici",
+      "Success": "Cartelle radici configurate",
+      "ErrorRemoving": "Errore rimuovendo le cartelle radici",
+      "ScanError": "Errore durante l'avviamento della scansione",
+      "ScanStarted": "Nuova scansione avviata"
     }
   }
 }

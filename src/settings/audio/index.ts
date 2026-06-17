@@ -3,13 +3,17 @@ import gapless from "./groups";
 
 import VolumeSvg from "@/assets/icons/volume-mid.svg?raw"
 
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+
 export default {
-  title: "Audio",
+  title: t("Settings.Audio.Title"),
   groups: [
     {
-      title: "Playback",
+      title: t("Settings.Audio.Playback"),
       icon: VolumeSvg,
-      desc: "Settings related to audio playback",
+      desc: t("Settings.Audio.PlaybackDesc"),
       settings: [...gapless],
     },
   ],

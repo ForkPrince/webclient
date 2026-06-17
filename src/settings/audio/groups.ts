@@ -1,6 +1,9 @@
 import { Setting } from '@/interfaces/settings'
 import settings from '@/stores/settings'
 import { SettingType } from '../enums'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // const use_legacy_streaming_endpoint: Setting = {
 //     title: 'Use legacy streaming',
@@ -11,8 +14,8 @@ import { SettingType } from '../enums'
 // }
 
 const use_silence: Setting = {
-    title: 'Silence padding removal',
-    desc: 'Automatically skip silence between tracks',
+    title: t("Settings.Audio.UseSilence.Title"),
+    desc: t("Settings.Audio.UseSilence.Description"),
     type: SettingType.binary,
     state: () => settings().use_silence_skip,
     action: () => settings().toggleUseSilenceSkip(),

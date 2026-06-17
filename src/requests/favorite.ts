@@ -5,6 +5,10 @@ import useAxios from './useAxios'
 import { Album, Artist, Track } from '@/interfaces'
 import { useToast as notif } from '@/stores/notification'
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 export async function addFavorite(favtype: favType, itemhash: string) {
     const { error } = await useAxios({
         url: paths.api.addFavorite,
@@ -15,7 +19,7 @@ export async function addFavorite(favtype: favType, itemhash: string) {
     })
 
     if (error) {
-        notif().showNotification('An error occured!', NotifType.Error)
+        notif().showNotification(t('Common.NotificationError'), NotifType.Error)
         return false
     }
 
@@ -32,7 +36,7 @@ export async function removeFavorite(favtype: favType, itemhash: string) {
     })
 
     if (error) {
-        notif().showNotification('An error occured!', NotifType.Error)
+        notif().showNotification(t('Common.NotificationError'), NotifType.Error)
         return false
     }
 

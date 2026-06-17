@@ -6,13 +6,17 @@ import { Album, Collection, Option, Playlist } from '@/interfaces'
 import { getAllCollections } from '@/requests/collections'
 import { getAllPlaylists } from '@/requests/playlists'
 
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 export const separator: Option = {
     type: 'separator',
 }
 
 export function get_new_playlist_option(new_playlist_modal_props: any = {}): Option {
     return {
-        label: 'New playlist',
+        label: t('Menus.Utils.NewPlaylist'),
         action: () => {
             modal().showNewPlaylistModal(new_playlist_modal_props)
         },
@@ -21,7 +25,7 @@ export function get_new_playlist_option(new_playlist_modal_props: any = {}): Opt
 
 export function get_new_collection_option(new_collection_modal_props: any = {}): Option {
     return {
-        label: 'New Collection',
+        label: t('Menus.Utils.NewCollection'),
         action: () => {
             modal().showCollectionModal(new_collection_modal_props)
         },
@@ -101,7 +105,7 @@ export const get_find_on_social = (page = 'album', query = '', album?: Album) =>
     const search_term = query ? query : is_album ? getAlbumSearchTerm() : useArtist().info.name
 
     return <Option>{
-        label: 'Search on',
+        label: t('Menus.Utils.SearchOn'),
         icon: SearchIcon,
         children: async () => [
             {

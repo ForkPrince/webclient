@@ -52,6 +52,11 @@
       "Month": "Month | Months",
       "AllTime": "All Time"
     },
+    "added": "added",
+    "removed": "removed",
+    "NotificationErrorWithArg": "Failed: {error}",
+    "NotificationError": "An error occured!",
+    "NotificationFunnyError": "Something funny happened!",
     "FileName": "File Name",
     "SwingMusic": "Swing Music"
   },
@@ -218,9 +223,59 @@
       "LinksContribute": "Contribute",
       "GetInTouchTitle": "Get in touch",
       "GetInTouchDescription": "If you like my work, and would like to say hi, I'd like to hear from you.",
-      "SendEmail": "Send Email"
+      "SendEmail": "Send Email",
+      "Title": "About",
+      "LicenseTitle": "License",
+      "LicenseDesc": "Manage your license key, subscription and authorized devices",
+      "LicenseDisplayName": "License and Subscription"
     },
-    "Experimental": "experimental"
+    "Experimental": "experimental",
+    "NowPlaying": {
+      "Title": "Now playing",
+      "Description": "Settings relating to the current song",
+      "AlbumArt": "Show album art on the left sidebar"
+    },
+    "AppWidth": {
+      "Extend": "Full width"
+    },
+    "Sidebar": {
+      "UseSidebar": "Show right sidebar"
+    },
+    "ContextChildren": {
+      "ShowMode": "Show right click menu dropdowns on"
+    },
+    "MasterFlag": {
+      "Show": "Master flag"
+    },
+    "ShowFolders": {
+      "As": "Show folders as"
+    },
+    "RootDirs": {
+      "Title": "Root directories",
+      "Description": "Settings relating to your root directories",
+      "Change": "Change your root directories",
+      "Current": "Current root directories"
+    },
+    "Accounts": {
+      "Title": "Accounts",
+      "Desc": "Login to the mobile client using QR code"
+    },
+    "Pairing": {
+      "Title": "Pair device"
+    },
+    "Profile": {
+      "Title": "Profile",
+      "Desc": "Manage your profile and login information"
+    },
+    "Audio": {
+      "Title": "Audio",
+      "Playback": "Playback",
+      "PlaybackDesc": "Settings related to audio playback",
+      "UseSilence": {
+        "Title": "Silence padding removal",
+        "Description": "Automatically skip silence between tracks"
+      }
+    }
   },
   "Favorites": {
     "Album": "Album"
@@ -362,12 +417,79 @@
     "DeletePlaylist": "Are you sure you want to permanently delete this playlist?"
   },
   "Menus": {
-    "Album": {
+    "Album": {},
+    "Artist": {
+      "PlayNext": "Play next"
+    },
+    "Common": {
+      "AddToCollection": "Add to Collection",
+      "AddToPlaylist": "Add to Playlist",
       "AddToQueue": "Add to queue",
       "PlayNext": "Play next",
-      "AddToPlaylist": "Add to Playlist",
-      "AddToCollection": "Add to Collection",
-      "RemoveFromCollection": "Remove item"
+      "RemoveFromCollection": "Remove item",
+      "RemoveFromPlaylist": "Remove From Playlist",
+      "RemoveFromQueue": "Remove from Queue"
+    },
+    "PlayList": {
+      "RemoveFromPlaylist": "Remove from playlist"
+    },
+    "Queue": {
+      "ArtistName": "This is {hash}",
+      "PlaylistName": "{name} 2.0",
+      "SearchName": "Search results for {query}",
+      "FavoritesName": "Favorites",
+      "ClearQueue": "Clear queue",
+      "AddQueueToPlaylist": "Add queue to playlist"
+    },
+    "Track": {
+      "GoToFolder": "Go to Folder",
+      "GoToArtist": "Go to Artist",
+      "OpenInFiles": "Open in files",
+      "GoToAlbum": "Go to Album",
+      "DeleteTrack": "Delete Track"
+    },
+    "Utils": {
+      "NewPlaylist": "New playlist",
+      "NewCollection": "New Collection",
+      "SearchOn": "Search on"
+    }
+  },
+  "UsePlayFrom": {
+    "AlbumTracksNotFound": "Album tracks not found",
+    "ArtistTracksNotFound": "Artist tracks not found",
+    "FolderTracksNotFound": "Folder tracks not found"
+  },
+  "Requests": {
+    "Album": {
+      "AlbumNotCreatedYet": "Album not created yet!"
+    },
+    "Artists": {
+      "ArtistNotFound": "Artist not found"
+    },
+    "Collections": {
+      "AddOrRemCollSuccess": "{payload} {command} to page",
+      "CollectionAlreadyPresent": "{payload} already in collection"
+    },
+    "Playlists": {
+      "CreatedSuccesfully": "Playlist created successfully!",
+      "AlreadyExists": "That playlist already exists",
+      "NotFound": "Playlist not found",
+      "TrackAlreadyPresent": "Track already exists in playlist",
+      "AddedToPlaylist": "Added to {name}",
+      "ErrUnsupportedImage": "Failed: Unsupported image",
+      "Updated": "Playlist updated!",
+      "Deleted": "Playlist deleted",
+      "TrackRemoved": "Tracks removed",
+      "TrackRemovedError": "Unable to remove tracks",
+      "BannerImageRemoved": "Banner image removed",
+      "BannerImageRemovedError": "Unable to remove banner image"
+    },
+    "RootDirs": {
+      "ErrorAdding": "Error adding root dirs",
+      "Success": "Root directories configured",
+      "ErrorRemoving": "Error removing root dirs",
+      "ScanError": "Error triggering scan",
+      "ScanStarted": "Rescan started"
     }
   }
 }
