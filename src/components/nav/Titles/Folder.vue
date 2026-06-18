@@ -26,7 +26,6 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 
 import { Routes } from '@/router'
 
@@ -35,9 +34,10 @@ import BreadCrumbNav from '@/components/FolderView/BreadCrumbNav.vue'
 import DropDown from '@/components/shared/DropDown.vue'
 import useFolder from '@/stores/pages/folder'
 import { computed } from 'vue'
+import { useT } from '@/i18n'
 
 
-const { t } = useI18n();
+const { t } = useT();
 
 const router = useRouter()
 const folder = useFolder()
@@ -57,7 +57,7 @@ const items: SortItem[] = [
     { key: 'filepath', title: t('Common.FileName') },
     { key: 'album', title:  t('Common.Album') },
     // { key: 'albumartists', title: t('Common.AlbumArtist')} },
-    { key: 'artists', title: t('Common.Artist') },
+    { key: 'artists', title: t('Common.Artist', 2) },
     // { key: 'bitrate', title: t('Common.Bitrate') },
     { key: 'date', title: t('Common.ReleaseDate') },
     // { key: 'disc', title: t('Common.Disc') },

@@ -22,7 +22,7 @@ import { useRoute } from 'vue-router'
 import { useAlbumList, useArtistList } from '@/stores/pages/itemlist'
 import SortKey from './SortKey.vue'
 import ChartSvg from '@/assets/icons/chart.svg'
-import { useT } from '@/i18n.js'
+import { useT } from '@/i18n'
 
 const { t } = useT();
 

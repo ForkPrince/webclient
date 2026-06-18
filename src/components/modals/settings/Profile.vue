@@ -3,7 +3,7 @@
         <div class="profileavatar">
             <Avatar :name="username || auth.user.username" />
             <div class="name">
-                {{ adding_user ? username : $t('Profile.HiUser', {user: auth.user.username})  }}
+                {{ adding_user ? username : $t('Profile.HiUser', {user: auth.user.username}) }}
             </div>
             <div v-if="!adding_user" class="roles">
                 <span v-for="role in auth.user.roles" :key="role" class="role"> {{ role }}</span>
@@ -11,7 +11,7 @@
         </div>
         <div class="updateprof">
             <div class="locale-changer">
-                <label>{{ t('Languages.ChooseLang') }}</label>
+                <label>{{ $t('Languages.ChooseLang') }}</label>
                 <select class="language" v-model="$i18n.locale" @change="updateLang">
                     <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ $t('Languages.'+ locale) }}</option>
                 </select>
@@ -25,12 +25,12 @@
             <div class="names">
                 <label for="username">{{ $t('Profile.Username')}}<</label>
                 <Input
-                    :placeholder="adding_user ? t('Profile.Username')  : auth.user.username"
+                    :placeholder="adding_user ? $t('Profile.Username')  : auth.user.username"
                     @input="input => (username = input)"
                 />
             </div>
-            <label for="pswd">{{ adding_user ? $t('Profile.PasswordAction', {action: $t('Common.Create')}) 
-                : $t('Profile.PasswordAction', {action: $t('Common.Change')}) }}</label>
+            <label for="pswd">{{ adding_user ? $t('Profile.PasswordAction', { action: $t('Common.Create') }) 
+                : $t('Profile.PasswordAction', { action: $t('Common.Change') }) }}</label>
             <Input type="password" placeholder="✶✶✶✶✶✶✶✶" @input="input => (password = input)" />
             <div v-if="password.length" class="confirmpassword">
                 <label for="confirmpswd">{{ $t('Profile.ConfirmPassword') }}<</label>
@@ -93,8 +93,8 @@ const setLang = computed(()=> {
 const setCookie = function() {
     cookies.set('locale', locale.value)
     langIns.value = false
-    //FIXME: Feels like a hack to force reload the whole app; but parts of the UI doesn't update it properly.
-    //Adding cookies dependencies to all components might be the only alternative.
+    // FIXME: Feels like a hack to force reload the whole app; but parts of the UI doesn't update it properly.
+    //  Adding cookies dependencies to all components might be the only alternative.
     router.go(0);
 }
 

@@ -1,7 +1,7 @@
 <template>
     <FilePicker v-if="showFilePicker" :userhome="userHome" @submitDirs="handleSubmitDirs" @cancel="toggleFilePicker" />
     <div v-else class="rootdirconfig">
-        <div class="heading">{{ $t('Onboarding.RootDirs.Title')}}</div>
+        <div class="heading">{{ $t('Onboarding.RootDirs.Title') }}</div>
         <div class="description">{{ $t('Onboarding.RootDirs.TitleDesc') }}</div>
         <br />
         <div class="options">

@@ -6,7 +6,7 @@
                 :class="{ showDropDown }"
                 :title="
                     reverse !== 'hide'
-                        ? $t('DropDown.SortByUppercase', {title: current.title.toUpperCase(), order: reverse ?  $t('Common.Descending').toUpperCase() : $t('Common.Ascending').toUpperCase()})
+                        ? $t('DropDown.SortByUppercase', { title: current.title.toUpperCase(), order: reverse ? $t('Common.Descending').toUpperCase() : $t('Common.Ascending').toUpperCase() })
                         : undefined
                 "
                 @click.prevent="handleOpener"

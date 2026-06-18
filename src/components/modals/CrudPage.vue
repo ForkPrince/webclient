@@ -1,7 +1,7 @@
 <template>
     <form action="" v-if="delete">
         <br>
-        <div>{{ $t('CrudPage.DeleteDescription')}}</div>
+        <div>{{ $t('CrudPage.DeleteDescription') }}</div>
         <br />
         <button @click.prevent="submit" class="critical">{{ $t('CrudPage.DeleteButton') }}</button>
     </form>

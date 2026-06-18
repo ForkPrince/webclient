@@ -1,4 +1,3 @@
-import { useI18n } from "vue-i18n";
 import { Routes } from "@/router";
 import useDialog from "@/stores/modal";
 import useSearch from "@/stores/search";
@@ -9,9 +8,10 @@ import PlaylistSvg from "@/assets/icons/playlist-1.svg";
 import SearchSvg from "@/assets/icons/search.svg";
 import SettingsSvg from "@/assets/icons/settings.svg";
 import HomeSvg from "@/assets/icons/home.svg";
+import { useT } from "@/i18n";
 
 export const useNavItems = () => {
-  const { t } = useI18n();
+  const { t } = useT()
 
   const folder = {
     name: t('LeftSidebar.NavItems.Folder'),

@@ -80,7 +80,9 @@ import ExpandSvg from '@/assets/icons/expand.svg'
 import ImageIcon from '@/assets/icons/image.svg'
 
 import Switch from '../SettingsView/Components/Switch.vue'
+import { useT } from '@/i18n.js'
 
+const { t } = useT()
 const pStore = usePStore()
 const { info: playlist } = storeToRefs(pStore)
 
@@ -96,7 +98,7 @@ const emit = defineEmits<{
     (e: 'hideModal'): void
 }>()
 
-emit('setTitle', 'Update Playlist')
+emit('setTitle', t('Modal.UpdatePlaylist'))
 
 function selectFiles() {
     const input = document.getElementById('update-pl-image-upload') as HTMLInputElement

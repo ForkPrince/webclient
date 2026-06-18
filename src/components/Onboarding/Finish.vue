@@ -1,7 +1,7 @@
 <template>
     <div class="onboardingfinish">
         <div class="heading">
-            <span v-if="isFinished">{{ $t('Onboarding.Finish.TitleDone')}}</span>
+            <span v-if="isFinished">{{ $t('Onboarding.Finish.TitleDone') }}</span>
             <span v-else>{{ $t('Onboarding.Finish.TitleAlmostDone') }}</span>
         </div>
         <div class="description">

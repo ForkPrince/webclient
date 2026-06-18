@@ -1,4 +1,4 @@
-import { createI18n } from "vue-i18n";
+import { Composer, createI18n } from "vue-i18n";
 
 import en from './locales/en_US.json';
 import it from './locales/it_IT.json';
@@ -19,7 +19,7 @@ const i18n = createI18n({
     en_US: en,
     it_IT: it,
     ko: ko
-  },
+  }
 });
 
 export function useT(){

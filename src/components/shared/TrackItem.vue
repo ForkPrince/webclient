@@ -43,7 +43,7 @@
             <div
                 v-if="isQueueTrack"
                 class="remove-track"
-                :title="$t('TrackItem.RemoveFromQueue') "
+                :title="$t('TrackItem.RemoveFromQueue')"
                 @click.stop="player.removeByIndex(index)"
             >
                 <DelSvg />

@@ -1,130 +1,57 @@
 {
-  "Common": {
-    "Create": "Crea",
-    "Change": "Cambia",
-    "Update": "Aggiorna",
-    "Saving": "Salvataggio",
-    "Image": "Immagine",
-    "update": "aggiornare",
-    "upload": "caricare",
-    "Settings": "Impostazioni",
-    "Default": "Default",
-    "Title": "Titolo",
-    "Album": "Album | Albums",
-    "Artist": "Artista | Artisti",
-    "ReleaseDate": "Data di rilascio",
-    "DateAdded": "Data di aggiunta",
-    "LastPlayed": "Ultima riproduzione",
-    "PlayCount": "Numero di riproduzioni",
-    "PlayDuration": "Durata di riproduzione",
-    "top": "migliori",
-    "LogOut": "Scollegati",
-    "BuiltBy": "creato da @cwilvx ↗",
-    "Playlist": "Playlist",
-    "AlbumArtist": "Artista Album",
-    "Bitrate": "Bitrate",
-    "Disc": "Disco",
-    "Duration": "Durata",
-    "album": "album | albums",
-    "track": "traccia | tracce",
-    "experimental": "sperimentale",
-    "new": "nuovo",
-    "Rescan": "Riscansiona",
-    "Descending": "Decrescente",
-    "Ascending": "Crescente",
-    "TrackCount": "{count} traccia | {count} tracce",
-    "NoTracks": "Nessuna traccia",
-    "HiSpace": "Ciao ",
-    "Lyrics": "Testi canzoni",
-    "Play": "Riproduci",
-    "SeeAll": "Vis. Tutti",
-    "Unknown": "Sconosciuto",
-    "New": "Nuova",
-    "Track": "Traccia | Tracce",
-    "Periods": {
-      "Year": "Anno | Anni",
-      "Week": "Settimana | Settimane",
-      "Month": "Mese | Mesi",
-      "AllTime": "Sempre"
-    },
-    "added": "aggiunto",
-    "removed": "rimosso",
-    "NotificationErrorWithArg": "Fallito: {error}",
-    "NotificationError": "È avvenuto un errore!",
-    "NotificationFunnyError": "È successo qualcosa di divertentemente inaspettato!",
-    "Appearance": "Aspetto",
-    "Library": "Libreria",
-    "Folders": "Cartelle",
-    "Backup": "Backup",
-    "Modify": "Modifica",
-    "Configure": "Configura",
-    "Plugins": "Plugins",
-    "Finish": "Termina",
-    "Disconnect": "Scollega",
-    "Connect": "Collega",
-    "Discography": "Discografia {artist}",
-    "Recents": "Recenti",
-    "Pinned": "Fissato",
-    "Other": "Altre",
-    "All": "Tutte",
-    "SearchResults": "Risultati della ricerca",
-    "Playlists": "Playlists",
-    "Appearances": "Comparse",
-    "Compilations": "Raccolta | Raccolte",
-    "Singles": "EP & Singles",
-    "SimilarArtists": "Artisti simili",
-    "Delete": "Elimina",
-    "NowPlaying": "In riproduzione",
-    "artist": "artista | artisti",
-    "mix": "mix | mixes",
-    "Search": "Trova",
-    "NoResults": "Nessun risultato",
-    "NoSearchResults": "Non riesco a trovare nessun risultato per la tua ricerca.",
-    "TopResult": "Risultati migliori",
-    "NoTrackResults": "Nessun risultato trovato nelle tracce",
-    "LogIn": "Accedi",
-    "Autodetect": "autorileva",
-    "FileName": "Nome File",
-    "SwingMusic": "Swing Music",
-    "selected": "selezionato",
-    "AppTitle": "Swing Music",
-    "Username": "Nome utente",
-    "Password": "Password",
-    "ConfirmPass": "Conferma password",
-    "CreateAccount": "Crea account",
-    "Continue": "Continua"
+  "Accounts": {
+    "Admin": "Admin",
+    "AdminDesc": "Può far tutto",
+    "AllUsers": "Tutti gli utenti",
+    "EnableGuestAccess": "Abilita accesso ospite",
+    "EnableGuestAccessDesc": "Permetti utenti di accedere a questo sito senza un account",
+    "NewUser": "Nuovo utente",
+    "NoSelfDelete": "Non puoi cancellare te stesso!",
+    "ShowUsersOnLogin": "Mostra utenti durante l'accesso",
+    "ShowUsersOnLoginDesc": "Mostra un elenco di utenti disponibili durante l'accesso"
   },
   "AlbumView": {
     "AlbumBy": "Album by ",
-    "TrackCount": "Traccia | Tracce",
+    "DiskNumber": "Disco {num}",
     "GenreBanner": {
-      "GenreExists": "Generi",
-      "GenreDoesNotExist": "Nessun genere"
+      "GenreDoesNotExist": "Nessun genere",
+      "GenreExists": "Generi"
     },
     "PlayDisc": "Riproduci disco",
-    "DiskNumber": "Disco {num}"
+    "TrackCount": "Traccia | Tracce"
+  },
+  "ArtistCard": {
+    "TrackCount": "{count} Traccia | {count} Tracce"
   },
   "ArtistView": {
-    "Title": "Artista",
+    "LoadMore": "Carica altri",
     "NoTracks": "Nessuna traccia",
     "RepeatOptions": {
       "All": "Ripeti tutte",
-      "One": "Ripeti singola",
-      "None": "Nessuna ripetizione"
+      "None": "Nessuna ripetizione",
+      "One": "Ripeti singola"
     },
-    "LoadMore": "Carica altri"
+    "Title": "Artista"
+  },
+  "AuthLogin": {
+    "Back": "Indietro",
+    "BackToSelection": "Torna alla selezione",
+    "ContinueAsGuest": "O continua come ospite",
+    "EnterPassword": "Inserisci password",
+    "EnterUsername": "Inserisci nome utente",
+    "WelcomeBack": "Bentornato"
   },
   "BottomBar": {
+    "Favorite": "Preferita",
     "GoToNowPlaying": "Vai a in riproduzione",
-    "PlaceholderTitle": "Benvenuto",
     "PlaceholderArtist": "Benvenuto a Swing Music",
+    "PlaceholderTitle": "Benvenuto",
     "RepeatOptions": {
       "All": "Ripeti tutte",
-      "One": "Ripeti singola",
-      "None": "Nessuna ripetizione"
+      "None": "Nessuna ripetizione",
+      "One": "Ripeti singola"
     },
-    "Shuffle": "Mescola",
-    "Favorite": "Preferita"
+    "Shuffle": "Mescola"
   },
   "Bubbles": {
     "DropHere": "RILASCIA TRACCE QUA"
@@ -132,458 +59,18 @@
   "CardList": {
     "SortBy": "Ordina per",
     "SortByOptions": {
-      "TrackCount": "N. di tracce",
-      "Duration": "Durata",
+      "AlbumArtists": "Artista",
       "CreatedDate": "Aggiunto in data",
+      "Date": "Anno di rilascio",
+      "Duration": "Durata",
       "LastPlayed": "Ultima riproduzione",
+      "Name": "Nome",
+      "NoOfAlbums": "No. di album",
       "PlayCount": "Numero di rip.",
       "PlayDuration": "Durata riproduzione",
       "Title": "Titolo",
-      "AlbumArtists": "Artista",
-      "Date": "Anno di rilascio",
-      "Name": "Nome",
-      "NoOfAlbums": "No. di album"
+      "TrackCount": "N. di tracce"
     }
-  },
-  "FolderView": {
-    "FileCount": "File | Files"
-  },
-  "HomeView": {
-    "Title": "Home",
-    "Greetings": {
-      "midnight": "Hey animale notturno",
-      "dawn": "Hey there uccello mattutino",
-      "morning": "Buongiorno, {name}",
-      "afternoon": "Buon pomeriggio, {name}",
-      "evening": "Buona serata, {name}"
-    },
-    "Browse": {
-      "Title": "Sfoglia libreria",
-      "BrowseList": {
-        "Folders": "Cartelle",
-        "Albums": "Album",
-        "Artists": "Artisti",
-        "Playlists": "Playlist",
-        "Favorites": "Preferiti",
-        "FavTracks": "Tracce pref.",
-        "FavArtists": "Artisti pref.",
-        "FavAlbums": "Album pref.",
-        "Stats": "Statist."
-      }
-    },
-    "title": "Home"
-  },
-  "LeftSidebar": {
-    "NavItems": {
-      "Folder": "Cartelle",
-      "Favorites": "Preferiti",
-      "Playlists": "Playlist",
-      "Home": "Home",
-      "Search": "Cerca",
-      "Settings": "Impostazioni"
-    },
-    "FileTypeBitrate": "tipo file • bitrate"
-  },
-  "NowPlaying": {
-    "GoToAlbum": "Vai ad album",
-    "UpNext": "Pros. traccia",
-    "Queue": "Coda",
-    "GoToPlaySource": "Vai alla posizione della traccia"
-  },
-  "PlaylistView": {
-    "LastUpdated": "Aggiornato in {date}",
-    "Edit": "Modifica",
-    "AllTracks": "Tutte le tracce"
-  },
-  "RightSidebar": {
-    "SimilarTracks": "Tracce simili",
-    "Shuffle": "Shuffle",
-    "NowPlaying": "Riproducendo",
-    "NoQueueTitle": "Nessuna canzone in coda",
-    "NoQueueDescription": "Quando inizierai a riprodurre canzoni, queste appariranno qua.",
-    "BackToQueue": "ritorna alla coda"
-  },
-  "Search": {
-    "NoResultsTitle": "Nessun risultato",
-    "NoTracksTitle": "nessuna traccia",
-    "NoResultsDescription": "Non riesco a trovare nessuna traccia con i parametri specificati.",
-    "TopResult": "Miglior risultato",
-    "BackToQueue": "Ritorna alla coda",
-    "GoToSearch": "Vai alla ricerca",
-    "SearchPlaceholder": "Scrivi per cercare",
-    "top": "Top"
-  },
-  "Settings": {
-    "Save": "Salva",
-    "Cancel": "Annulla",
-    "Backup": {
-      "Title": "Backup",
-      "RestoreBackup": "Ripristina Backup",
-      "BackupCount": "Hai {count} backup(s) nella tua cartella dei backup.",
-      "PlaylistCount": "{count} playlist | {count} playlists",
-      "ScrobbleCount": "{count} scrobble | {count} scrobbles",
-      "FavoriteCount": "{count} preferito | {count} preferiti",
-      "CollectionCount": "{count} collezione | {count} collezioni",
-      "RestoreButton": "Ripristina",
-      "RestoreAllButton": "Ripristina tutto",
-      "BackupSuccess": "Backup creato",
-      "ThankYouMessage": "Ti ringrazio per aver sponsorizzato Swing Music!"
-    },
-    "List": {
-      "RootNotConfigured": "Cartella radice non impostata. Usa il pulsante \"Configure\" per impostarla"
-    },
-    "NumberInput": {
-      "InvalidNumber": "Numero non valido",
-      "Updated": "Aggiornato",
-      "UpdateFailed": "Aggiornamento fallito"
-    },
-    "About": {
-      "Developer": "Swing Music è un atto d'amore sviluppato su GitHub all'indirizzo {link}. Se questo software ti piace, una stellina sul progetto sarebbe molto apprezzata. Spero tu l'apprezzi tanto quanto mi son divertito a scriverla da zero. 😁🤗",
-      "LinksTitle": "Links",
-      "LinksDocs": "Docs",
-      "LinksGitHub": "Stellina su GitHub",
-      "LinksIssue": "Segnala un problema (in inglese)",
-      "LinksContribute": "Contribuisci",
-      "GetInTouchTitle": "Rimani in contatto",
-      "GetInTouchDescription": "Se apprezzi il mio lavoro, e ti piacerebbe salutarmi, mi farebbe piacere un contatto (in inglese).",
-      "SendEmail": "Manda Email",
-      "Title": "Riguardo a",
-      "LicenseTitle": "Licenza",
-      "LicenseDesc": "Gestisci la tua chiave di licenza, la tua sottoscrizione e i tuoi dispositivi autorizzati.",
-      "LicenseDisplayName": "Licenza e sottoscrizione"
-    },
-    "Experimental": "sperimentale",
-    "NowPlaying": {
-      "Title": "In riproduzione",
-      "Description": "Impostazioni riguardo la canzone in riproduzione",
-      "AlbumArt": "Mostra l'immagine di copertina nella barra di sinistra"
-    },
-    "AppWidth": {
-      "Extend": "Larghezza piena",
-      "ExtendDesc": "Permetti all'applicazione di estendersi per tutta la larghezza dello schermo"
-    },
-    "Sidebar": {
-      "UseSidebar": "Mostra la barra di destra"
-    },
-    "ContextChildren": {
-      "ShowMode": "Mostra i menu del tasto destro su"
-    },
-    "MasterFlag": {
-      "Show": "Flag master"
-    },
-    "ShowFolders": {
-      "As": "Mostra cartelle come"
-    },
-    "RootDirs": {
-      "Title": "Cartelle radici",
-      "Description": "Impostazioni riguardo le tue cartelle radici",
-      "Change": "Cambia le tue cartelle radici",
-      "Current": "Cartelle radici attuali"
-    },
-    "Accounts": {
-      "Title": "Accounts",
-      "Desc": "Accedi alla app mobile usando un QR code"
-    },
-    "Pairing": {
-      "Title": "Collega dispositivo"
-    },
-    "Profile": {
-      "Title": "Profilo",
-      "Desc": "Gestisci il tuo profilo e le informazioni di login"
-    },
-    "Audio": {
-      "Title": "Audio",
-      "Playback": "Riproduzione",
-      "PlaybackDesc": "Impostazioni riguado la riproduzione audio",
-      "UseSilence": {
-        "Title": "Rimozione del silenzio tra le tracce",
-        "Description": "Salta automaticante il silenzio audio tra le tracce"
-      },
-      "UseCrossfade": {
-        "Title": "Abilita crossfade",
-        "Description": "Riduci il volume dell'audio della traccia corrente in uscita mentre aumenti l'audio della canzone in ingresso"
-      },
-      "CrossfadeDuration": {
-        "Title": "Durata crossfade",
-        "Description": "Durata in secondi del crossfade"
-      },
-      "StreamingQuality": {
-        "96": "96kbps",
-        "128": "128kbps",
-        "320": "320kbps",
-        "Original": "Originale",
-        "640Flac": "Media (640kbps) (FLAC)",
-        "1024Flac": "Alta (1024kbps) (FLAC)",
-        "Title": "Qualità streaming",
-        "Description": "Scegli la qualità audio durante lo streaming"
-      },
-      "LegacyStreaming": {
-        "Title": "Usa streaming legacy",
-        "Description": "Abilita se riscontro problemi durante lo streaming"
-      }
-    },
-    "General": {
-      "MainSettingsDescription": "Impostazioni riguardo varie parti dell'interfaccia utente.",
-      "FolderListMode": {
-        "Title": "Mostra cartelle in modalità lista"
-      },
-      "CircularArtist": {
-        "Description": "Disabilita il layout a gradiente standard e usa invece una semplice immagine circolare",
-        "Title": "Intestazione della pagina dell'artista semplificata"
-      },
-      "Backups": {
-        "AutomaticBackups": {
-          "Description": "Crea un backup automatico ogni 6 ore",
-          "Title": "Backup automatici"
-        },
-        "BackupNow": {
-          "Description": "Directory di backup: ~/swingmusic.backups",
-          "Title": "Esegui backup"
-        }
-      },
-      "Albums": {
-        "AlbumAsSingles": {
-          "Description": "Richiedi che un album abbia almeno due tracce",
-          "Title": "Marca album con una sola traccia come singles"
-        },
-        "CleanTitles": {
-          "Description": "Rimuovi testo in parentesi dai titoli ed elaboralo separatamente, se possibile",
-          "Title": "Pulisci titoli album"
-        },
-        "MergeAlbum": {
-          "Description": "Tutte le versioni diverse dello stesso album verranno unite in un singolo album",
-          "Title": "Unisci versioni albums"
-        }
-      },
-      "TrackInfoSettingsDesc": "Impostazioni riguado i dettagli delle tracce",
-      "AlbumInfoSettingsDesc": "Impostazioni riguardo i dettagli degli albums",
-      "ArtistSeparatorDesc": "Personalizza i separatori degli artisti",
-      "BackupMainDesc": "Esegui e ripristina il backup delle tue librerie",
-      "UseNoSidebarTitle": "Usa il layout senza barre laterali",
-      "NowPlaying": {
-        "DisableNPTitle": "Nascondi l'immagine dell'album dalla barra a sinistra",
-        "OnTabTitle": {
-          "Title": "Mostra la canzone in riproduzione attuale nel titolo della pagina",
-          "Description": "Sostituisci le informazioni della pagina corrente con la canzone in riproduzione"
-        },
-        "FavoriteInline": {
-          "Title": "Mostra l'icona dei preferiti inline",
-          "Description": "Mostra il pulsante dei preferiti accanto alla durata della traccia"
-        },
-        "HighlightFavorite": {
-          "Title": "Evidenzia tracce preferite",
-          "Description": "Mostra sempre il pulsante dei preferiti sulle tracce preferite"
-        }
-      },
-      "RootDirs": {
-        "ShowPlaylistInFolders": {
-          "Title": "Mostra le playlists nella visualizzazione a cartella",
-          "Description": "Naviga playlists e preferiti nella visualizzazione a cartella (pensata per l'app mobile)"
-        },
-        "EnablePeriodicScans": "Abilita scansioni periodiche",
-        "UseWatchdog": "Controlla le cartelle radici per trovare nuova musica",
-        "PeriodicScanInterval": "Intervallo della scansione periodica (in minuti)"
-      },
-      "Separators": {
-        "Title": "Inserisci i separatori separati da una virgola",
-        "Description": "Questi saranno usati per separare gli artisti e artisti degli album"
-      },
-      "Sidebar": {
-        "Title": "Mostra/nascondi barra destra",
-        "Description": "CTRL + B"
-      },
-      "Tracks": {
-        "ProcessFeatArtists": {
-          "Title": "Artisti in evidenza",
-          "Description": "Rimuovi gli artisti in evidenza dai titoli e uniscili con gli altri artisti"
-        },
-        "RemoveProd": {
-          "Title": "Nascondi 'prod.'",
-          "Description": "Rimuovi 'prod.' dal titolo delle tracce"
-        },
-        "HideRemaster": {
-          "Title": "Nascondi informazioni remaster",
-          "Description": "Rimuovi riferimenti riguardo eventuali remaster dai titoli delle canzoni "
-        }
-      },
-      "ArtistsDesc": "Personalizza le impostazioni degli artisti",
-      "Artists": {
-        "SeparatorTitle": "Inserisci i separatori separati da virgole",
-        "SeparatorDesc": "Saranno usati per separare artisti e artisti degli album",
-        "ArticleAwareTitle": "Ordinamento intelligente articoli",
-        "ArticleAwareDesc": "Ignora articoli (p.e. The, A, An) nell'ordinamento del nome degli artisti"
-      }
-    },
-    "Plugins": {
-      "LastFM": {
-        "Authorize": {
-          "Title": "Collega il tuo account",
-          "Description": "Connetti il tuo account Last.fm a Swing Music "
-        },
-        "Description": "Condividi la tua musica su Last.fm",
-        "Title": "Last.fm",
-        "ApiKey": {
-          "Title": "Usa key API personalizzata",
-          "Description": "invece di quella usata di default da Swing Music per autenticarsi a Last.fm"
-        },
-        "ApiSecret": {
-          "Title": "Usa segreto API personalizzato",
-          "Description": "invece di quella usata di default da Swing Music per firmare i tuoi invii scrobble"
-        }
-      },
-      "LyricsDescription": "Cerca e visualizza testi delle canzoni trovate su internet.",
-      "Lyrics": {
-        "ToggleLyrics": {
-          "Title": "Abilita plugin"
-        },
-        "AutoDownload": {
-          "Title": "Scarica automaticamente testi",
-          "Description": "Scarica automaticamente i testi mancanti quando apri la  pagina dei testi delle canzoni"
-        },
-        "OverrideLocal": {
-          "Title": "Ignora testi locali non sincronizzati",
-          "Description": "Scarica comunque i testi anche sono già presenti testi locali non sincronizzati alla musica"
-        },
-        "TrustCloud": {
-          "Title": "Mostra solo testi verificati",
-          "Desc": "Non mostrare testi non verificati (licenza premium richiesta)"
-        }
-      }
-    },
-    "License": {
-      "GithubSponsorTitle": "Benefit GitHub Sponsor",
-      "NoGithubLogin": "Il premium di Swing Music è disponibile per tutti i donatori su Github Sponsor. Accedici per averne l'accesso.",
-      "ThanksCustName": "Ciao @{cust}! Hai accesso a Swing Music Premium.",
-      "ThanksWithHearts": "Grazie per il tuo supporto. ❤️❤️"
-    }
-  },
-  "Favorites": {
-    "Album": "Album"
-  },
-  "Mixes": {
-    "track": "traccia | tracce",
-    "SavedMix": "Mix salvato",
-    "SaveMix": "Salva mix",
-    "Radio": "Radio"
-  },
-  "AuthLogin": {
-    "BackToSelection": "Torna alla selezione",
-    "Back": "Indietro",
-    "WelcomeBack": "Bentornato",
-    "EnterUsername": "Inserisci nome utente",
-    "EnterPassword": "Inserisci password",
-    "ContinueAsGuest": "O continua come ospite"
-  },
-  "ConfirmModal": {
-    "Cancel": "Annulla",
-    "Delete": "Elimina"
-  },
-  "CrudPage": {
-    "CollectionName": "Nome collezione",
-    "Description": "Descrizione",
-    "Update": "Aggiorna",
-    "Create": "Crea",
-    "DeleteDescription": "Sei sicuro di voler cancellare questa collezione?",
-    "DeleteButton": "Si, eliminala",
-    "DeleteNotification": "Collezione eliminata",
-    "CreateNotification": "Nuova collezione creata",
-    "UpdateNotification": "Collezione aggiornata",
-    "DeleteTitle": "Elimina",
-    "UpdateTitle": "Aggiorna",
-    "NewTitle": "Nuova",
-    "CollectionTitle": " Collezione"
-  },
-  "NewPlaylist": {
-    "PlaylistName": "Nome playlist",
-    "NamePlaceholder": "Inserisci un nome...",
-    "CreateButton": "Crea",
-    "Title": "Nuova playlist",
-    "NameNotEmpty": "Il nome della playlist non può essere vuoto"
-  },
-  "RootDirsPrompt": {
-    "WhereToLook": "Dove vuoi cercare la tua musica?",
-    "HomeDir": "Cartella home",
-    "HomeDirInfo": "Scansiona tutte le cartelle nella tua home.",
-    "SpecificDir": "Cartella specifica",
-    "SpecificDirInfo": "Seleziona le cartelle contententi la musica da scansionare."
-  },
-  "SetRootDirs": {
-    "NoSubFolders": "Nessuna cartella qua. Clicca \"aggiungi questa cartella\" per aggiungere la posizione attuale.",
-    "SelectThisFolder": "Aggiungi questa cartella",
-    "AddAllChecked": "Aggiungi tutte le cartelle spuntate"
-  },
-  "Accounts": {
-    "AllUsers": "Tutti gli utenti",
-    "NewUser": "Nuovo utente",
-    "EnableGuestAccess": "Abilita accesso ospite",
-    "EnableGuestAccessDesc": "Permetti utenti di accedere a questo sito senza un account",
-    "ShowUsersOnLogin": "Mostra utenti durante l'accesso",
-    "ShowUsersOnLoginDesc": "Mostra un elenco di utenti disponibili durante l'accesso",
-    "Admin": "Admin",
-    "AdminDesc": "Può far tutto",
-    "NoSelfDelete": "Non puoi cancellare te stesso!"
-  },
-  "Pairing": {
-    "ScanQRCode": "Scansiona il QRCode con l'app Swing Music per accedere automaticamente a questo server.",
-    "ErrorPairingCode": "Errore nel recupero del codice di pairing. Codice di errore: {res}"
-  },
-  "Profile": {
-    "PasswordMismatch": "Le password sono diverse",
-    "HiUser": "Ciao {user}",
-    "Username": "Nome utente",
-    "PasswordAction": "{action} password",
-    "ConfirmPassword": "Conferma password",
-    "AddUser": "Aggiungi utente",
-    "SelectLanguage": "Inserisci la lingua desiderata",
-    "SetLanguage": "Imposta lingua",
-    "LangNotCurrentlySupported": "Lingua non supportata attualmente"
-  },
-  "UpdatePlaylist": {
-    "Name": "Nome playlist",
-    "CoverAction": "Clicca per {action} l'immagine di copertina",
-    "SquareCover": "Rendi la copertina squadrata",
-    "ImagePosition": "Modifica posizione immagine • {pos} %"
-  },
-  "NavTitles": {
-    "ArtistTracks": "Tracce Artisti",
-    "NowPlaying": "In riproduzione",
-    "Settings": "Impostazioni"
-  },
-  "ProfileDropdown": {
-    "QuickScan": "Scan. veloce",
-    "HiUser": "Ciao {user}"
-  },
-  "SearchInput": {
-    "GoToSearch": "vai alla ricerca",
-    "BackToQueue": "torna alla coda"
-  },
-  "UpNext": {
-    "PlayNextSong": "riproduci prossima traccia",
-    "NextUp": "La prossima"
-  },
-  "Content": {
-    "SettingsDesc": "Personalizza le impostazioni e le tue preferenze"
-  },
-  "Nav": {
-    "ResetClient": "Resetta client"
-  },
-  "ArtistCard": {
-    "TrackCount": "{count} Traccia | {count} Tracce"
-  },
-  "DropDown": {
-    "SortByUppercase": "ORDINA PER {title} {order}"
-  },
-  "FavoritesCard": {
-    "FavoriteTracks": "Tracce preferite",
-    "PlaylistUpper": "PLAYLIST"
-  },
-  "MasterFlag": {
-    "MasterAudioBitrate": "Bitrate audio sorgente -"
-  },
-  "TrackItem": {
-    "AddToFavorites": "Aggiungi ai preferiti",
-    "RemoveFromFavorites": "Rimuovi dai preferiti",
-    "RemoveFromQueue": "Rimuovi dalla coda"
   },
   "ChartItem": {
     "ArtistPlays": "{count} ascolti totali"
@@ -593,11 +80,189 @@
     "NoDataFound": "Nessun dato trovato per il periodo specificato: {per}"
   },
   "Charts": {
-    "ChartsTitle": "Classifiche",
-    "ChartsDescription": "Gli artisti, album e canzoni più ascoltate"
+    "ChartsDescription": "Gli artisti, album e canzoni più ascoltate",
+    "ChartsTitle": "Classifiche"
   },
-  "Modal": {
-    "DeletePlaylist": "Sei sicuro di voler cancellare questa playlist in modo definitivo?"
+  "Common": {
+    "Activate": "Attiva",
+    "Album": "Album | Albums",
+    "AlbumArtist": "Artista Album",
+    "All": "Tutte",
+    "AppTitle": "Swing Music",
+    "Appearance": "Aspetto",
+    "Appearances": "Comparse",
+    "Artist": "Artista | Artisti",
+    "Ascending": "Crescente",
+    "Autodetect": "autorileva",
+    "Backup": "Backup",
+    "Bitrate": "Bitrate",
+    "BuiltBy": "creato da @cwilvx ↗",
+    "Change": "Cambia",
+    "Compilations": "Raccolta | Raccolte",
+    "Configure": "Configura",
+    "ConfirmPass": "Conferma password",
+    "Connect": "Collega",
+    "Continue": "Continua",
+    "Create": "Crea",
+    "CreateAccount": "Crea account",
+    "DateAdded": "Data di aggiunta",
+    "Default": "Default",
+    "Delete": "Elimina",
+    "Descending": "Decrescente",
+    "Details": "Dettagli",
+    "Disc": "Disco",
+    "Discography": "Discografia {artist}",
+    "Disconnect": "Scollega",
+    "Duration": "Durata",
+    "FileName": "Nome File",
+    "Finish": "Termina",
+    "Folders": "Cartelle",
+    "HiSpace": "Ciao ",
+    "Image": "Immagine",
+    "LastPlayed": "Ultima riproduzione",
+    "Library": "Libreria",
+    "LogIn": "Accedi",
+    "LogOut": "Scollegati",
+    "Lyrics": "Testi canzoni",
+    "Modify": "Modifica",
+    "New": "Nuovo",
+    "NoResults": "Nessun risultato",
+    "NoSearchResults": "Non riesco a trovare nessun risultato per la tua ricerca.",
+    "NoTrackResults": "Nessun risultato trovato nelle tracce",
+    "NoTracks": "Nessuna traccia",
+    "NotificationError": "È avvenuto un errore!",
+    "NotificationErrorWithArg": "Fallito: {error}",
+    "NotificationFunnyError": "È successo qualcosa di divertentemente inaspettato!",
+    "NowPlaying": "In riproduzione",
+    "Other": "Altre",
+    "Password": "Password",
+    "Periods": {
+      "AllTime": "Sempre",
+      "Month": "Mese | Mesi",
+      "MonthShort": "me",
+      "OnceShort": "una volta",
+      "Week": "Settimana | Settimane",
+      "Year": "Anno | Anni",
+      "YearShort": "an"
+    },
+    "Pinned": "Fissato",
+    "Play": "Riproduci",
+    "PlayCount": "Numero di riproduzioni",
+    "PlayDuration": "Durata di riproduzione",
+    "Playlist": "Playlist",
+    "Playlists": "Playlists",
+    "Plugins": "Plugins",
+    "Recents": "Recenti",
+    "ReleaseDate": "Data di rilascio",
+    "Rescan": "Riscansiona",
+    "Saving": "Salvataggio",
+    "Search": "Trova",
+    "SearchResults": "Risultati della ricerca",
+    "SeeAll": "Vis. Tutti",
+    "Settings": "Impostazioni",
+    "SimilarArtists": "Artisti simili",
+    "Singles": "EP & Singles",
+    "SwingMusic": "Swing Music",
+    "Title": "Titolo",
+    "TopResult": "Risultati migliori",
+    "Track": "Traccia | Tracce",
+    "TrackCount": "{count} traccia | {count} tracce",
+    "Unknown": "Sconosciuto",
+    "Update": "Aggiorna",
+    "Username": "Nome utente",
+    "added": "aggiunto",
+    "album": "album | albums",
+    "artist": "artista | artisti",
+    "experimental": "sperimentale",
+    "mix": "mix | mixes",
+    "new": "nuovo",
+    "removed": "rimosso",
+    "selected": "selezionato",
+    "top": "migliori",
+    "track": "traccia | tracce",
+    "update": "aggiornare",
+    "upload": "caricare"
+  },
+  "ConfirmModal": {
+    "Cancel": "Annulla",
+    "Delete": "Elimina"
+  },
+  "Content": {
+    "SettingsDesc": "Personalizza le impostazioni e le tue preferenze"
+  },
+  "CrudPage": {
+    "CollectionName": "Nome collezione",
+    "CollectionTitle": " Collezione",
+    "Create": "Crea",
+    "CreateNotification": "Nuova collezione creata",
+    "DeleteButton": "Si, eliminala",
+    "DeleteDescription": "Sei sicuro di voler cancellare questa collezione?",
+    "DeleteNotification": "Collezione eliminata",
+    "DeleteTitle": "Elimina",
+    "Description": "Descrizione",
+    "NewTitle": "Nuova",
+    "Update": "Aggiorna",
+    "UpdateNotification": "Collezione aggiornata",
+    "UpdateTitle": "Aggiorna"
+  },
+  "DropDown": {
+    "SortByUppercase": "ORDINA PER {title} {order}"
+  },
+  "Favorites": {
+    "Album": "Album"
+  },
+  "FavoritesCard": {
+    "FavoriteTracks": "Tracce preferite",
+    "PlaylistUpper": "PLAYLIST"
+  },
+  "FolderView": {
+    "FileCount": "File | Files"
+  },
+  "HomeView": {
+    "Browse": {
+      "BrowseList": {
+        "Albums": "Album",
+        "Artists": "Artisti",
+        "FavAlbums": "Album pref.",
+        "FavArtists": "Artisti pref.",
+        "FavTracks": "Tracce pref.",
+        "Favorites": "Preferiti",
+        "Folders": "Cartelle",
+        "Playlists": "Playlist",
+        "Stats": "Statist."
+      },
+      "Title": "Sfoglia libreria"
+    },
+    "Greetings": {
+      "afternoon": "Buon pomeriggio, {name}",
+      "dawn": "Hey there uccello mattutino",
+      "evening": "Buona serata, {name}",
+      "midnight": "Hey animale notturno",
+      "morning": "Buongiorno, {name}"
+    },
+    "Title": "Home",
+    "title": "Home"
+  },
+  "Languages": {
+    "ChooseLang": "Scegli la tua lingua preferita",
+    "WarnAppReload": "(impostare la lingua forza un refresh dell'app)",
+    "en_US": "🇺🇸 Inglese (Stati Uniti)",
+    "it_IT": "🇮🇹 Italiano (Italia)",
+    "ko": "Coreano"
+  },
+  "LeftSidebar": {
+    "FileTypeBitrate": "tipo file • bitrate",
+    "NavItems": {
+      "Favorites": "Preferiti",
+      "Folder": "Cartelle",
+      "Home": "Home",
+      "Playlists": "Playlist",
+      "Search": "Cerca",
+      "Settings": "Impostazioni"
+    }
+  },
+  "MasterFlag": {
+    "MasterAudioBitrate": "Bitrate audio sorgente -"
   },
   "Menus": {
     "Artist": {
@@ -616,30 +281,113 @@
       "RemoveFromPlaylist": "Rimuovi dalla playlist"
     },
     "Queue": {
+      "AddQueueToPlaylist": "Aggiungi la coda alla playlist",
       "ArtistName": "Questo è {hash}",
-      "PlaylistName": "{name} 2.0",
-      "SearchName": "Risultati di ricerca per {query}",
-      "FavoritesName": "Preferiti",
       "ClearQueue": "Svuota coda",
-      "AddQueueToPlaylist": "Aggiungi la coda alla playlist"
+      "FavoritesName": "Preferiti",
+      "PlaylistName": "{name} 2.0",
+      "SearchName": "Risultati di ricerca per {query}"
     },
     "Track": {
-      "GoToFolder": "Vai alla cartella",
-      "GoToArtist": "Vai all'artista",
-      "OpenInFiles": "Apri in file",
+      "DeleteTrack": "Cancella traccia",
       "GoToAlbum": "Vai all'album",
-      "DeleteTrack": "Cancella traccia"
+      "GoToArtist": "Vai all'artista",
+      "GoToFolder": "Vai alla cartella",
+      "OpenInFiles": "Apri in file"
     },
     "Utils": {
-      "NewPlaylist": "Nuova playlist",
       "NewCollection": "Nuova collezione",
+      "NewPlaylist": "Nuova playlist",
       "SearchOn": "Cerca su"
     }
   },
-  "UsePlayFrom": {
-    "AlbumTracksNotFound": "Tracce album non trovate",
-    "ArtistTracksNotFound": "Tracce artista non trovate",
-    "FolderTracksNotFound": "Tracce della cartella non trovate"
+  "Mixes": {
+    "Radio": "Radio",
+    "SaveMix": "Salva mix",
+    "SavedMix": "Mix salvato",
+    "track": "traccia | tracce"
+  },
+  "Modal": {
+    "DeletePlaylist": "Sei sicuro di voler cancellare questa playlist in modo definitivo?",
+    "UpdatePlaylist": "Aggiorna playlist"
+  },
+  "Nav": {
+    "ResetClient": "Resetta client"
+  },
+  "NavTitles": {
+    "ArtistTracks": "Tracce Artisti",
+    "NowPlaying": "In riproduzione",
+    "Settings": "Impostazioni"
+  },
+  "NewPlaylist": {
+    "CreateButton": "Crea",
+    "NameNotEmpty": "Il nome della playlist non può essere vuoto",
+    "NamePlaceholder": "Inserisci un nome...",
+    "PlaylistName": "Nome playlist",
+    "Title": "Nuova playlist"
+  },
+  "NowPlaying": {
+    "GoToAlbum": "Vai ad album",
+    "GoToPlaySource": "Vai alla posizione della traccia",
+    "Queue": "Coda",
+    "UpNext": "Pros. traccia"
+  },
+  "Onboarding": {
+    "CreateAccountDesc": "Questo account sarà usato per amministrare il server.",
+    "CreateAccountTitle": "Crea account",
+    "ErrorPassDoNotMatch": "Le password non corrispondono",
+    "ErrorPassTooShort": "La password deve essere lunga almeno 8 caratteri",
+    "FilePicker": {
+      "Help": "Usa (⌘/Ctrl o Shift) + click per selezionare cartelle multiple",
+      "Selected": "{sel} selezionate",
+      "ThisFolderHelp": ". (questa cartella)"
+    },
+    "Finish": {
+      "ConfirmButton": "Clicca il pulsante sotto per proseguire nella tua libreria.",
+      "Processing": "Swing Music sta scansionando le tue cartelle selezionate. Attendi ...",
+      "TitleAlmostDone": "Ci sei quasi!",
+      "TitleDone": "Hai finito! 🎉"
+    },
+    "RootDirs": {
+      "AddFolders": "Aggiungi cartelle",
+      "ErrorSelectRootFolder": "Seleziona una cartella radice",
+      "FolderSelected": "{n} cartella selezionata | {n} cartelle selezionate",
+      "FolderSelectedDesc": "Seleziona cartella per effettuarne la scansione",
+      "HomeDir": "Cartella home",
+      "HomeDirDesc": "Scansiona tutte le cartelle in ",
+      "SpecificFolder": "Cartella specifica",
+      "Title": "Configura cartelle musicali",
+      "TitleDesc": "Dove vuoi che Swing Music cerchi le tue tracce musicali?"
+    },
+    "Welcome": {
+      "GetStarted": "Iniziamo",
+      "Tagline": "Clicca il pulsante sotto per creare il tuo primo account",
+      "Title": "Benvenuto a"
+    }
+  },
+  "Pairing": {
+    "ErrorPairingCode": "Errore nel recupero del codice di pairing. Codice di errore: {res}",
+    "ScanQRCode": "Scansiona il QRCode con l'app Swing Music per accedere automaticamente a questo server."
+  },
+  "PlaylistView": {
+    "AllTracks": "Tutte le tracce",
+    "Edit": "Modifica",
+    "LastUpdated": "Aggiornato in {date}"
+  },
+  "Profile": {
+    "AddUser": "Aggiungi utente",
+    "ConfirmPassword": "Conferma password",
+    "HiUser": "Ciao {user}",
+    "LangNotCurrentlySupported": "Lingua non supportata attualmente",
+    "PasswordAction": "{action} password",
+    "PasswordMismatch": "Le password sono diverse",
+    "SelectLanguage": "Inserisci la lingua desiderata",
+    "SetLanguage": "Imposta lingua",
+    "Username": "Nome utente"
+  },
+  "ProfileDropdown": {
+    "HiUser": "Ciao {user}",
+    "QuickScan": "Scan. veloce"
   },
   "Requests": {
     "Album": {
@@ -653,91 +401,436 @@
       "CollectionAlreadyPresent": "{payload} è già presente nella collezione"
     },
     "Playlists": {
-      "CreatedSuccesfully": "Playlist creata correttamente!",
+      "AddedToPlaylist": "Aggiunto a {name}",
       "AlreadyExists": "Questa playlist esiste già",
+      "BannerImageRemoved": "Immagine del banner rimossa",
+      "BannerImageRemovedError": "Non riesco a rimuovere l'immagine del banner",
+      "CreatedSuccesfully": "Playlist creata correttamente!",
+      "Deleted": "Playlist cancellata",
+      "ErrUnsupportedImage": "Fallito: immagine non supportata",
       "NotFound": "Playlist non trovata",
       "TrackAlreadyPresent": "La traccia è gia presente nella playlist",
-      "AddedToPlaylist": "Aggiunto a {name}",
-      "ErrUnsupportedImage": "Fallito: immagine non supportata",
-      "Updated": "Playlist aggiornata!",
-      "Deleted": "Playlist cancellata",
       "TrackRemoved": "Traccie rimosse",
       "TrackRemovedError": "Non riesco a rimuovere le tracce",
-      "BannerImageRemoved": "Immagine del banner rimossa",
-      "BannerImageRemovedError": "Non riesco a rimuovere l'immagine del banner"
+      "Updated": "Playlist aggiornata!"
     },
     "RootDirs": {
       "ErrorAdding": "Errore aggiungendo le cartelle radici",
-      "Success": "Cartelle radici configurate",
       "ErrorRemoving": "Errore rimuovendo le cartelle radici",
       "ScanError": "Errore durante l'avviamento della scansione",
-      "ScanStarted": "Nuova scansione avviata"
+      "ScanStarted": "Nuova scansione avviata",
+      "Success": "Cartelle radici configurate"
+    }
+  },
+  "RightSidebar": {
+    "BackToQueue": "ritorna alla coda",
+    "NoQueueDescription": "Quando inizierai a riprodurre canzoni, queste appariranno qua.",
+    "NoQueueTitle": "Nessuna canzone in coda",
+    "NowPlaying": "Riproducendo",
+    "Shuffle": "Shuffle",
+    "SimilarTracks": "Tracce simili"
+  },
+  "RootDirsPrompt": {
+    "HomeDir": "Cartella home",
+    "HomeDirInfo": "Scansiona tutte le cartelle nella tua home.",
+    "SpecificDir": "Cartella specifica",
+    "SpecificDirInfo": "Seleziona le cartelle contententi la musica da scansionare.",
+    "WhereToLook": "Dove vuoi cercare la tua musica?"
+  },
+  "Search": {
+    "BackToQueue": "Ritorna alla coda",
+    "GoToSearch": "Vai alla ricerca",
+    "NoResultsDescription": "Non riesco a trovare nessuna traccia con i parametri specificati.",
+    "NoResultsTitle": "Nessun risultato",
+    "NoTracksTitle": "nessuna traccia",
+    "SearchPlaceholder": "Scrivi per cercare",
+    "TopResult": "Miglior risultato",
+    "top": "Top"
+  },
+  "SearchInput": {
+    "BackToQueue": "torna alla coda",
+    "GoToSearch": "vai alla ricerca"
+  },
+  "SetRootDirs": {
+    "AddAllChecked": "Aggiungi tutte le cartelle spuntate",
+    "NoSubFolders": "Nessuna cartella qua. Clicca \"aggiungi questa cartella\" per aggiungere la posizione attuale.",
+    "SelectThisFolder": "Aggiungi questa cartella"
+  },
+  "Settings": {
+    "About": {
+      "Developer": "Swing Music è un atto d'amore sviluppato su GitHub all'indirizzo {link}. Se questo software ti piace, una stellina sul progetto sarebbe molto apprezzata. Spero tu l'apprezzi tanto quanto mi son divertito a scriverla da zero. 😁🤗",
+      "GetInTouchDescription": "Se apprezzi il mio lavoro, e ti piacerebbe salutarmi, mi farebbe piacere un contatto (in inglese).",
+      "GetInTouchTitle": "Rimani in contatto",
+      "LicenseDesc": "Gestisci la tua chiave di licenza, la tua sottoscrizione e i tuoi dispositivi autorizzati.",
+      "LicenseDisplayName": "Licenza e sottoscrizione",
+      "LicenseTitle": "Licenza",
+      "LinksContribute": "Contribuisci",
+      "LinksDocs": "Docs",
+      "LinksGitHub": "Stellina su GitHub",
+      "LinksIssue": "Segnala un problema (in inglese)",
+      "LinksTitle": "Links",
+      "SendEmail": "Manda Email",
+      "Title": "Riguardo a"
+    },
+    "Accounts": {
+      "Desc": "Accedi alla app mobile usando un QR code",
+      "Title": "Accounts"
+    },
+    "AppWidth": {
+      "Extend": "Larghezza piena",
+      "ExtendDesc": "Permetti all'applicazione di estendersi per tutta la larghezza dello schermo"
+    },
+    "Audio": {
+      "CrossfadeDuration": {
+        "Description": "Durata in secondi del crossfade",
+        "Title": "Durata crossfade"
+      },
+      "LegacyStreaming": {
+        "Description": "Abilita se riscontro problemi durante lo streaming",
+        "Title": "Usa streaming legacy"
+      },
+      "Playback": "Riproduzione",
+      "PlaybackDesc": "Impostazioni riguado la riproduzione audio",
+      "StreamingQuality": {
+        "1024Flac": "Alta (1024kbps) (FLAC)",
+        "128": "128kbps",
+        "320": "320kbps",
+        "640Flac": "Media (640kbps) (FLAC)",
+        "96": "96kbps",
+        "Description": "Scegli la qualità audio durante lo streaming",
+        "Original": "Originale",
+        "Title": "Qualità streaming"
+      },
+      "Title": "Audio",
+      "UseCrossfade": {
+        "Description": "Riduci il volume dell'audio della traccia corrente in uscita mentre aumenti l'audio della canzone in ingresso",
+        "Title": "Abilita crossfade"
+      },
+      "UseSilence": {
+        "Description": "Salta automaticante il silenzio audio tra le tracce",
+        "Title": "Rimozione del silenzio tra le tracce"
+      }
+    },
+    "Backup": {
+      "BackupCount": "Hai {count} backup(s) nella tua cartella dei backup.",
+      "BackupSuccess": "Backup creato",
+      "CollectionCount": "{count} collezione | {count} collezioni",
+      "FavoriteCount": "{count} preferito | {count} preferiti",
+      "PlaylistCount": "{count} playlist | {count} playlists",
+      "RestoreAllButton": "Ripristina tutto",
+      "RestoreBackup": "Ripristina Backup",
+      "RestoreButton": "Ripristina",
+      "ScrobbleCount": "{count} scrobble | {count} scrobbles",
+      "ThankYouMessage": "Ti ringrazio per aver sponsorizzato Swing Music!",
+      "Title": "Backup"
+    },
+    "Cancel": "Annulla",
+    "ContextChildren": {
+      "ShowMode": "Mostra i menu del tasto destro su"
+    },
+    "Experimental": "sperimentale",
+    "General": {
+      "AlbumInfoSettingsDesc": "Impostazioni riguardo i dettagli degli albums",
+      "Albums": {
+        "AlbumAsSingles": {
+          "Description": "Richiedi che un album abbia almeno due tracce",
+          "Title": "Marca album con una sola traccia come singles"
+        },
+        "CleanTitles": {
+          "Description": "Rimuovi testo in parentesi dai titoli ed elaboralo separatamente, se possibile",
+          "Title": "Pulisci titoli album"
+        },
+        "MergeAlbum": {
+          "Description": "Tutte le versioni diverse dello stesso album verranno unite in un singolo album",
+          "Title": "Unisci versioni albums"
+        }
+      },
+      "ArtistSeparatorDesc": "Personalizza i separatori degli artisti",
+      "Artists": {
+        "ArticleAwareDesc": "Ignora articoli (p.e. The, A, An) nell'ordinamento del nome degli artisti",
+        "ArticleAwareTitle": "Ordinamento intelligente articoli",
+        "SeparatorDesc": "Saranno usati per separare artisti e artisti degli album",
+        "SeparatorTitle": "Inserisci i separatori separati da virgole"
+      },
+      "ArtistsDesc": "Personalizza le impostazioni degli artisti",
+      "BackupMainDesc": "Esegui e ripristina il backup delle tue librerie",
+      "Backups": {
+        "AutomaticBackups": {
+          "Description": "Crea un backup automatico ogni 6 ore",
+          "Title": "Backup automatici"
+        },
+        "BackupNow": {
+          "Description": "Directory di backup: ~/swingmusic.backups",
+          "Title": "Esegui backup"
+        }
+      },
+      "CircularArtist": {
+        "Description": "Disabilita il layout a gradiente standard e usa invece una semplice immagine circolare",
+        "Title": "Intestazione della pagina dell'artista semplificata"
+      },
+      "FolderListMode": {
+        "Title": "Mostra cartelle in modalità lista"
+      },
+      "MainSettingsDescription": "Impostazioni riguardo varie parti dell'interfaccia utente.",
+      "NowPlaying": {
+        "DisableNPTitle": "Nascondi l'immagine dell'album dalla barra a sinistra",
+        "FavoriteInline": {
+          "Description": "Mostra il pulsante dei preferiti accanto alla durata della traccia",
+          "Title": "Mostra l'icona dei preferiti inline"
+        },
+        "HighlightFavorite": {
+          "Description": "Mostra sempre il pulsante dei preferiti sulle tracce preferite",
+          "Title": "Evidenzia tracce preferite"
+        },
+        "OnTabTitle": {
+          "Description": "Sostituisci le informazioni della pagina corrente con la canzone in riproduzione",
+          "Title": "Mostra la canzone in riproduzione attuale nel titolo della pagina"
+        }
+      },
+      "RootDirs": {
+        "EnablePeriodicScans": "Abilita scansioni periodiche",
+        "PeriodicScanInterval": "Intervallo della scansione periodica (in minuti)",
+        "ShowPlaylistInFolders": {
+          "Description": "Naviga playlists e preferiti nella visualizzazione a cartella (pensata per l'app mobile)",
+          "Title": "Mostra le playlists nella visualizzazione a cartella"
+        },
+        "UseWatchdog": "Controlla le cartelle radici per trovare nuova musica"
+      },
+      "Separators": {
+        "Description": "Questi saranno usati per separare gli artisti e artisti degli album",
+        "Title": "Inserisci i separatori separati da una virgola"
+      },
+      "Sidebar": {
+        "Description": "CTRL + B",
+        "Title": "Mostra/nascondi barra destra"
+      },
+      "TrackInfoSettingsDesc": "Impostazioni riguado i dettagli delle tracce",
+      "Tracks": {
+        "HideRemaster": {
+          "Description": "Rimuovi riferimenti riguardo eventuali remaster dai titoli delle canzoni ",
+          "Title": "Nascondi informazioni remaster"
+        },
+        "ProcessFeatArtists": {
+          "Description": "Rimuovi gli artisti in evidenza dai titoli e uniscili con gli altri artisti",
+          "Title": "Artisti in evidenza"
+        },
+        "RemoveProd": {
+          "Description": "Rimuovi 'prod.' dal titolo delle tracce",
+          "Title": "Nascondi 'prod.'"
+        }
+      },
+      "UseNoSidebarTitle": "Usa il layout senza barre laterali"
+    },
+    "License": {
+      "ActivateLicense": "{action} licenza",
+      "Amount": "Quantità",
+      "AuthDevices": "Dispositivi autorizzati",
+      "AutoRenewOff": "Addebito auto off",
+      "CanceledAt": "Terminata ",
+      "CurrentlyUsed": "Istanze che utilizzano la tua chiave di licenza ({cur}/{tot} attivi)",
+      "Expires": "Scade",
+      "GithubSponsorTitle": "Benefit GitHub Sponsor",
+      "GithubSponsors": "Sponsors GitHub",
+      "LastActivity": "Ultima attività: {time}",
+      "LicenseKey": {
+        "AlreadyHave": "Hai già una chiave di licenza?",
+        "Info": "Informazioni chiave licenza",
+        "Paste": "Incolla la chiave di licenza qui:",
+        "Update": "Aggiorna la chiave di licenza:"
+      },
+      "LogInToGithub": "Accedi a GitHub",
+      "Manage": "Gestisci {lic} ↗",
+      "NewOrUpServerName": "{action} server:",
+      "NoActiveSub": "Nessun abbonamento attivo",
+      "NoActiveSubDesc": "Ottieni un abbonamento per sbloccare tutte le funzionalità premium.\n Usa il link qui sotto per sfogliare piani e vantaggi disponibili.",
+      "NoActivity": "Nessuna attività",
+      "NoGithubLogin": "Il premium di Swing Music è disponibile per tutti i donatori su Github Sponsor. Accedici per averne l'accesso.",
+      "RefreshStatus": "Aggiorna stato",
+      "Renewal": "Rinnova",
+      "Revoke": "Revoca",
+      "SaveChanges": "Salva modifiche",
+      "SponsorOnGithub": "Sponsorizza su GitHub ❤️",
+      "Sponsorship": "Sponsor",
+      "Status": "Stato",
+      "Subscription": "Abbonamento",
+      "ThanksCustName": "Ciao @{cust}! Hai accesso a Swing Music Premium.",
+      "ThanksWithHearts": "Grazie per il tuo supporto. ❤️❤️",
+      "Tier": "Livello",
+      "ViewPricing": "Mostra prezzi"
+    },
+    "List": {
+      "RootNotConfigured": "Cartella radice non impostata. Usa il pulsante \"Configure\" per impostarla"
+    },
+    "MasterFlag": {
+      "Show": "Flag master"
+    },
+    "NowPlaying": {
+      "AlbumArt": "Mostra l'immagine di copertina nella barra di sinistra",
+      "Description": "Impostazioni riguardo la canzone in riproduzione",
+      "Title": "In riproduzione"
+    },
+    "NumberInput": {
+      "InvalidNumber": "Numero non valido",
+      "UpdateFailed": "Aggiornamento fallito",
+      "Updated": "Aggiornato"
+    },
+    "Pairing": {
+      "Title": "Collega dispositivo"
+    },
+    "Plugins": {
+      "LastFM": {
+        "ApiKey": {
+          "Description": "invece di quella usata di default da Swing Music per autenticarsi a Last.fm",
+          "Title": "Usa key API personalizzata"
+        },
+        "ApiSecret": {
+          "Description": "invece di quella usata di default da Swing Music per firmare i tuoi invii scrobble",
+          "Title": "Usa segreto API personalizzato"
+        },
+        "Authorize": {
+          "Description": "Connetti il tuo account Last.fm a Swing Music ",
+          "Title": "Collega il tuo account"
+        },
+        "Description": "Condividi la tua musica su Last.fm",
+        "Title": "Last.fm"
+      },
+      "Lyrics": {
+        "AutoDownload": {
+          "Description": "Scarica automaticamente i testi mancanti quando apri la  pagina dei testi delle canzoni",
+          "Title": "Scarica automaticamente testi"
+        },
+        "OverrideLocal": {
+          "Description": "Scarica comunque i testi anche sono già presenti testi locali non sincronizzati alla musica",
+          "Title": "Ignora testi locali non sincronizzati"
+        },
+        "ToggleLyrics": {
+          "Title": "Abilita plugin"
+        },
+        "TrustCloud": {
+          "Desc": "Non mostrare testi non verificati (licenza premium richiesta)",
+          "Title": "Mostra solo testi verificati"
+        }
+      },
+      "LyricsDescription": "Cerca e visualizza testi delle canzoni trovate su internet."
+    },
+    "Profile": {
+      "Desc": "Gestisci il tuo profilo e le informazioni di login",
+      "Title": "Profilo"
+    },
+    "RootDirs": {
+      "Change": "Cambia le tue cartelle radici",
+      "Current": "Cartelle radici attuali",
+      "Description": "Impostazioni riguardo le tue cartelle radici",
+      "Title": "Cartelle radici"
+    },
+    "Save": "Salva",
+    "ShowFolders": {
+      "As": "Mostra cartelle come"
+    },
+    "Sidebar": {
+      "UseSidebar": "Mostra la barra di destra"
     }
   },
   "Stores": {
-    "Tracklist": {
-      "AddTrackToQueue": "Aggiunta {n} traccia alla coda | Aggiunte {n} tracce alla coda"
-    },
     "Auth": {
-      "UserAddedSucc": "Utente aggiunto con successo!",
       "GuestUserAdded": "Utente ospite aggiunto con successo!",
       "ProfileUpdated": "Profilo aggiornato con successo!",
+      "UserAddedSucc": "Utente aggiunto con successo!",
       "UserDeleted": "Utente {user} cancellato con successo!"
     },
     "Player": {
       "AutoplayBlockedError": "Tocca ovunque la pagina per riprovare (autoplay bloccato)",
-      "PlayerErrorWithArg": "Errore player: {msg}",
-      "LoadErrorWithArg": "Non riesco a caricare: {queue}"
+      "LoadErrorWithArg": "Non riesco a caricare: {queue}",
+      "PlayerErrorWithArg": "Errore player: {msg}"
     },
     "Queue": {
       "AddedTrack": "Aggiunta una traccia alla coda"
+    },
+    "Tracklist": {
+      "AddTrackToQueue": "Aggiunta {n} traccia alla coda | Aggiunte {n} tracce alla coda"
     }
   },
+  "TrackItem": {
+    "AddToFavorites": "Aggiungi ai preferiti",
+    "RemoveFromFavorites": "Rimuovi dai preferiti",
+    "RemoveFromQueue": "Rimuovi dalla coda"
+  },
+  "UpNext": {
+    "NextUp": "La prossima",
+    "PlayNextSong": "riproduci prossima traccia"
+  },
+  "UpdatePlaylist": {
+    "CoverAction": "Clicca per {action} l'immagine di copertina",
+    "ImagePosition": "Modifica posizione immagine • {pos} %",
+    "Name": "Nome playlist",
+    "SquareCover": "Rendi la copertina squadrata"
+  },
+  "UsePlayFrom": {
+    "AlbumTracksNotFound": "Tracce album non trovate",
+    "ArtistTracksNotFound": "Tracce artista non trovate",
+    "FolderTracksNotFound": "Tracce della cartella non trovate"
+  },
   "Utils": {
-    "PlayingFrom": {
-      "SearchFrom": "Cerca per: \"{source}\"",
-      "FavoriteTracks": "Tracce preferite",
-      "NoSource": "👻 Nessuna sorgente"
-    },
     "FormatTime": {
-      "Second": "{sec} secondo | {sec} secondi",
       "Hour": "{hrs} ora | {hrs} ore",
-      "Minute": "{mnt} minuto | {mnt} minuti"
+      "Minute": "{mnt} minuto | {mnt} minuti",
+      "Second": "{sec} secondo | {sec} secondi"
+    },
+    "PlayingFrom": {
+      "FavoriteTracks": "Tracce preferite",
+      "NoSource": "👻 Nessuna sorgente",
+      "SearchFrom": "Cerca per: \"{source}\""
     }
   },
   "Views": {
+    "AlbumViews": {
+      "MoreFrom": "Altro da {art}",
+      "OtherVersions": "Altre edizioni",
+      "RelatedAlbums": "Albums correlati"
+    },
     "ArtistDiscography": {
-      "NoContributions": "Nessun contributo",
-      "NoContributionsDesc": "Nessun {type} trovato per {artist}",
+      "AllAlbums": "Tutti gli albums",
       "Contributions": "Contribuzioni",
-      "AllAlbums": "Tutti gli albums"
+      "NoContributions": "Nessun contributo",
+      "NoContributionsDesc": "Nessun {type} trovato per {artist}"
     },
     "FavCardScroller": {
-      "Title": "{item} preferiti",
-      "Desc": "Hai {nelem} {type} preferito | Hai {nelem} {type} preferiti"
-    },
-    "Favorites": {
-      "Title": "Preferiti",
-      "CountStats": "{tra} Tracce • {alb} Albums • {art} Artisti",
-      "NoFavoritesFound": "Nessun preferito trovato",
-      "Description": "Puoi aggiungere tracce, albums e artisti ai tuoi preferiti cliccando sull'icona a forma di cuoricino"
+      "Desc": "Hai {nelem} {type} preferito | Hai {nelem} {type} preferiti",
+      "Title": "{item} preferiti"
     },
     "FavoriteTracks": {
       "Description": "Hai {n_tr} canzone preferita | Hai {n_tr} canzoni preferite",
       "Title": "Tracce preferite"
     },
+    "Favorites": {
+      "CountStats": "{tra} Tracce • {alb} Albums • {art} Artisti",
+      "Description": "Puoi aggiungere tracce, albums e artisti ai tuoi preferiti cliccando sull'icona a forma di cuoricino",
+      "NoFavoritesFound": "Nessun preferito trovato",
+      "Title": "Preferiti"
+    },
     "FolderView": {
       "FolderIsEmpty": "Cartella vuota",
-      "NoResultFound": "Nessun risultato trovato",
       "NoIndexedTracks": "La cartella che hai aperto non ha nessuna traccia indicizzata. Aggiungi canzoni a questa cartella e riprova",
+      "NoResultFound": "Nessun risultato trovato",
       "NoTracksForQuery": "Nessuna cartella o traccia in questa specifica cartella corrisponde alla query: {query}"
     },
-    "MixLisView": {},
+    "Header": {
+      "TotalAlbumAndArtists": "Hai {tot} {what} nella tua libreria"
+    },
+    "LyricView": {
+      "NoLyricsFoundFirst": "Non hai il testo",
+      "NoLyricsFoundSecond": "di questa canzone",
+      "SearchOnline": "Cerca online",
+      "Searching": "Cercando...",
+      "Unsynced": "non sincronizzata"
+    },
+    "MixLisView": {
+    },
     "MixListView": {
-      "mixes": "mixes",
       "MixesBasedOnListening": "{n} mixes • In base agli artisti che hai ascoltato ultimamente",
+      "OtherMixes": "Altri mixes di {type}",
       "SavedMixes": "Mixes salvati",
-      "OtherMixes": "Altri mixes di {type}"
+      "mixes": "mixes"
     },
     "MixView": {
       "MixNotFound": "404: Mix non trovato"
@@ -746,83 +839,28 @@
       "Error": "404! Pagina non trovata!"
     },
     "PlaylistList": {
-      "Title": "Playlists",
+      "AllPlaylists": "Tutte le playlists",
       "Description": "Hai {n} playlists nella tua libreria",
-      "SearchPlaylist": "Cerca playlists",
+      "NoItemDescription": "Puoi creare una playlist facendo click con il tasto destro su una traccia e selezionando l'opzione \"aggiungi a playlist\"",
       "NoPlaylistsFound": "Nessuna playlist trovata",
       "OtherPlaylists": "Altre playlists",
-      "AllPlaylists": "Tutte le playlists",
-      "NoItemDescription": "Puoi creare una playlist facendo click con il tasto destro su una traccia e selezionando l'opzione \"aggiungi a playlist\""
-    },
-    "Header": {
-      "TotalAlbumAndArtists": "Hai {tot} {what} nella tua libreria"
-    },
-    "AlbumViews": {
-      "MoreFrom": "Altro da {art}",
-      "OtherVersions": "Altre edizioni",
-      "RelatedAlbums": "Albums correlati"
-    },
-    "LyricView": {
-      "Unsynced": "non sincronizzata",
-      "NoLyricsFoundFirst": "Non hai il testo",
-      "NoLyricsFoundSecond": "di questa canzone",
-      "Searching": "Cercando...",
-      "SearchOnline": "Cerca online"
+      "SearchPlaylist": "Cerca playlists",
+      "Title": "Playlists"
     },
     "PlaylistView": {
-      "NoTracks": "Nessuna traccia in questa playlist",
-      "AddMoreDesc": "Aggiungine altre facendo click con il tasto destro del mouse e seleziona \"aggiungi a playlist\""
+      "AddMoreDesc": "Aggiungine altre facendo click con il tasto destro del mouse e seleziona \"aggiungi a playlist\"",
+      "NoTracks": "Nessuna traccia in questa playlist"
     },
     "SearchView": {
       "NoResults": "Nessun risultato per {page}",
-      "TypeToSearch": "Inizia a scrivere per cercare per {what}",
+      "NoResultsDesc": "I risultati compaiono qua",
       "ResultsForQuery": "I risultati per {query} verranno mostrati qua",
-      "TypeToSearchTracks": "Inizia a scrivere per cercare nelle tracce",
-      "NoResultsDesc": "I risultati compaiono qua"
+      "TypeToSearch": "Inizia a scrivere per cercare per {what}",
+      "TypeToSearchTracks": "Inizia a scrivere per cercare nelle tracce"
     },
     "Stats": {
-      "Title": "Statistiche",
-      "Description": "Le tue statistiche d'ascolto nell'ultima settimana"
-    }
-  },
-  "Languages": {
-    "en_US": "🇺🇸 Inglese (Stati Uniti)",
-    "ko": "Coreano",
-    "it_IT": "🇮🇹 Italiano (Italia)",
-    "ChooseLang": "Scegli la tua lingua preferita",
-    "WarnAppReload": "(impostare la lingua forza un refresh dell'app)"
-  },
-  "Onboarding": {
-    "CreateAccountTitle": "Crea account",
-    "CreateAccountDesc": "Questo account sarà usato per amministrare il server.",
-    "ErrorPassTooShort": "La password deve essere lunga almeno 8 caratteri",
-    "ErrorPassDoNotMatch": "Le password non corrispondono",
-    "FilePicker": {
-      "Help": "Usa (⌘/Ctrl o Shift) + click per selezionare cartelle multiple",
-      "Selected": "{sel} selezionate",
-      "ThisFolderHelp": ". (questa cartella)"
-    },
-    "Finish": {
-      "TitleDone": "Hai finito! 🎉",
-      "TitleAlmostDone": "Ci sei quasi!",
-      "ConfirmButton": "Clicca il pulsante sotto per proseguire nella tua libreria.",
-      "Processing": "Swing Music sta scansionando le tue cartelle selezionate. Attendi ..."
-    },
-    "RootDirs": {
-      "ErrorSelectRootFolder": "Seleziona una cartella radice",
-      "Title": "Configura cartelle musicali",
-      "TitleDesc": "Dove vuoi che Swing Music cerchi le tue tracce musicali?",
-      "HomeDir": "Cartella home",
-      "HomeDirDesc": "Scansiona tutte le cartelle in ",
-      "SpecificFolder": "Cartella specifica",
-      "FolderSelected": "{n} cartella selezionata | {n} cartelle selezionate",
-      "FolderSelectedDesc": "Seleziona cartella per effettuarne la scansione",
-      "AddFolders": "Aggiungi cartelle"
-    },
-    "Welcome": {
-      "Title": "Benvenuto a",
-      "Tagline": "Clicca il pulsante sotto per creare il tuo primo account",
-      "GetStarted": "Iniziamo"
+      "Description": "Le tue statistiche d'ascolto nell'ultima settimana",
+      "Title": "Statistiche"
     }
   }
 }
