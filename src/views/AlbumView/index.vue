@@ -213,7 +213,10 @@ const scrollerItems = computed(() => {
     moreFrom = moreFrom.filter(item => item.id !== undefined)
     const otherVersionsComponent = getAlbumVersionsComponent()
 
-    const pageItems = settings.classical_enabled && album.info.is_classical ? getWorkItems() : getSongItems()
+    const pageItems =
+        settings.classical_enabled && album.info.is_classical && album.works.length > 0
+            ? getWorkItems()
+            : getSongItems()
 
     let components = [header, ...pageItems, genreBanner]
 
