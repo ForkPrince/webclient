@@ -32,7 +32,7 @@
                 {{ album.title }}
             </h4>
             <div class="artist ellip" @click.prevent.stop="() => {}">
-                <template v-if="show_date"> {{ new Date(album.date * 1000).getFullYear() }} </template>
+                <template v-if="show_date"> {{ new Date(album.date * 1000).getUTCFullYear() }} </template>
                 <span v-if="show_date && artists.length > 0"> • </span>
                 <RouterLink
                     v-if="artists.length > 0"

@@ -6,10 +6,15 @@ export function formatDate(timestamp: number, yearOnly = false) {
     // format date as Month day, year
     const date = new Date(timestamp * 1000)
 
-    const options = { year: 'numeric', month: 'long', day: 'numeric' }
+    const options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'UTC',
+    }
 
     if (yearOnly) {
-        return date.getFullYear()
+        return date.getUTCFullYear()
     }
 
     return date.toLocaleDateString('en-US', options)
