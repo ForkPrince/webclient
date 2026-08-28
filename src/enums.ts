@@ -108,6 +108,8 @@ export interface DBSettings {
   lastfmApiKey: string;
   lastfmApiSecret: string;
   lastfmSessionKey: string;
+  listenbrainzToken: string;
+  listenbrainzBaseUrl: string;
   showPlaylistsInFolderView: boolean;
   artistArticleAwareSorting: boolean;
   trustCloudLyrics: boolean;

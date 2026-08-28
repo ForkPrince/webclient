@@ -1,0 +1,48 @@
+name: Build UI
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Zip client
+        run: |
+          mkdir -p /tmp/client
+          cp -r dist/* /tmp/client/
+          cd /tmp
+          zip -r $GITHUB_WORKSPACE/client.zip client
+          ls -lh $GITHUB_WORKSPACE/client.zip
+
+      - name: Extract repository name
+        run: echo "NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
+
+      - name: Upload Build
+        uses: marvinpinto/action-automatic-releases@master
+        with:
+          title: "${{ env.NAME }}"
+          automatic_release_tag: "latest"
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          files: client.zip
+          prerelease: false

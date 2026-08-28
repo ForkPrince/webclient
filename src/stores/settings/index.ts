@@ -63,6 +63,9 @@ export default defineStore('settings', {
         lastfm_session_key: '',
         lastfm_integration_started: false,
 
+        listenbrainz_token: '',
+        listenbrainz_base_url: 'https://api.listenbrainz.org',
+
         // audio
         use_silence_skip: true,
         use_crossfade: false,
@@ -110,6 +113,8 @@ export default defineStore('settings', {
             this.lastfm_api_key = settings.lastfmApiKey
             this.lastfm_api_secret = settings.lastfmApiSecret
             this.lastfm_session_key = settings.lastfmSessionKey
+            this.listenbrainz_token = settings.listenbrainzToken || ''
+            this.listenbrainz_base_url = settings.listenbrainzBaseUrl || 'https://api.listenbrainz.org'
             this.use_lyrics_plugin = settings.plugins.find(p => p.name === 'lyrics_finder')?.active
 
             if (this.use_lyrics_plugin) {
@@ -396,6 +401,47 @@ export default defineStore('settings', {
             }
 
             this.lastfm_session_key = ''
+        },
+        async saveListenBrainzToken(token: string) {
+            const res = await useAxios({
+                url: paths.api.plugins + '/listenbrainz/token',
+                method: 'POST',
+                props: {
+                    token,
+                    base_url: this.listenbrainz_base_url,
+                },
+            })
+            if (res.status !== 200) {
+                return false
+            }
+            this.listenbrainz_token = token
+            return true
+        },
+        async setListenBrainzBaseUrl(url: string) {
+            const trimmed = (url || '').trim().replace(/\/$/, '')
+            const finalUrl = trimmed || 'https://api.listenbrainz.org'
+            const res = await this.genericToggleSetting('listenbrainzBaseUrl', finalUrl, 'listenbrainz_base_url')
+            if (res && this.listenbrainz_token) {
+                await this.saveListenBrainzToken(this.listenbrainz_token)
+            }
+            return res
+        },
+        async disconnectListenBrainz() {
+            const res = await useAxios({
+                url: paths.api.plugins + '/listenbrainz/token',
+                method: 'DELETE',
+            })
+            if (res.status !== 200) {
+                return
+            }
+            this.listenbrainz_token = ''
+        },
+        async checkListenBrainzStatus() {
+            const res = await useAxios({
+                url: paths.api.plugins + '/listenbrainz/status',
+                method: 'GET',
+            })
+            return res
         },
         setStreamingQuality(quality: string) {
             this.streaming_quality = quality
