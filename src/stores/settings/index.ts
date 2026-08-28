@@ -412,6 +412,7 @@ export default defineStore('settings', {
                 },
             })
             if (res.status !== 200) {
+                this.listenbrainz_token = ''
                 return false
             }
             this.listenbrainz_token = token
@@ -441,7 +442,7 @@ export default defineStore('settings', {
                 url: paths.api.plugins + '/listenbrainz/status',
                 method: 'GET',
             })
-            return res
+            return res.data?.connected ?? false
         },
         setStreamingQuality(quality: string) {
             this.streaming_quality = quality
