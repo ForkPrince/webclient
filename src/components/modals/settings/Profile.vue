@@ -12,14 +12,14 @@
         <div class="updateprof">
             <div class="locale-changer">
                 <label>{{ $t('Languages.ChooseLang') }}</label>
-                <select class="language" v-model="$i18n.locale" @change="updateLang">
-                    <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ $t('Languages.'+ locale) }}</option>
+                <select v-model="locale" class="language" @change="updateLang">
+                    <option v-for="lang in availableLocales" :key="`locale-${lang}`" :value="lang">{{ $t('Languages.' + lang) }}</option>
                 </select>
             </div>                
             <button v-if="setLang" @click="setCookie">
                 {{ $t('Profile.SetLanguage') }}
             </button>
-            <label class="warning" v-if="setLang">{{ $t('Languages.WarnAppReload') }}</label>
+            <label v-if="setLang" class="warning">{{ $t('Languages.WarnAppReload') }}</label>
         </div>
         <form v-auto-animate class="updateprof" @submit.prevent="handleSubmit">
             <div class="names">
@@ -57,7 +57,7 @@ import useAuth from '@/stores/auth'
 
 const cookies = useCookies(['locale']);
 const router = useRouter();
-const { t, locale } = useI18n();
+const { t, locale, availableLocales } = useI18n();
 
 const props = defineProps<{
     adding_user?: boolean
