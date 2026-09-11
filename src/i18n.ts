@@ -5,11 +5,27 @@ import it from './locales/it_IT.json';
 import ko from './locales/ko.json';
 import { useCookies } from "@vueuse/integrations/useCookies";
 
-const userLocale = navigator.language;
 export const supportedLocales = ['en_US', 'it_IT', 'ko'];
 const fallbackLocale = 'en_US';
 const cookies = useCookies();
-export const locale = supportedLocales.includes(userLocale) ? userLocale : fallbackLocale;
+
+function detectBrowserLocale(): string {
+  const tags = navigator.languages?.length ? navigator.languages : [navigator.language];
+
+  for (const tag of tags) {
+    const normalized = tag.replace('-', '_');
+    const exact = supportedLocales.find(l => l === normalized);
+    if (exact) return exact;
+
+    const language = normalized.split('_')[0];
+    const byLanguage = supportedLocales.find(l => l.split('_')[0] === language);
+    if (byLanguage) return byLanguage;
+  }
+
+  return fallbackLocale;
+}
+
+export const locale = detectBrowserLocale();
 
 const i18n = createI18n({
   legacy: false,
