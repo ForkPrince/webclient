@@ -17,7 +17,13 @@
         }"
     >
         <div class="big-img no-scroll" :class="`${isHeaderSmall ? 'imgSmall' : ''} shadow-lg rounded-sm`">
-            <img :src="imguri.thumb.large + album.image" class="rounded-sm" />
+            <ImageLoader
+                :image="imguri.thumb.large + album.image"
+                :blurhash="album.blurhash"
+                :duration="1000"
+                :panels="true"
+                img-class="rounded-sm"
+            />
         </div>
         <Info />
     </div>
@@ -34,6 +40,7 @@ import useNavStore from '@/stores/nav'
 import useAlbumStore from '@/stores/pages/album'
 
 import Info from '@/components/AlbumView/Header/Info.vue'
+import ImageLoader from '@/components/shared/ImageLoader.vue'
 import useVisibility from '@/utils/useVisibility'
 
 const albumheaderthing = ref<any>(null)
@@ -81,24 +88,14 @@ useVisibility(albumheaderthing, handleVisibilityState)
     align-items: flex-end;
 
     .big-img {
+        width: 16rem;
         height: 16rem;
-        display: flex;
-        align-items: flex-end;
-
-        img {
-            height: 16rem;
-            max-width: 16rem;
-            object-fit: contain;
-        }
+        position: relative;
     }
 
     .big-img.imgSmall {
         width: 12rem;
         height: 12rem;
-
-        img {
-            height: 12rem;
-        }
     }
 
     .nocontrast {
@@ -121,10 +118,6 @@ useVisibility(albumheaderthing, handleVisibilityState)
             height: 14rem !important;
             aspect-ratio: 1;
             margin: 0 auto;
-
-            img {
-                height: 14rem !important;
-            }
         }
 
         .albumtype {

@@ -36,4 +36,13 @@ const show_albums_as_singles: Setting = {
     action: () => settings().toggleShowAlbumsAsSingles(),
 }
 
-export default [clean_album_titles, merge_album_versions, show_albums_as_singles]
+const classical_enabled: Setting = {
+    title: 'Enable classical music support',
+    desc: 'Enable classical music support for albums (premium required)',
+    type: SettingType.binary,
+    state: () => settings().classical_enabled,
+    action: () => settings().toggleClassicalEnabled(),
+    inactive: () => settings().licenseInfo?.license.status !== 'active',
+}
+
+export default [clean_album_titles, merge_album_versions, show_albums_as_singles, classical_enabled]

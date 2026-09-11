@@ -18,8 +18,7 @@
                         :is="item.component"
                         :key="index"
                         v-bind="item.props"
-                        @playThis="playFromAlbum(item.props.track.master_index)"
-                        @playDisc="playDisc"
+                        v-on="listenersFor(item)"
                     ></component>
                 </DynamicScrollerItem>
             </template>
@@ -31,12 +30,13 @@
 import { computed, nextTick } from 'vue'
 import { onBeforeRouteLeave, onBeforeRouteUpdate, useRoute } from 'vue-router'
 
-import { Track } from '@/interfaces'
+import { ClassicalWork, Track } from '@/interfaces'
 
 import useAlbumStore from '@/stores/pages/album'
 import useQueueStore from '@/stores/queue'
 import useTracklist from '@/stores/queue/tracklist'
 
+import WorkItem from '@/components/Classical/WorkItem.vue'
 import AlbumDiscBar from '@/components/AlbumView/AlbumDiscBar.vue'
 import GenreBanner from '@/components/AlbumView/GenreBanner.vue'
 import Header from '@/components/AlbumView/main.vue'
@@ -50,11 +50,13 @@ import { isSmall } from '@/stores/content-width'
 import { useT } from '@/i18n'
 
 const { t } = useT()
+import useSettingsStore from '@/stores/settings'
 
 const album = useAlbumStore()
 const queue = useQueueStore()
 const tracklist = useTracklist()
 const route = useRoute()
+const settings = useSettingsStore()
 
 interface ScrollerItem {
     id: string | undefined
@@ -65,6 +67,7 @@ interface ScrollerItem {
         | typeof CardScroller
         | typeof AlbumsFetcher
         | typeof Stats
+        | typeof WorkItem
     props?: any
 }
 
@@ -73,8 +76,8 @@ class songItem {
     props = {}
     component: typeof SongItem | typeof AlbumDiscBar
 
-    constructor(track: Track) {
-        this.id = track.filepath || Math.random()
+    constructor(track: Track, index: number) {
+        this.id = track.is_album_disc_number ? `disc-${track.album_page_disc_number}` : `${track.filepath}-${index}`
         this.props = track.is_album_disc_number
             ? { album_disc: track }
             : {
@@ -84,6 +87,20 @@ class songItem {
                   source: dropSources.album,
               }
         this.component = track.is_album_disc_number ? AlbumDiscBar : SongItem
+    }
+}
+
+class workItem {
+    id: string | number
+    props = {}
+    component: typeof WorkItem
+
+    constructor(work: ClassicalWork, index: number) {
+        this.id = `work-${index}-${work.workhash}`
+        this.props = {
+            work,
+        }
+        this.component = WorkItem
     }
 }
 
@@ -114,8 +131,14 @@ const fetched_similar_hash: ScrollerItem = {
 }
 
 function getSongItems() {
-    return album.tracks.map(track => {
-        return new songItem(track)
+    return album.tracks.map((track, index) => {
+        return new songItem(track, index)
+    })
+}
+
+function getWorkItems() {
+    return album.works.map((work, index) => {
+        return new workItem(work, index)
     })
 }
 
@@ -193,7 +216,12 @@ const scrollerItems = computed(() => {
     moreFrom = moreFrom.filter(item => item.id !== undefined)
     const otherVersionsComponent = getAlbumVersionsComponent()
 
-    let components = [header, ...getSongItems(), genreBanner]
+    const pageItems =
+        settings.classical_enabled && album.info.is_classical && album.works.length > 0
+            ? getWorkItems()
+            : getSongItems()
+
+    let components = [header, ...pageItems, genreBanner]
 
     // if (album.tracks.length) {
     //     components.push(AlbumVersionsFetcher)
@@ -230,8 +258,52 @@ const scrollerItems = computed(() => {
 
 function playFromAlbum(index: number, tracks = album.srcTracks) {
     const { title, albumhash } = album.info
-    tracklist.setFromAlbum(title, albumhash, tracks)
+    tracklist.setFromAlbum(title, albumhash, tracks, album.works || {})
     queue.play(index)
+}
+
+function listenersFor(item: { component: any }) {
+    const listeners: Record<string, (...args: any[]) => void> = {}
+
+    if ([SongItem, WorkItem, Header].includes(item.component)) {
+        listeners.playThis = (trackhash?: string) => onPlayThis(item as ScrollerItem, trackhash)
+    }
+
+    if (item.component === AlbumDiscBar) {
+        listeners.playDisc = playDisc
+    }
+
+    if (item.component === WorkItem) {
+        listeners.playWork = playWork
+    }
+
+    return listeners
+}
+
+function playWork(workhash: string) {
+    const work = album.works.find(w => w.workhash === workhash)
+    if (!work) return
+
+    const movementHashes = new Set(work.movements.map(m => m.trackhash))
+    const tracks = album.srcTracks.filter(t => movementHashes.has(t.trackhash))
+
+    if (tracks.length) playFromAlbum(0, tracks)
+}
+
+function onPlayThis(item: ScrollerItem, trackhash?: string) {
+    if (trackhash) {
+        const index = album.srcTracks.findIndex(t => t.trackhash === trackhash)
+
+        if (index < 0) {
+            console.warn(`onPlayThis: trackhash ${trackhash} not found in srcTracks`)
+            return
+        }
+
+        playFromAlbum(index)
+        return
+    }
+
+    playFromAlbum(item.props.track.master_index)
 }
 
 function playDisc(disc_number: number) {

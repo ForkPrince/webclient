@@ -5,8 +5,8 @@
             params: { albumhash: album.albumhash },
         }"
         class="album-card"
-        @contextmenu.prevent="showMenu"
         :class="{ 'context-menu-open': contextMenuFlag }"
+        @contextmenu.prevent="showMenu"
     >
         <div class="with-img rounded-sm no-scroll">
             <div
@@ -32,7 +32,7 @@
                 {{ album.title }}
             </h4>
             <div class="artist ellip" @click.prevent.stop="() => {}">
-                <template v-if="show_date"> {{ new Date(album.date * 1000).getFullYear() }} </template>
+                <template v-if="show_date"> {{ new Date(album.date * 1000).getUTCFullYear() }} </template>
                 <span v-if="show_date && artists.length > 0"> • </span>
                 <RouterLink
                     v-if="artists.length > 0"
@@ -126,6 +126,7 @@ function showMenu(e: MouseEvent) {
             height: 100%;
             aspect-ratio: 1;
             object-fit: cover;
+            object-position: top left;
         }
 
         .gradient {

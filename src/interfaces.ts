@@ -45,6 +45,7 @@ export interface Track extends AlbumDisc {
 
     color?: string
     blurhash?: string
+    is_classical: boolean
 }
 
 export interface Folder {
@@ -76,6 +77,7 @@ export interface Album {
     help_text?: string
     time?: string
     is_favorite: boolean
+    is_classical: boolean
     genres: Genre[]
     versions: string[]
     trend?: {
@@ -83,6 +85,32 @@ export interface Album {
         is_new: boolean
     }
 }
+
+export interface CatalogueId {
+    name: string
+    hash: string
+}
+
+export interface ClassicalMovement extends Track {
+    movement_title: string
+    // added when the movement is added to the queue,
+    // links back to tracklist.worklist
+    workhash?: string
+}
+
+export interface ClassicalWork {
+    catalogue_ids: CatalogueId[]
+    composer: string
+    composer_hash: string
+    key: string | null
+    name: string
+    subtitle: string | null
+    workhash: string
+    movements: ClassicalMovement[]
+}
+
+export type QueueItem = Track | ClassicalMovement
+export type QueueWork = Omit<ClassicalWork, 'movements'>
 
 export interface Mix {
     id: string
@@ -382,7 +410,7 @@ interface License {
         modified_at: string
         price_id: string
         product_id: string
-        recurring_interval: "month" | "year" | "one_time"
+        recurring_interval: 'month' | 'year' | 'one_time'
         started_at: string
         status: string
         trial_end: string | null

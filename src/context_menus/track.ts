@@ -1,5 +1,5 @@
 import { router } from '@/router'
-import { Artist, Playlist, Track } from '@/interfaces'
+import { Artist, ClassicalWork, Playlist, Track } from '@/interfaces'
 import { router as Router, Routes } from '@/router'
 
 import { Option } from '@/interfaces'
@@ -7,6 +7,7 @@ import { openInFiles } from '@/requests/folders'
 import { addTracksToPlaylist, removeTracks } from '@/requests/playlists'
 
 import { AddToQueueIcon, AlbumIcon, ArtistIcon, DeleteIcon, FolderIcon, PlayNextIcon, PlusIcon } from '@/icons'
+import useAlbumStore from '@/stores/pages/album'
 import usePlaylistStore from '@/stores/pages/playlist'
 import useQueueStore from '@/stores/queue'
 import useTracklist from '@/stores/queue/tracklist'
@@ -72,10 +73,17 @@ export default async (track: Track): Promise<Option[]> => {
         icon: PlusIcon,
     }
 
+    const findWork = (): ClassicalWork[] | undefined => {
+        if (!track.is_classical) return undefined
+
+        const work = useAlbumStore().works.find(w => w.movements.some(m => m.trackhash === track.trackhash))
+        return work ? [work] : undefined
+    }
+
     const add_to_q: Option = {
         label: t('Menus.Common.AddToQueue'),
         action: () => {
-            useTracklist().addTrack(track)
+            useTracklist().addTracks([track], findWork())
         },
         icon: AddToQueueIcon,
     }
@@ -83,7 +91,7 @@ export default async (track: Track): Promise<Option[]> => {
     const play_next: Option = {
         label: t('Menus.Common.PlayNext'),
         action: () => {
-            useQueueStore().playTrackNext(track)
+            useQueueStore().playTrackNext(track, findWork())
         },
         icon: PlayNextIcon,
     }
