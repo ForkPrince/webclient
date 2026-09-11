@@ -51,7 +51,7 @@
             </div>
             <ArtistName
                 :artists="queue.currenttrack?.artists || []"
-                :albumartists="queue.currenttrack?.albumartists || $t('BottomBar.PlaceholderArtist')""
+                :albumartists="queue.currenttrack?.albumartists || $t('BottomBar.PlaceholderArtist')"
                 class="artist"
             />
         </div>
