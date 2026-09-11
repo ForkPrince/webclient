@@ -85,7 +85,7 @@
   },
   "Common": {
     "Activate": "Attiva",
-    "Album": "Album | Albums",
+    "Album": "Album | Album",
     "AlbumArtist": "Artista Album",
     "All": "Tutte",
     "AppTitle": "Swing Music",
@@ -171,7 +171,7 @@
     "Update": "Aggiorna",
     "Username": "Nome utente",
     "added": "aggiunto",
-    "album": "album | albums",
+    "album": "album | album",
     "artist": "artista | artisti",
     "experimental": "sperimentale",
     "mix": "mix | mixes",
@@ -262,7 +262,7 @@
     }
   },
   "MasterFlag": {
-    "MasterAudioBitrate": "Bitrate audio sorgente -"
+    "MasterAudioBitrate": "Bitrate audio sorgente - {bitrate} Kbps"
   },
   "Menus": {
     "Artist": {

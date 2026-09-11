@@ -3,10 +3,10 @@
         <template #header>
             <GenericHeader>
                 <template #name>
-                    {{ $t("Views.FavCardScroller.Title", {item: itemtype.toUpperCase()}) }}
+                    {{ $t('Views.FavCardScroller.Title', { item: $t(itemtype == 'album' ? 'Common.Album' : 'Common.Artist', 2) }) }}
                 </template>
                 <template #description>
-                    {{ $t('Views.FavCardScroller.Desc', {nelem: itemtype == 'album' ? albumCount : artistCount, type: itemtype}, items.length) }}
+                    {{ $t('Views.FavCardScroller.Desc', { nelem: count, type: $t(itemtype == 'album' ? 'Common.album' : 'Common.artist', count) }, count) }}
                 </template>
             </GenericHeader>
         </template>
@@ -48,6 +48,8 @@ const itemtype = computed(() => {
 
     return 'artist'
 })
+
+const count = computed(() => (itemtype.value == 'album' ? albumCount.value : artistCount.value))
 
 const items = computed(() => {
     if (itemtype.value == 'album') {

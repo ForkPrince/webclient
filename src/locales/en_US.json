@@ -262,7 +262,7 @@
     }
   },
   "MasterFlag": {
-    "MasterAudioBitrate": "Master audio bitrate - "
+    "MasterAudioBitrate": "Master audio bitrate - {bitrate} Kbps"
   },
   "Menus": {
     "Album": {
@@ -797,8 +797,8 @@
       "NoContributionsDesc": "No {type} found for {artist}"
     },
     "FavCardScroller": {
-      "Desc": "You have {nelem} favorited {type} | You have {nelem} favorited {type}s",
-      "Title": "Favorite {item}S"
+      "Desc": "You have {nelem} favorited {type}",
+      "Title": "Favorite {item}"
     },
     "FavoriteTracks": {
       "Description": "You have {n_tr} favorited track | You have {n_tr} favorited tracks",
