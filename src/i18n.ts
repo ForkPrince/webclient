@@ -14,6 +14,7 @@ export const locale = supportedLocales.includes(userLocale) ? userLocale : fallb
 const i18n = createI18n({
   legacy: false,
   locale: cookies.get('locale') ? cookies.get('locale') : locale,
+  fallbackLocale,
   globalInjection: true,
   messages: {
     en_US: en,
