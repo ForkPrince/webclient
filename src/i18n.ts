@@ -25,7 +25,7 @@ function detectBrowserLocale(): string {
   return fallbackLocale;
 }
 
-export const locale = detectBrowserLocale();
+const locale = detectBrowserLocale();
 
 const i18n = createI18n({
   legacy: false,

@@ -4,7 +4,7 @@
  * @returns formatted date
  */
 
-import { locale } from "@/i18n"
+import { useT } from "@/i18n"
 
 export function formatDate(timestamp: number, yearOnly = false) {
     // format date as Month day, year
@@ -21,6 +21,7 @@ export function formatDate(timestamp: number, yearOnly = false) {
         return date.getUTCFullYear()
     }
 
-    // Replace _ to - in order to make them BCP47/RCF5646 compliant language tags.
-    return date.toLocaleDateString(locale.replace('_', '-'), options)
+    // Intl expects BCP 47 tags (en-US), the locale ids use underscores (en_US).
+    const locale = useT().locale.value.replace('_', '-')
+    return date.toLocaleDateString(locale, options)
 }
