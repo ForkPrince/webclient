@@ -10,7 +10,7 @@
                 </template>
 
                 <template v-if="savedItems.length" #after>
-                    <h2>{{ $t('Views.MixListView.SavedMixes') }}<</h2>
+                    <h2>{{ $t('Views.MixListView.SavedMixes') }}</h2>
                     <div v-for="item in savedItemComponents" :key="item.id">
                         <component :is="item.component" :type="item.props.type" :items="item.props.items" />
                     </div>

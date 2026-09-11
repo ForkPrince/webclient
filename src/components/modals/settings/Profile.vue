@@ -23,7 +23,7 @@
         </div>
         <form v-auto-animate class="updateprof" @submit.prevent="handleSubmit">
             <div class="names">
-                <label for="username">{{ $t('Profile.Username')}}<</label>
+                <label for="username">{{ $t('Profile.Username')}}</label>
                 <Input
                     :placeholder="adding_user ? $t('Profile.Username')  : auth.user.username"
                     @input="input => (username = input)"
@@ -33,7 +33,7 @@
                 : $t('Profile.PasswordAction', { action: $t('Common.Change') }) }}</label>
             <Input type="password" placeholder="✶✶✶✶✶✶✶✶" @input="input => (password = input)" />
             <div v-if="password.length" class="confirmpassword">
-                <label for="confirmpswd">{{ $t('Profile.ConfirmPassword') }}<</label>
+                <label for="confirmpswd">{{ $t('Profile.ConfirmPassword') }}</label>
                 <Input type="password" placeholder="✶✶✶✶✶✶✶✶" @input="input => (confirmPassword = input)" />
                 <label v-if="errorText" class="error">{{ errorText }}</label>
             </div>
@@ -111,6 +111,8 @@ const errorText = computed(() => {
     if (confirmPassword.value.length && password.value !== confirmPassword.value) {
         return t('Profile.PasswordMismatch')
     }
+
+    return ""
 })
 
 const payload = computed(() => {

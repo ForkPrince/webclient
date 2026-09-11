@@ -22,11 +22,11 @@
                 </div>
                 <div class="buttons">
                     <DeleteSvg @click="() => deleteBackup(backup.name)" />
-                    <button class="restore" @click="() => restore(backup.name)">{{ $t('Settings.Backup.RestoreButton') }}<</button>
+                    <button class="restore" @click="() => restore(backup.name)">{{ $t('Settings.Backup.RestoreButton') }}</button>
                 </div>
             </div>
         </div>
-        <button class="restore-all" @click="() => restore()">{{ $t('Settings.Backup.RestoreAllButton') }}<</button>
+        <button class="restore-all" @click="() => restore()">{{ $t('Settings.Backup.RestoreAllButton') }}</button>
     </div>
 </template>
 
