@@ -642,7 +642,7 @@
       },
       "LogInToGithub": "Log in with GitHub",
       "Manage": "Manage {lic} ↗",
-      "NewOrUpServerName": "{act} server name:",
+      "NewOrUpServerName": "{action} server name:",
       "NoActiveSub": "No Active Subscription",
       "NoActiveSubDesc": "Get a subscription to unlock all premium features.\n Use the link below to browse the available plans and benefits.",
       "NoActivity": "No activity",
