@@ -22,7 +22,7 @@
                             </span>
                         </span>
                         <button v-if="setting.type == SettingType.root_dirs" @click="setting.action">
-                            <ReloadSvg height="1.5rem" /> <span>{{ $t('Common.Rescan') }}</span>
+                            <ReloadSvg height="1.5rem" /> <span>{{ $t('Common.FullScan') }}</span>
                         </button>
                     </div>
                     <div v-if="setting.desc" class="desc">

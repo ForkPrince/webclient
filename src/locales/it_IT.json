@@ -154,7 +154,7 @@
     "Plugins": "Plugins",
     "Recents": "Recenti",
     "ReleaseDate": "Data di rilascio",
-    "Rescan": "Riscansiona",
+    "FullScan": "Scansione completa",
     "Saving": "Salvataggio",
     "Search": "Trova",
     "SearchResults": "Risultati della ricerca",
@@ -418,7 +418,8 @@
       "ErrorAdding": "Errore aggiungendo le cartelle radici",
       "ErrorRemoving": "Errore rimuovendo le cartelle radici",
       "ScanError": "Errore durante l'avviamento della scansione",
-      "ScanStarted": "Nuova scansione avviata",
+      "FullScanStarted": "Scansione completa avviata",
+      "QuickScanStarted": "Scansione veloce avviata",
       "Success": "Cartelle radici configurate"
     }
   },

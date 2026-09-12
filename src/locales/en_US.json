@@ -154,7 +154,7 @@
     "Plugins": "Plugins",
     "Recents": "Recents",
     "ReleaseDate": "Release Date",
-    "Rescan": "Rescan",
+    "FullScan": "Full scan",
     "Saving": "Saving",
     "Search": "Search",
     "SearchResults": "Search Results",
@@ -420,7 +420,8 @@
       "ErrorAdding": "Error adding root dirs",
       "ErrorRemoving": "Error removing root dirs",
       "ScanError": "Error triggering scan",
-      "ScanStarted": "Rescan started",
+      "FullScanStarted": "Full scan started",
+      "QuickScanStarted": "Quick scan started",
       "Success": "Root directories configured"
     }
   },

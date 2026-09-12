@@ -76,5 +76,8 @@ export async function triggerScan(full_scan: boolean = false) {
         return
     }
 
-    useToast().showNotification((full_scan ? 'Full' : 'Quick') + ' scan started', NotifType.Success)
+    useToast().showNotification(
+        t(full_scan ? 'Requests.RootDirs.FullScanStarted' : 'Requests.RootDirs.QuickScanStarted'),
+        NotifType.Success
+    )
 }
