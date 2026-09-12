@@ -7,6 +7,7 @@ const { t } = useT()
 export default <SettingCategory>{
     groups: [
         {
+            id: 'profile',
             title: t('Settings.Profile.Title'),
             desc: t('Settings.Profile.Desc'),
             settings: [

@@ -10,6 +10,7 @@ const { t } = useT()
 export default <SettingCategory>{
     groups: [
         {
+            id: 'license',
             title: t('Settings.About.LicenseTitle'),
             desc: t('Settings.About.LicenseDesc'),
             displayName: t('Settings.About.LicenseDisplayName'),
@@ -21,6 +22,7 @@ export default <SettingCategory>{
             ],
         },
         {
+            id: 'about',
             title: t("Settings.About.Title"),
             icon: InfoSvg,
             settings: [

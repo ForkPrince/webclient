@@ -54,7 +54,7 @@
                         :value="setting.value(user.roles)"
                         :class="{
                             disabled:
-                                setting.title === 'Admin' &&
+                                setting.id === 'admin' &&
                                 users.filter(u => u.roles.includes('admin')).length === 1 &&
                                 user.roles.includes('admin') &&
                                 user.username === auth.user.username,
@@ -141,6 +141,7 @@ const account_settings = [
 
 const usettings = [
     {
+        id: 'admin',
         title: t('Accounts.Admin'),
         desc: t('Accounts.AdminDesc'),
         value: (roles: string[]) => {

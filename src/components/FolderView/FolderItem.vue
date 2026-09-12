@@ -16,8 +16,8 @@
       <FolderSvg v-else />
       <div class="info">
         <div class="f-item-text ellip">{{ folder.name }}</div>
-        <div class="f-count" v-if="folder.trackcount">
-          {{ folder.trackcount.toLocaleString() + $t('FolderView.FileCount', folder.trackcount) }}
+        <div v-if="folder.trackcount" class="f-count">
+          {{ folder.trackcount.toLocaleString() + ' ' + $t('FolderView.FileCount', folder.trackcount) }}
         </div>
       </div>
       <div v-if="!folder_page" class="check">

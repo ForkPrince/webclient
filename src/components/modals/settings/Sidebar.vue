@@ -19,11 +19,11 @@
                         class="gitem rounded-sm"
                         :class="{
                             active: currentGroup && item.title === currentGroup.title,
-                            subscription: item.title === 'Subscription',
+                            subscription: item.id === 'subscription',
                         }"
                         @click="() => $emit('setTab', item.title || '')"
                     >
-                        <Avatar v-if="item.title === 'Profile'" :size="18" :name="auth.user.username || ''" />
+                        <Avatar v-if="item.id === 'profile'" :size="18" :name="auth.user.username || ''" />
                         <span v-else class="icon" v-html="item.icon"></span>
                         <span>
                             {{ item.title }}

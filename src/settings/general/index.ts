@@ -33,6 +33,7 @@ export const general = {
     // title: 'General',
     groups: [
         {
+            id: 'appearance',
             title: t("Common.Appearance"),
             desc: t("Settings.General.MainSettingsDescription"),
             icon: AppearanceSvg,
@@ -51,7 +52,7 @@ export const general = {
 } as SettingCategory
 
 export const library = {
-    title: 'Library',
+    title: t('Common.Library'),
     show_if: loggedInUserIsAdmin,
     groups: [
         {
