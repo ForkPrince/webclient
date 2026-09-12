@@ -353,7 +353,6 @@ export interface UserSimplified {
 export interface User extends UserSimplified {
     image: string
     roles: string[]
-    lang?: string
 }
 
 export interface StatItem {

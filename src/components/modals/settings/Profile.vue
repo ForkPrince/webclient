@@ -9,18 +9,6 @@
                 <span v-for="role in auth.user.roles" :key="role" class="role"> {{ role }}</span>
             </div>
         </div>
-        <div class="updateprof">
-            <div class="locale-changer">
-                <label>{{ $t('Languages.ChooseLang') }}</label>
-                <select v-model="locale" class="language" @change="updateLang">
-                    <option v-for="lang in availableLocales" :key="`locale-${lang}`" :value="lang">{{ $t('Languages.' + lang) }}</option>
-                </select>
-            </div>                
-            <button v-if="setLang" @click="setCookie">
-                {{ $t('Profile.SetLanguage') }}
-            </button>
-            <label v-if="setLang" class="warning">{{ $t('Languages.WarnAppReload') }}</label>
-        </div>
         <form v-auto-animate class="updateprof" @submit.prevent="handleSubmit">
             <div class="names">
                 <label for="username">{{ $t('Profile.Username')}}</label>
@@ -46,18 +34,14 @@
 
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { useI18n } from 'vue-i18n';
-import { useRouter } from 'vue-router';
-import { useCookies } from '@vueuse/integrations/useCookies';
+import { useI18n } from 'vue-i18n'
 
 import Avatar from '@/components/shared/Avatar.vue'
 import Input from '@/components/shared/Input.vue'
 import { User } from '@/interfaces'
 import useAuth from '@/stores/auth'
 
-const cookies = useCookies(['locale']);
-const router = useRouter();
-const { t, locale, availableLocales } = useI18n();
+const { t } = useI18n()
 
 const props = defineProps<{
     adding_user?: boolean
@@ -71,7 +55,6 @@ const auth = useAuth()
 
 const username = ref('')
 const password = ref('')
-const langIns = ref(false)
 const confirmPassword = ref('')
 
 const showSubmit = computed(() => {
@@ -86,22 +69,6 @@ const showSubmit = computed(() => {
         (payload.value.username || payload.value.password)
     )
 })
-const setLang = computed(()=> {
-    return (langIns.value)
-})
-
-const setCookie = function() {
-    cookies.set('locale', locale.value)
-    langIns.value = false
-    // FIXME: Feels like a hack to force reload the whole app; but parts of the UI doesn't update it properly.
-    //  Adding cookies dependencies to all components might be the only alternative.
-    router.go(0);
-}
-
-const updateLang = function() {
-    langIns.value = true
-}
-
 const errorText = computed(() => {
     // if password has not changed, no error
     if (!password.value.length) {
@@ -152,7 +119,6 @@ async function updateProfile() {
         username.value = ''
         password.value = ''
         confirmPassword.value = ''
-        langIns.value = false
     }
 }
 
@@ -201,15 +167,6 @@ onMounted(async () => {
             color: $gray1;
         }
 
-        select {
-            width: 100%;
-            margin-bottom: 0.5rem;
-            margin-top: 0.5rem;
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: $white;
-        }
-
         input {
             width: 100%;
             padding: 0.5rem;
@@ -230,12 +187,6 @@ onMounted(async () => {
 
         .error {
             color: $red;
-        }
-
-        .warning {
-            width: 100%;
-            color: $yellow;
-            text-align: center;
         }
 
         button {

@@ -41,6 +41,14 @@
                         :source="setting.state !== null ? setting.state : () => ''"
                         :setter-fn="setting.action"
                     />
+                    <DropDown
+                        v-if="setting.type === SettingType.dropdown"
+                        :items="(setting.options ?? [] as any)"
+                        :current="(setting.state && setting.state() as any)"
+                        :reverse="'hide'"
+                        component_key="setting-dropdown"
+                        @item-clicked="setting.action"
+                    />
                     <NumberInput
                         v-if="setting.type === SettingType.free_number_input"
                         :value="setting.state && setting.state()"
@@ -177,6 +185,10 @@ defineProps<{
 
         .options {
             margin: auto 0;
+        }
+
+        .setting-dropdown {
+            width: 9rem;
         }
 
         .text {

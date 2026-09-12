@@ -1,13 +1,12 @@
-import { Composer, createI18n } from "vue-i18n";
+import { createI18n } from "vue-i18n";
 
 import en from './locales/en_US.json';
 import it from './locales/it_IT.json';
 import ko from './locales/ko.json';
-import { useCookies } from "@vueuse/integrations/useCookies";
+import { readLocalStorage } from "./utils/useLocalStorage";
 
 export const supportedLocales = ['en_US', 'it_IT', 'ko'];
 const fallbackLocale = 'en_US';
-const cookies = useCookies();
 
 function detectBrowserLocale(): string {
   const tags = navigator.languages?.length ? navigator.languages : [navigator.language];
@@ -25,11 +24,19 @@ function detectBrowserLocale(): string {
   return fallbackLocale;
 }
 
-const locale = detectBrowserLocale();
+// Runs before Pinia is installed, so peek at the persisted settings store directly.
+function readSavedLocale(): string | null {
+  try {
+    const saved = readLocalStorage('settings')?.locale;
+    return supportedLocales.includes(saved) ? saved : null;
+  } catch {
+    return null;
+  }
+}
 
 const i18n = createI18n({
   legacy: false,
-  locale: cookies.get('locale') ? cookies.get('locale') : locale,
+  locale: readSavedLocale() ?? detectBrowserLocale(),
   fallbackLocale,
   globalInjection: true,
   messages: {

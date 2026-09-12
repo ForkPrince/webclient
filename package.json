@@ -25,7 +25,6 @@
     "pinia": "^2.0.17",
     "pinia-plugin-persistedstate": "^3.2.0",
     "qr-code-styling": "^1.6.0-rc.1",
-    "universal-cookie": "^8.0.1",
     "v-wave": "^1.5.0",
     "vue": "^v3.5.13",
     "vue-boring-avatars": "^1.4.0",

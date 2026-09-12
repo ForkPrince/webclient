@@ -244,11 +244,9 @@
     "title": "Home"
   },
   "Languages": {
-    "ChooseLang": "Choose your preferred language",
-    "WarnAppReload": "(setting the language triggers an app reload)",
-    "en_US": "🇺🇸 English (United States)",
-    "it_IT": "🇮🇹 Italian (Italy)",
-    "ko": "Korean"
+    "en_US": "English",
+    "it_IT": "Italiano",
+    "ko": "한국어"
   },
   "LeftSidebar": {
     "FileTypeBitrate": "file type • bitrate",
@@ -384,7 +382,6 @@
     "PasswordAction": "{action} password",
     "PasswordMismatch": "Passwords do not match",
     "SelectLanguage": "Insert the preferred language",
-    "SetLanguage": "Set language",
     "Username": "Username"
   },
   "ProfileDropdown": {
@@ -534,6 +531,9 @@
     "Experimental": "experimental",
     "General": {
       "AlbumInfoSettingsDesc": "Settings relating to album information",
+      "Language": {
+        "Title": "Language"
+      },
       "Albums": {
         "AlbumAsSingles": {
           "Description": "Require an album to have at least two tracks",

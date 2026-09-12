@@ -18,4 +18,5 @@ export enum SettingType {
   streaming_quality,
   backup,
   secretinput,
+  dropdown,
 }

@@ -13,6 +13,7 @@
             >
                 <span class="ellip">{{ current.title }}</span>
                 <ArrowSvg v-if="reverse !== 'hide'" :class="{ reverse }" class="dropdown-arrow" />
+                <ExpandSvg v-else class="dropdown-chevron" />
             </button>
             <div v-if="showDropDown" ref="dropOptionsRef" class="options rounded no-scroll shadow-lg">
                 <div
@@ -33,6 +34,7 @@ import { onClickOutside } from '@vueuse/core'
 import { Ref, ref } from 'vue'
 
 import ArrowSvg from '@/assets/icons/arrow.svg'
+import ExpandSvg from '@/assets/icons/expand.svg'
 
 const showDropDown = ref(false)
 const dropOptionsRef: Ref<HTMLElement | undefined> = ref()
@@ -73,9 +75,14 @@ onClickOutside(dropOptionsRef, e => {
 .smdropdown {
     z-index: 1000;
 
-    .dropdown-arrow {
+    .dropdown-arrow,
+    .dropdown-chevron {
         width: 100%;
         aspect-ratio: 1;
+    }
+
+    .dropdown-chevron path {
+        fill: currentColor;
     }
 
     .selected {
