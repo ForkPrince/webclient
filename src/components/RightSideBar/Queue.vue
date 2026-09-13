@@ -4,8 +4,8 @@
     <div class="queue-virtual-scroller" @mouseover="mouseover = true" @mouseout="mouseover = false">
         <NoItems
             :flag="!store.tracklist.length"
-            :title="'No songs in queue'"
-            :description="'When you start playing songs, they will appear here.'"
+            :title="$t('RightSidebar.NoQueueTitle')"
+            :description="$t('RightSidebar.NoQueueDescription')"
             :icon="QueueSvg"
         />
         <DynamicScroller
@@ -53,6 +53,7 @@ import TrackItem from '@/components/shared/TrackItem.vue'
 import WorkHeader from '@/components/Classical/WorkHeader.vue'
 import QueueSvg from '@/assets/icons/queue.svg'
 import PlayingFrom from '../NowPlaying/PlayingFrom.vue'
+
 
 interface QueueScrollerItem {
     id: string | number

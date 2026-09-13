@@ -1,6 +1,6 @@
 <template>
   <div style="height: 1px">
-    <button v-if="show_text" @click="fetch_callback">Load More</button>
+    <button v-if="show_text" @click="fetch_callback">{{ $t('ArtistView.LoadMore') }}</button>
   </div>
 </template>
 

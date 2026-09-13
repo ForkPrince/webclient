@@ -4,6 +4,9 @@ import { defineStore } from 'pinia'
 import { getHomePageData } from '@/requests/home'
 import { HomePageItem } from '@/interfaces'
 import { maxAbumCards } from './content-width'
+import { useT } from '@/i18n'
+
+const { t } = useT()
 
 export default defineStore('homepage', () => {
     const homepageData = reactive(<HomePageItem[]>{})
@@ -25,7 +28,7 @@ export default defineStore('homepage', () => {
     }
 
     const seeAllTexts = {
-        recently_played: 'VIEW HISTORY',
+        recently_played: t('HomeView.ViewHistory'),
     }
 
     async function fetchAll() {

@@ -2,6 +2,9 @@ import { paths } from '@/config'
 import { Album, ClassicalWork, StatItem, Track } from '@/interfaces'
 import { NotifType, useToast } from '@/stores/notification'
 import useAxios from './useAxios'
+import { useT } from '@/i18n'
+
+const { t } = useT();
 import useSettingsStore from '@/stores/settings'
 
 const {
@@ -40,7 +43,7 @@ const getAlbumData = async (albumhash: string, albumlimit: number) => {
     })
 
     if (status == 204) {
-        useToast().showNotification('Album not created yet!', NotifType.Error)
+        useToast().showNotification(t('Requests.Album.AlbumNotCreatedYet'), NotifType.Error)
     }
 
     return data as AlbumData

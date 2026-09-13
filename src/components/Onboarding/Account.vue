@@ -3,18 +3,18 @@
         <form class="createadmin" @submit.prevent="createAccount">
             <Avatar class="avatar" :name="username" :size="48"/>
             <div>
-                <div class="heading">Create account</div>
-                <div class="description">This account will be used to manage your server.</div>
+                <div class="heading">{{ $t('Onboarding.CreateAccountTitle') }}</div>
+                <div class="description">{{ $t('Onboarding.CreateAccountDesc') }}</div>
             </div>
             <br />
             <div class="form">
                 <div class="names">
-                    <label for="username">Username</label>
+                    <label for="username">{{ $t('Common.Username') }}</label>
                     <Input :placeholder="username" input-id="username" required @input="input => (username = input)" />
                 </div>
                 <div class="passwords">
                     <div class="names">
-                        <label for="password">Password</label>
+                        <label for="password">{{ $t('Common.Password') }}</label>
                         <Input
                             :placeholder="password"
                             type="password"
@@ -24,7 +24,7 @@
                         />
                     </div>
                     <div class="names">
-                        <label for="confirmPassword">Confirm Password</label>
+                        <label for="confirmPassword">{{ $t('Common.ConfirmPass')}}</label>
                         <Input
                             :placeholder="confirmPassword"
                             type="password"
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-continue">Create account</button>
+            <button class="btn-continue">{{ $t('Common.CreateAccount' )}}</button>
         </form>
     </div>
 </template>
@@ -45,7 +45,9 @@ import { onMounted, ref } from 'vue'
 import { addNewUser } from '@/requests/auth'
 import Input from '@/components/shared/Input.vue'
 import Avatar from '@/components/shared/Avatar.vue'
+import { useT } from '@/i18n'
 
+const { t } = useT()
 const username = ref('')
 const password = ref('✶✶✶✶✶✶✶✶')
 const confirmPassword = ref('✶✶✶✶✶✶✶✶')
@@ -55,12 +57,12 @@ const emit = defineEmits(['accountCreated', 'error'])
 function validatePassword() {
     // check if password is at least 8 characters
     if (password.value.length < 8) {
-        return emit('error', 'Password must be at least 8 characters')
+        return emit('error', t('Onboarding.ErrorPassTooShort'))
     }
 
     // check if password and confirm password match
     if (password.value !== confirmPassword.value) {
-        return emit('error', 'Passwords do not match')
+        return emit('error', t('Onboarding.ErrorPassDoNotMatch'))
     }
 
     emit('error', '')

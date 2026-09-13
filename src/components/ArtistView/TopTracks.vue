@@ -14,7 +14,7 @@
                 @playThis="playHandler(index)"
             />
         </div>
-        <div v-if="!tracks.length" class="error">No tracks</div>
+        <div v-if="!tracks.length" class="error">{{ $t('ArtistView.NoTracks') }}</div>
     </div>
 </template>
 
@@ -24,6 +24,7 @@ import { Track } from '@/interfaces'
 import { isMedium, isSmall } from '@/stores/content-width'
 import SeeAll from '../shared/SeeAll.vue'
 import SongItem from '../shared/SongItem.vue'
+
 
 defineProps<{
     tracks: Track[]

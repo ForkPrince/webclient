@@ -1,9 +1,9 @@
 <template>
     <div v-if="album_disc.is_album_disc_number" class="album_disc_header no-select">
         <div class="disc_number">
-            Disc {{ album_disc.album_page_disc_number }}
+            {{ $t('AlbumView.DiskNumber', { num: album_disc.album_page_disc_number }) }}
             <span @click="$emit('playDisc', album_disc.album_page_disc_number || 0)" class="play">
-                <PlaySvg /> Play Disc {{ album_disc.album_page_disc_number }}</span
+                <PlaySvg /> {{ $t('AlbumView.PlayDisc') }} {{ album_disc.album_page_disc_number }}</span
             >
         </div>
         <div class="play"></div>

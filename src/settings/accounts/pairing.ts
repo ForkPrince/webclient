@@ -1,12 +1,15 @@
 import { SettingType } from '../enums'
 import AvatarSvg from '@/assets/icons/phone.svg?raw'
 import { SettingCategory } from '@/interfaces/settings'
+import { useT } from '@/i18n'
+
+const { t } = useT()
 
 export default <SettingCategory>{
     groups: [
         {
-            title: 'Pair device',
-            desc: 'Login to the mobile client using QR code',
+            title: t("Settings.Pairing.Title"),
+            desc: t("Settings.Accounts.Desc"),
             icon: AvatarSvg,
             settings: [
                 {

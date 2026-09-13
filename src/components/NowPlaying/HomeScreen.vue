@@ -19,9 +19,12 @@ import updatePageTitle from '@/utils/updatePageTitle'
 
 import Header from '@/components/NowPlaying/Header.vue'
 import Queue from '@/components/RightSideBar/Queue.vue'
+import { useT } from '@/i18n'
 
+const { t } = useT()
 const store = useTracklist()
-onMounted(() => updatePageTitle('Now Playing'))
+
+onMounted(() => updatePageTitle(t('Common.NowPlaying')))
 </script>
 
 <style lang="scss">

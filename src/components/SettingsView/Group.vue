@@ -15,14 +15,14 @@
                         <span class="ellip">
                             {{ setting.title }}
                             <span v-if="setting.experimental" class="badge experimental circular">
-                                {{ setting.experimental ? 'experimental' : '' }}
+                                {{ setting.experimental ? $t('Common.experimental') : '' }}
                             </span>
                             <span v-if="setting.new" class="badge new circular">
-                                {{ setting.new ? 'new' : '' }}
+                                {{ setting.new ? $t('Common.new') : '' }}
                             </span>
                         </span>
                         <button v-if="setting.type == SettingType.root_dirs" @click="setting.action">
-                            <ReloadSvg height="1.5rem" /> <span>Full Scan</span>
+                            <ReloadSvg height="1.5rem" /> <span>{{ $t('Common.FullScan') }}</span>
                         </button>
                     </div>
                     <div v-if="setting.desc" class="desc">
@@ -40,6 +40,14 @@
                         :options="setting.options"
                         :source="setting.state !== null ? setting.state : () => ''"
                         :setter-fn="setting.action"
+                    />
+                    <DropDown
+                        v-if="setting.type === SettingType.dropdown"
+                        :items="(setting.options ?? [] as any)"
+                        :current="(setting.state && setting.state() as any)"
+                        :reverse="'hide'"
+                        component_key="setting-dropdown"
+                        @item-clicked="setting.action"
                     />
                     <NumberInput
                         v-if="setting.type === SettingType.free_number_input"
@@ -177,6 +185,10 @@ defineProps<{
 
         .options {
             margin: auto 0;
+        }
+
+        .setting-dropdown {
+            width: 9rem;
         }
 
         .text {

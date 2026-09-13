@@ -1,6 +1,6 @@
 <template>
   <div class="homebrowse">
-    <div class="btitle"><b>Browse Library</b></div>
+    <div class="btitle"><b>{{ $t('HomeView.Browse.Title') }}</b></div>
     <div class="browselist">
       <RouterLink
         v-for="i in browselist"
@@ -30,10 +30,14 @@ import {
 } from "@/icons";
 import { Routes } from "@/router";
 import { album_card_with } from "@/stores/content-width";
+import useDialog from "@/stores/modal";
+import { useT } from "@/i18n";
+
+const { t } = useT();
 
 const browselist = [
   {
-    title: "Folders",
+    title: t('HomeView.Browse.BrowseList.Folders'),
     route: Routes.folder,
     params: {
       path: "$home",
@@ -41,46 +45,46 @@ const browselist = [
     icon: FolderIcon,
   },
   {
-    title: "Albums",
+    title: t('HomeView.Browse.BrowseList.Albums'),
     route: Routes.AlbumList,
     icon: AlbumIcon,
   },
   {
-    title: "Artists",
+    title: t('HomeView.Browse.BrowseList.Artists'),
     route: Routes.ArtistList,
     icon: ArtistIcon,
   },
   {
-    title: "Playlists",
+    title: t('HomeView.Browse.BrowseList.Playlists'),
     route: Routes.playlists,
     icon: PlaylistIcon,
   },
   {
-    title: "Favorites",
+    title: t('HomeView.Browse.BrowseList.Favorites'),
     route: Routes.favorites,
     icon: HeartIcon,
     class: "favorite",
   },
   {
-    title: "Fav. tracks",
+    title: t('HomeView.Browse.BrowseList.FavTracks'),
     route: Routes.favoriteTracks,
     icon: HeartIcon,
     class: "favorite",
   },
   {
-    title: "Fav. artists",
+    title: t('HomeView.Browse.BrowseList.FavArtists'),
     route: Routes.favoriteArtists,
     icon: ArtistIcon,
     class: "favorite",
   },
   {
-    title: "Fav. albums",
+    title: t('HomeView.Browse.BrowseList.FavAlbums'),
     route: Routes.favoriteAlbums,
     icon: AlbumIcon,
     class: "favorite",
   },
   // {
-  //   title: "Settings",
+  //   title: t('Common.Settings'),
   //   route: null,
   //   icon: SettingsIcon,
   //   action: () => {
@@ -89,7 +93,7 @@ const browselist = [
   //   class: "settings",
   // },
   {
-    title: "Stats",
+    title: t('HomeView.Browse.BrowseList.Stats'),
     icon: AlbumIcon,
     route: Routes.Stats,
   }

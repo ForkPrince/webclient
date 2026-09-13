@@ -1,3 +1,7 @@
+import { useT } from "@/i18n";
+
+const { t } = useT()
+
 function padNumber(number: number) {
   return ("0" + number).slice(-2);
 }
@@ -25,11 +29,11 @@ export default function formatSeconds(
 
   if (long == true) {
     if (mm < 1 && hh < 1 && ss > 0) {
-      return `${_ss} Seconds`;
+      return t('Utils.FormatTime.Second', { sec: _ss }, ss);
     }
 
-    _hh = `${hh} hr${hh > 1 ? "s" : ""}`;
-    _mm = `${mm} minute${mm > 1 ? "s" : ""}`;
+    _hh = t('Utils.FormatTime.Hour', { hrs: hh }, hh);
+    _mm = t('Utils.FormatTime.Minute', { mnt: mm }, mm);
 
     if (hh > 0) {
       return `${_hh}, ${_mm}`;

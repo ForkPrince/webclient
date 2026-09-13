@@ -21,6 +21,7 @@ export interface Setting {
 }
 
 export interface SettingGroup {
+  id?: string;
   title?: string;
   desc?: string;
   displayName?: string;

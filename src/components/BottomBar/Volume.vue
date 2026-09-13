@@ -14,7 +14,7 @@
                 min="0"
                 step="0.01"
                 :value="settings.volume"
-                :aria-label="`Volume ${volume_percent} percent`"
+                :aria-label="$t('BottomBar.VolumeLabel', { percent: volume_percent })"
                 :aria-valuetext="`${volume_percent}%`"
                 :style="{
                     backgroundSize: `${volume_percent}% 100%`,

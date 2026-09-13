@@ -5,22 +5,25 @@ import { SettingCategory } from '@/interfaces/settings'
 
 import LyricsSvg from '@/assets/icons/lyrics.svg?raw'
 import LastfmSvg from '@/assets/icons/lastfm.svg?raw'
+import { useT } from '@/i18n'
+
+const { t } = useT()
 
 export default <SettingCategory>{
-    title: 'Plugins',
+    title: t("Common.Plugins"),
     show_if: loggedInUserIsAdmin,
     groups: [
         {
-            title: 'Lyrics',
+            title: t("Common.Lyrics"),
             icon: LyricsSvg,
-            desc: 'Finds and displays lyrics from the internet.',
+            desc: t("Settings.Plugins.LyricsDescription"),
             settings: lyrics,
             experimental: true,
         },
         {
-            title: 'Last.fm',
+            title: t("Settings.Plugins.LastFM.Title"),
             icon: LastfmSvg,
-            desc: 'Scrobble your music to Last.fm',
+            desc: t('Settings.Plugins.LastFM.Description'),
             settings: lastfm,
         },
     ],

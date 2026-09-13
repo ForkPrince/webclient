@@ -3,9 +3,9 @@
     <!-- <div class="left"> -->
       <!-- <button v-if="!onNowPlaying" v-wave class="shuffle-queue action" @click="queue.shuffleQueue">
         <ShuffleSvg />
-        <span>Shuffle</span>
+      <span>{{ $t('RightSidebar.Shuffle') }}</span>
       </button>
-      <h2 v-else style="margin: 0">Now Playing</h2> -->
+      <h2 v-else style="margin: 0">{{ $t('RightSidebar.NowPlaying') }}</h2> -->
       <PlayingFrom />
     <!-- </div>
     <div class="right">

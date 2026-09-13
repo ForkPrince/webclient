@@ -1,4 +1,7 @@
+import { useT } from '@/i18n'
 import useSettings from '@/stores/settings'
+
+const { t } = useT()
 
 export default (title: string, isNowPlayingInfo: boolean = false) => {
     const settings = useSettings()
@@ -6,7 +9,7 @@ export default (title: string, isNowPlayingInfo: boolean = false) => {
         return
     }
 
-    const base = 'Swing Music'
+    const base = t('Common.AppTitle')
 
     if (title) {
         document.title = `${title} | ${base}`

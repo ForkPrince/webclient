@@ -3,7 +3,7 @@
         <div class="sidenav_header">
             <a @click="closeSidenav" class="sidenav_logo" href="#">
                 <div class="art"><LogoSvg /></div>
-                <div class="title">Swing Music</div>
+                <div class="title">{{ $t('Common.AppTitle') }}</div>
             </a>
         </div>
         <div class="sidenav_content scrollable">
@@ -26,7 +26,8 @@
 
 <script setup lang="ts">
 import LogoSvg from '@/assets/icons/logos/logo-fill.light.svg'
-import { topnavitems } from '../LeftSidebar/navitems'
+import { useNavItems } from "../LeftSidebar/navitems";
+const { topnavitems } = useNavItems();
 
 const emit = defineEmits(['close'])
 

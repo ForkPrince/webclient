@@ -6,8 +6,11 @@
 </template>
 
 <script setup lang="ts">
+import { useT } from '@/i18n';
 import { useToast } from '@/stores/notification'
 import { ref } from 'vue'
+
+const { t } = useT();
 
 const toast = useToast()
 
@@ -22,7 +25,7 @@ function handleInput(e: Event) {
     const newValue = (e.target as HTMLInputElement).valueAsNumber
 
     if (Number.isNaN(newValue)) {
-        return toast.showError('Invalid number')
+        return toast.showError(t('Settings.NumberInput.InvalidNumber'))
     }
 
     if (newValue) {
@@ -34,9 +37,9 @@ async function submit(newValue: number) {
     const success = await props.callback(newValue)
 
     if (success) {
-        toast.showSuccess('Updated!')
+        toast.showSuccess(t('Settings.NumberInput.Updated'))
     } else {
-        toast.showError('Failed to update')
+        toast.showError(t('Settings.NumberInput.UpdateFailed'))
     }
 }
 </script>

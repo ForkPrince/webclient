@@ -1,15 +1,15 @@
 <template>
     <FilePicker v-if="showFilePicker" :userhome="userHome" @submitDirs="handleSubmitDirs" @cancel="toggleFilePicker" />
     <div v-else class="rootdirconfig">
-        <div class="heading">Configure music folders</div>
-        <div class="description">Where do you want Swing Music to look for music?</div>
+        <div class="heading">{{ $t('Onboarding.RootDirs.Title') }}</div>
+        <div class="description">{{ $t('Onboarding.RootDirs.TitleDesc') }}</div>
         <br />
         <div class="options">
             <div class="option" tabindex="0" @click="toggleHomeDir" @keydown="handleKeyDown($event, toggleHomeDir)">
                 <div>
-                    <div class="option-title">Home directory</div>
+                    <div class="option-title">{{ $t('Onboarding.RootDirs.HomeDir') }}</div>
                     <div class="option-description">
-                        Scan all folders in <span class="userhome">{{ userHome }}</span>
+                        {{ $t('Onboarding.RootDirs.HomeDirDesc') }} <span class="userhome">{{ userHome }}</span>
                     </div>
                 </div>
                 <div class="option-selected">
@@ -24,28 +24,28 @@
                 @keydown="handleKeyDown($event, toggleFilePicker)"
             >
                 <div>
-                    <div class="option-title">Specific directory</div>
+                    <div class="option-title"> {{ $t('Onboarding.RootDirs.SpecificFolder') }}</div>
                     <div class="option-description">
                         {{
                             specificDirsSelected
-                                ? `${finalRootDirs.length} folder${finalRootDirs.length !== 1 ? 's' : ''} selected`
-                                : 'Select folder to scan for music'
+                                ? t('Onboarding.RootDirs.FolderSelected', {n: finalRootDirs.length}, finalRootDirs.length)
+                                : t('Onboarding.RootDirs.FolderSelectedDesc')
                         }}
                     </div>
                 </div>
                 <div v-show="specificDirsSelected" class="option-selected">
-                    <span>Add Folders</span>
+                    <span>{{ $t('Onboarding.RootDirs.AddFolders') }}</span>
                     <CheckSvg v-if="specificDirsSelected" height="1.75rem" />
                 </div>
             </div>
         </div>
         <br />
         <div class="btn-container">
-            <button class="btn-continue" @click="handleContinue">{{ fromSettings ? 'Update' : 'Continue' }}</button>
+            <button class="btn-continue" @click="handleContinue">{{ fromSettings ? $t('Common.Update') : $t('Common.Continue') }}</button>
         </div>
     </div>
     <div v-if="rootDirs.length > 0 && !homeDirSelected" class="selected-folders rounded-sm">
-        <div class="heading">{{ finalRootDirs.length }} selected folders</div>
+        <div class="heading">{{ t('Onboarding.RootDirs.FolderSelected', {n: finalRootDirs.length}, finalRootDirs.length) }}</div>
         <div class="folders">
             <div v-for="folder in finalRootDirs" :key="folder" class="folder">
                 <FolderSvg />
@@ -77,6 +77,9 @@ import FilePicker from './FilePicker.vue'
 import FolderSvg from '@/assets/icons/folder.svg'
 import SubtractSvg from '@/assets/icons/subtract.svg'
 import CheckSvg from '@/assets/icons/check.filled.svg'
+import { useT } from '@/i18n.js'
+
+const { t } = useT()
 
 // SECTION: Props & Emits
 const props = defineProps<{
@@ -166,7 +169,7 @@ function handleRemoveFolder(folder: string) {
 
 async function handleContinue() {
     if (!rootDirs.value.length) {
-        emit('error', 'Please select a root directory')
+        emit('error', t('Onboarding.RootDirs.ErrorSelectRootFolder'))
         return
     }
 

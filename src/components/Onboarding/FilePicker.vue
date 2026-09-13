@@ -22,7 +22,7 @@
                         class="btn-finish"
                         @click="$emit('submitDirs', finalSelection.length ? finalSelection : [currentPath])"
                     >
-                        Continue
+                    {{ $t('Common.Continue') }}
                     </button></span
                 >
             </div>
@@ -51,9 +51,9 @@
         <div class="help rounded-sm">
             <div class="help-content">
                 <InfoSvg />
-                <span>Use (⌘/Ctrl or Shift) + Click to select multiple folders</span>
+                <span>{{ $t('Onboarding.FilePicker.Help')}}</span>
             </div>
-            <span>{{ selectedFolders.size }} Selected</span>
+            <span>{{ $t('Onboarding.FilePicker.Selected', {sel: selectedFolders.size}) }}</span>
         </div>
     </div>
 </template>
@@ -73,6 +73,9 @@ import ArrowLeftSvg from '@/assets/icons/arrow.svg'
 import InfoSvg from '@/assets/icons/info.svg'
 import { Folder } from '@/interfaces'
 import { createSubPaths } from '@/utils'
+import { useT } from '@/i18n.js'
+
+const { t } = useT()
 
 const props = defineProps<{
     userhome: string
@@ -93,7 +96,7 @@ const renderedFolders = computed(() => {
 
     if (first2.length >= 2) {
         first2[0].name = '↑'
-        first2[1].name = '. (this folder)'
+        first2[1].name = t('Onboarding.FilePicker.ThisFolderHelp')
     }
 
     return first2
