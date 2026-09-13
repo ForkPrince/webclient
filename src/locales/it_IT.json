@@ -567,9 +567,7 @@
       "ArtistSeparatorDesc": "Personalizza i separatori degli artisti",
       "Artists": {
         "ArticleAwareDesc": "Ignora articoli (p.e. The, A, An) nell'ordinamento del nome degli artisti",
-        "ArticleAwareTitle": "Ordinamento intelligente articoli",
-        "SeparatorDesc": "Saranno usati per separare artisti e artisti degli album",
-        "SeparatorTitle": "Inserisci i separatori separati da virgole"
+        "ArticleAwareTitle": "Ordinamento intelligente articoli"
       },
       "ArtistsDesc": "Personalizza le impostazioni degli artisti",
       "BackupMainDesc": "Esegui e ripristina il backup delle tue librerie",
@@ -616,8 +614,11 @@
         "UseWatchdog": "Controlla le cartelle radici per trovare nuova musica"
       },
       "Separators": {
+        "AddAnother": "Aggiungi un altro...",
         "Description": "Questi saranno usati per separare gli artisti e artisti degli album",
-        "Title": "Inserisci i separatori separati da una virgola"
+        "Hint": "Digita un separatore, poi premi {enter} o {comma} per aggiungerlo.",
+        "Locked": "Usato sempre come separatore",
+        "Title": "Separatori"
       },
       "Sidebar": {
         "Description": "CTRL + B",

@@ -8,8 +8,8 @@ import { useT } from '@/i18n'
 const { t } = useT()
 
 const separators = <Setting>{
-    title: t('Settings.General.Artists.SeparatorTitle'),
-    desc: t('Settings.General.Artists.SeparatorDesc'),
+    title: t('Settings.General.Separators.Title'),
+    desc: t('Settings.General.Separators.Description'),
     state: () => {
         const store = useSettingsStore()
 
@@ -22,12 +22,12 @@ const separators = <Setting>{
         return []
     },
     action: async (payload: string) => {
-        if (!payload) return
+        if (typeof payload !== 'string') return
 
         const { status } = await updateConfig('artistSeparators', payload)
 
         if (status == 200) {
-            useSettingsStore().setArtistSeparators(payload.split(','))
+            useSettingsStore().setArtistSeparators(payload ? payload.split(',') : [])
         }
 
         return true

@@ -564,9 +564,7 @@
       "ArtistSeparatorDesc": "自定义艺术家分隔符",
       "Artists": {
         "ArticleAwareDesc": "排序艺术家名称时忽略冠词（如 The、A、An）",
-        "ArticleAwareTitle": "忽略冠词排序",
-        "SeparatorDesc": "用于分隔艺术家和专辑艺术家",
-        "SeparatorTitle": "输入以逗号分隔的分隔符"
+        "ArticleAwareTitle": "忽略冠词排序"
       },
       "ArtistsDesc": "自定义艺术家设置",
       "BackupMainDesc": "备份和恢复你的媒体库数据",
@@ -616,8 +614,11 @@
         "UseWatchdog": "监视根目录中的新音乐"
       },
       "Separators": {
+        "AddAnother": "添加另一个...",
         "Description": "用于分隔艺术家和专辑艺术家",
-        "Title": "输入以逗号分隔的分隔符"
+        "Hint": "输入分隔符，然后按 {enter} 或 {comma} 添加。",
+        "Locked": "始终用作分隔符",
+        "Title": "分隔符"
       },
       "Sidebar": {
         "Description": "CTRL + B",

@@ -564,9 +564,7 @@
       "ArtistSeparatorDesc": "아티스트 구분자 맞춤 설정",
       "Artists": {
         "ArticleAwareDesc": "아티스트 이름을 정렬할 때 관사(The, A, An 등)를 무시해요",
-        "ArticleAwareTitle": "관사를 고려한 정렬",
-        "SeparatorDesc": "아티스트와 앨범 아티스트를 구분하는 데 사용돼요",
-        "SeparatorTitle": "쉼표로 구분한 구분자를 입력하세요"
+        "ArticleAwareTitle": "관사를 고려한 정렬"
       },
       "ArtistsDesc": "아티스트 설정 맞춤 구성",
       "BackupMainDesc": "라이브러리 데이터를 백업하고 복원하세요",
@@ -616,8 +614,11 @@
         "UseWatchdog": "루트 디렉토리에서 새 음악 감시"
       },
       "Separators": {
+        "AddAnother": "추가하기...",
         "Description": "아티스트와 앨범 아티스트를 구분하는 데 사용돼요",
-        "Title": "쉼표로 구분한 구분자를 입력하세요"
+        "Hint": "구분자를 입력한 뒤 {enter} 또는 {comma}를 눌러 추가하세요.",
+        "Locked": "항상 구분자로 사용돼요",
+        "Title": "구분자"
       },
       "Sidebar": {
         "Description": "CTRL + B",

@@ -569,9 +569,7 @@
       "ArtistSeparatorDesc": "Customize artist separators",
       "Artists": {
         "ArticleAwareDesc": "Ignore articles (e.g. The, A, An) when sorting artist names",
-        "ArticleAwareTitle": "Article aware sorting",
-        "SeparatorDesc": "These will be used to separate artists and album artists",
-        "SeparatorTitle": "Enter separators separated by a comma"
+        "ArticleAwareTitle": "Article aware sorting"
       },
       "ArtistsDesc": "Customize artist settings",
       "BackupMainDesc": "Backup and restore your library data",
@@ -618,8 +616,11 @@
         "UseWatchdog": "Watch root dirs for new music"
       },
       "Separators": {
+        "AddAnother": "Add another...",
         "Description": "These will be used to separate artists and album artists",
-        "Title": "Enter separators separated by a comma"
+        "Hint": "Type a separator, then press {enter} or {comma} to add it.",
+        "Locked": "Always used as a separator",
+        "Title": "Separators"
       },
       "Sidebar": {
         "Description": "CTRL + B",

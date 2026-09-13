@@ -57,6 +57,13 @@
                     <button v-if="setting.type === SettingType.button" @click="setting.action">
                         {{ setting.button_text && setting.button_text() }}
                     </button>
+                    <button
+                        v-if="setting.type === SettingType.separators_input"
+                        :disabled="!separatorsDirty"
+                        @click="separatorsInput?.save()"
+                    >
+                        {{ $t('Settings.Save') }}
+                    </button>
                     <LockedNumberInput
                         v-if="setting.type == SettingType.locked_number_input"
                         :value="setting.state !== null ? setting.state() : 0"
@@ -76,8 +83,10 @@
                 />
                 <SeparatorsInput
                     v-if="setting.type === SettingType.separators_input && setting.action"
+                    :ref="el => (separatorsInput = el as SeparatorsInputRef)"
                     :submit="setting.action"
                     :default="setting.state ? setting.state() : []"
+                    @dirty="value => (separatorsDirty = value)"
                 />
                 <Profile v-if="setting.type === SettingType.profile" />
                 <Accounts v-if="setting.type === SettingType.accounts" />
@@ -104,6 +113,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { SettingGroup } from '@/interfaces/settings'
 import { SettingType } from '@/settings/enums'
 
@@ -127,6 +137,11 @@ import License from './Components/License.vue'
 defineProps<{
     group: SettingGroup
 }>()
+
+type SeparatorsInputRef = { save: () => void } | null
+
+const separatorsInput = ref<SeparatorsInputRef>(null)
+const separatorsDirty = ref(false)
 </script>
 
 <style lang="scss">
