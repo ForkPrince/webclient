@@ -3,9 +3,10 @@ import { createI18n } from "vue-i18n";
 import en from './locales/en_US.json';
 import it from './locales/it_IT.json';
 import ko from './locales/ko.json';
+import zh from './locales/zh_CN.json';
 import { readLocalStorage } from "./utils/useLocalStorage";
 
-export const supportedLocales = ['en_US', 'it_IT', 'ko'];
+export const supportedLocales = ['en_US', 'it_IT', 'ko', 'zh_CN'];
 const fallbackLocale = 'en_US';
 
 function detectBrowserLocale(): string {
@@ -42,7 +43,8 @@ const i18n = createI18n({
   messages: {
     en_US: en,
     it_IT: it,
-    ko: ko
+    ko: ko,
+    zh_CN: zh
   }
 });
 

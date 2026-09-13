@@ -252,7 +252,8 @@
   "Languages": {
     "en_US": "English",
     "it_IT": "Italiano",
-    "ko": "한국어"
+    "ko": "한국어",
+    "zh_CN": "中文（简体）"
   },
   "LeftSidebar": {
     "FileTypeBitrate": "file type • bitrate",
