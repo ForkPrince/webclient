@@ -68,7 +68,7 @@ export default async (track: Track): Promise<Option[]> => {
         children: () =>
             getAddToPlaylistOptions(AddToPlaylistAction, {
                 trackhash: track.trackhash,
-                playlist_name: track.title + ' Radio',
+                playlist_name: t('Mixes.RadioName', { title: track.title }),
             }),
         icon: PlusIcon,
     }

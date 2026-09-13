@@ -37,8 +37,8 @@ const show_albums_as_singles: Setting = {
 }
 
 const classical_enabled: Setting = {
-    title: 'Enable classical music support',
-    desc: 'Enable classical music support for albums (premium required)',
+    title: t('Settings.General.Albums.Classical.Title'),
+    desc: t('Settings.General.Albums.Classical.Desc'),
     type: SettingType.binary,
     state: () => settings().classical_enabled,
     action: () => settings().toggleClassicalEnabled(),

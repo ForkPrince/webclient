@@ -42,6 +42,7 @@
     "WelcomeBack": "Bentornato"
   },
   "BottomBar": {
+    "VolumeLabel": "Volume {percent} percento",
     "Favorite": "Preferita",
     "GoToNowPlaying": "Vai a in riproduzione",
     "PlaceholderArtist": "Benvenuto a Swing Music",
@@ -219,6 +220,7 @@
     "FileCount": "File | Files"
   },
   "HomeView": {
+    "ViewHistory": "VEDI CRONOLOGIA",
     "Browse": {
       "BrowseList": {
         "Albums": "Album",
@@ -243,6 +245,10 @@
     "Title": "Home",
     "title": "Home"
   },
+  "ImageLoader": {
+    "NextPanel": "Pannello copertina successivo",
+    "PrevPanel": "Pannello copertina precedente"
+  },
   "Languages": {
     "en_US": "English",
     "it_IT": "Italiano",
@@ -264,6 +270,7 @@
   },
   "Menus": {
     "Artist": {
+      "ThisIsPlaylist": "Questo è {artist}",
       "PlayNext": "Riproduci dopo la corrente"
     },
     "Common": {
@@ -301,6 +308,12 @@
   },
   "Mixes": {
     "Radio": "Radio",
+    "RadioName": "{title} Radio",
+    "TypeLabel": "Mix {type}",
+    "Types": {
+      "artist": "artista",
+      "track": "traccia"
+    },
     "SaveMix": "Salva mix",
     "SavedMix": "Mix salvato",
     "track": "traccia | tracce"
@@ -533,6 +546,10 @@
         "Title": "Lingua"
       },
       "Albums": {
+        "Classical": {
+          "Desc": "Abilita il supporto per la musica classica negli album (richiede premium)",
+          "Title": "Abilita il supporto per la musica classica"
+        },
         "AlbumAsSingles": {
           "Description": "Richiedi che un album abbia almeno due tracce",
           "Title": "Marca album con una sola traccia come singles"
@@ -623,6 +640,7 @@
       "UseNoSidebarTitle": "Usa il layout senza barre laterali"
     },
     "License": {
+      "UnknownError": "Si è verificato un errore sconosciuto",
       "ActivateLicense": "{action} licenza",
       "Amount": "Quantità",
       "AuthDevices": "Dispositivi autorizzati",

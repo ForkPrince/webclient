@@ -42,6 +42,7 @@
     "WelcomeBack": "Welcome back"
   },
   "BottomBar": {
+    "VolumeLabel": "Volume {percent} percent",
     "Favorite": "Favorite",
     "GoToNowPlaying": "Go to Now Playing",
     "PlaceholderArtist": "Welcome to Swing Music",
@@ -219,6 +220,7 @@
     "FileCount": "File | Files"
   },
   "HomeView": {
+    "ViewHistory": "VIEW HISTORY",
     "Browse": {
       "BrowseList": {
         "Albums": "Albums",
@@ -243,6 +245,10 @@
     "Title": "Home",
     "title": "Home"
   },
+  "ImageLoader": {
+    "NextPanel": "Next cover panel",
+    "PrevPanel": "Previous cover panel"
+  },
   "Languages": {
     "en_US": "English",
     "it_IT": "Italiano",
@@ -266,6 +272,7 @@
     "Album": {
     },
     "Artist": {
+      "ThisIsPlaylist": "This is {artist}",
       "PlayNext": "Play next"
     },
     "Common": {
@@ -303,6 +310,12 @@
   },
   "Mixes": {
     "Radio": "Radio",
+    "RadioName": "{title} Radio",
+    "TypeLabel": "{type} mix",
+    "Types": {
+      "artist": "artist",
+      "track": "track"
+    },
     "SaveMix": "Save Mix",
     "SavedMix": "Saved Mix",
     "track": "track | tracks"
@@ -535,6 +548,10 @@
         "Title": "Language"
       },
       "Albums": {
+        "Classical": {
+          "Desc": "Enable classical music support for albums (premium required)",
+          "Title": "Enable classical music support"
+        },
         "AlbumAsSingles": {
           "Description": "Require an album to have at least two tracks",
           "Title": "Mark albums with one track as singles"
@@ -626,6 +643,7 @@
     },
     "License": {
       "ActivateLicense": "{action} License",
+      "UnknownError": "An unknown error occurred",
       "Amount": "Amount",
       "AuthDevices": "Authorized Devices",
       "AutoRenewOff": "Auto-renew off",

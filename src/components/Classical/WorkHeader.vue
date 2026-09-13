@@ -2,7 +2,7 @@
     <div class="workheader">
         <div class="workcomposer">
             <span v-if="work.composer" class="composername">{{ work.composer }}</span>
-            <span v-if="playable" class="play" @click.stop="$emit('playWork')"> <PlaySvg /> Play</span>
+            <span v-if="playable" class="play" @click.stop="$emit('playWork')"> <PlaySvg /> {{ $t('Common.Play') }}</span>
         </div>
         <div class="worktitle">
             {{ title }}

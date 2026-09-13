@@ -351,7 +351,7 @@ async function registerLicenseKey() {
     }
 
     if (response.status !== 200) {
-        error.value = response.data?.error || 'An unknown error occurred'
+        error.value = response.data?.error || t('Settings.License.UnknownError')
     }
 
     loading.value = false

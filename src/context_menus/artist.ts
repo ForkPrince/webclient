@@ -47,7 +47,7 @@ export default async (artisthash: string, artistname: string) => {
         children: () =>
             getAddToPlaylistOptions(AddToPlaylistAction, {
                 artisthash,
-                playlist_name: `This is ${artistname}`,
+                playlist_name: t('Menus.Artist.ThisIsPlaylist', { artist: artistname }),
             }),
         icon: PlusIcon,
     }

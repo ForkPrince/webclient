@@ -22,7 +22,7 @@
         <br />
         <div class="btn-container">
             <button class="btn-continue" :class="{ 'btn-disabled': !isFinished }" @click="emit('finish')">
-                Finish
+                {{ $t('Common.Finish') }}
             </button>
         </div>
     </div>

@@ -79,9 +79,20 @@ function getTypeString(type: string) {
 }
 
 function getTypeName(type: string | string[]) {
-  // @ts-ignore
-  if (type == "all") return t('Views.ArtistDiscography.AllAlbums');
-  return type;
+  switch (type) {
+    case "all":
+      return t('Views.ArtistDiscography.AllAlbums');
+    case discographyAlbumTypes.albums:
+      return t('Common.Album', 2);
+    case discographyAlbumTypes.EPs_and_singles:
+      return t('Common.Singles');
+    case discographyAlbumTypes.appearances:
+      return t('Common.Appearances');
+    case discographyAlbumTypes.compilations:
+      return t('Common.Compilations', 2);
+    default:
+      return String(type);
+  }
 }
 
 onMounted(() => {

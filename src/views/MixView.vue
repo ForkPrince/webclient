@@ -39,6 +39,7 @@ import useQueue from '@/stores/queue'
 import useTracklist from '@/stores/queue/tracklist'
 
 import updatePageTitle from '@/utils/updatePageTitle'
+import { useT } from '@/i18n'
 
 import SongItem from '@/components/shared/SongItem.vue'
 import AfterHeader from '@/components/PlaylistView/AfterHeader.vue'
@@ -47,6 +48,7 @@ import { FullMix } from '@/interfaces'
 import { getMix } from '@/requests/mixes'
 import MixesHeader from '@/components/Mixes/MixesHeader.vue'
 
+const { t } = useT()
 const queue = useQueue()
 const tracklist = useTracklist()
 const route = useRoute()
@@ -60,7 +62,7 @@ interface ScrollerItem {
 
 function handlePlay(index: number) {
     tracklist.setFromMix(
-        mix.extra.type === 'artist' ? mix.title : mix.title + ' Radio',
+        mix.extra.type === 'artist' ? mix.title : t('Mixes.RadioName', { title: mix.title }),
         mix.id,
         mix.tracks,
         mix.extra.type === 'artist' ? mix.sourcehash : mix.extra.og_sourcehash,
