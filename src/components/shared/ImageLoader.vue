@@ -31,10 +31,10 @@
             @load="onDomImageLoad(img.key, $event)"
         />
         <template v-if="showPanelButtons">
-            <button class="panel-btn prev" aria-label="Previous cover panel" @click.stop.prevent="stepPanel(-1)">
+            <button class="panel-btn prev" :aria-label="$t('ImageLoader.PrevPanel')" @click.stop.prevent="stepPanel(-1)">
                 <RightArrowSvg />
             </button>
-            <button class="panel-btn next" aria-label="Next cover panel" @click.stop.prevent="stepPanel(1)">
+            <button class="panel-btn next" :aria-label="$t('ImageLoader.NextPanel')" @click.stop.prevent="stepPanel(1)">
                 <RightArrowSvg />
             </button>
         </template>

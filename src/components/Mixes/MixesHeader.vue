@@ -2,17 +2,17 @@
     <div class="mixheader" v-if="mix.title">
         <MixImage :mix="mix" :on_header="true" />
         <div class="mixinfo">
-            <div class="header_type">{{ mix.extra['type'] }} mix</div>
+            <div class="header_type">{{ mixTypeLabel(mix.extra['type']) }}</div>
             <div class="header_title">{{ mix.title }}</div>
             <div class="header_description ellip2">
                 {{ mix.description }}
             </div>
             <div class="bunchofstuff">
-                {{ mix.trackcount }} track{{ mix.trackcount === 1 ? '' : 's' }} ▸ {{ mix.duration }}
+                {{ mix.trackcount }} {{ $t('Mixes.track', mix.trackcount) }} ▸ {{ mix.duration }}
             </div>
             <div class="buttons">
                 <PlayBtnRect :source="playSources.mix" :bg_color="'#fff'" @click.prevent="$emit('playThis')" />
-                <button class="savebtn" :title="mix.saved ? 'Saved Mix' : 'Save Mix'" @click="saveMix">
+                <button class="savebtn" :title="mix.saved ? $t('Mixes.SavedMix') : $t('Mixes.SaveMix')" @click="saveMix">
                     <SaveFilledSvg v-if="mix.saved" />
                     <SaveSvg v-else />
                 </button>
@@ -22,6 +22,7 @@
 </template>
 
 <script setup lang="ts">
+import mixTypeLabel from '@/utils/mixTypeLabel'
 import { FullMix } from '@/interfaces'
 import MixImage from './MixImage.vue'
 import PlayBtnRect from '../shared/PlayBtnRect.vue'

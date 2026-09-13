@@ -6,11 +6,11 @@
         :albumartists="''"
         :small="true"
         :append="!isSmallPhone ? statsText : ''"
-        :prepend="isSmallPhone ? 'Album by ' : ''"
+        :prepend="isSmallPhone ? $t('AlbumView.AlbumBy') : ''"
       />
     </div>
     <div v-if="isSmallPhone" class="stats2">
-      {{ new Date(album.date * 1000).getUTCFullYear() }} {{ !album.is_single ? `• ${album.trackcount} Tracks` : "" }} •
+      {{ new Date(album.date * 1000).getFullYear() }} {{ !album.is_single ? `• ${album.trackcount} ${ $t('Common.Track', album.trackcount) }` : "" }} •
       {{ formatSeconds(album.duration, true) }}
     </div>
   </div>
@@ -18,12 +18,15 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import { useT } from "@/i18n";
 
 import { Album } from "@/interfaces";
 import { isSmallPhone } from "@/stores/content-width";
 import { formatSeconds } from "@/utils";
 
 import ArtistName from "@/components/shared/ArtistName.vue";
+
+const { t } = useT();
 
 const props = defineProps<{
   album: Album;
@@ -33,8 +36,8 @@ const statsText = computed(() => {
   const is_single = props.album.is_single;
 
   // hide track count if it's a single, also add an s to track if it's plural
-  return `• ${new Date(props.album.date * 1000).getUTCFullYear()} ${
-    !is_single ? `• ${props.album.trackcount.toLocaleString()} Track${props.album.trackcount > 1 ? "s" : ""}` : ""
+  return `• ${new Date(props.album.date * 1000).getFullYear()} ${
+    !is_single ? `• ${props.album.trackcount.toLocaleString()} ${ t('Common.Track', props.album.trackcount) }` : ""
   } • ${formatSeconds(props.album.duration, true)}`;
 });
 </script>

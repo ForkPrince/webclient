@@ -2,6 +2,9 @@ import { paths } from '@/config'
 import { Folder } from '@/interfaces'
 import { NotifType, useToast } from '@/stores/notification'
 import useAxios from '../useAxios'
+import { useT } from '@/i18n';
+
+const { t } = useT();
 
 const { add_root_dir, get_root_dirs, remove_root_dir } = paths.api.settings
 
@@ -25,11 +28,11 @@ export async function addRootDirs(new_dirs: string[], removed: string[]) {
     })
 
     if (error) {
-        useToast().showNotification('Error adding root dirs', NotifType.Error)
+        useToast().showNotification(t('Requests.RootDirs.ErrorAdding'), NotifType.Error)
         return []
     }
 
-    useToast().showNotification('Root directories configured', NotifType.Success)
+    useToast().showNotification(t('Requests.RootDirs.Success'), NotifType.Success)
 
     return data.root_dirs as string[]
 }
@@ -41,7 +44,7 @@ export async function removeRootDirs(dirs: string[]) {
     })
 
     if (error) {
-        useToast().showNotification('Error removing root dirs', NotifType.Error)
+        useToast().showNotification(t('Requests.RootDirs.ErrorRemoving'), NotifType.Error)
     }
 }
 
@@ -69,9 +72,12 @@ export async function triggerScan(full_scan: boolean = false) {
     })
 
     if (error) {
-        useToast().showNotification('Error triggering scan', NotifType.Error)
+        useToast().showNotification(t('Requests.RootDirs.ScanError'), NotifType.Error)
         return
     }
 
-    useToast().showNotification((full_scan ? 'Full' : 'Quick') + ' scan started', NotifType.Success)
+    useToast().showNotification(
+        t(full_scan ? 'Requests.RootDirs.FullScanStarted' : 'Requests.RootDirs.QuickScanStarted'),
+        NotifType.Success
+    )
 }

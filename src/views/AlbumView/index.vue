@@ -47,6 +47,9 @@ import Stats from '@/components/Stats/Stats.vue'
 
 import { dropSources } from '@/enums'
 import { isSmall } from '@/stores/content-width'
+import { useT } from '@/i18n'
+
+const { t } = useT()
 import useSettingsStore from '@/stores/settings'
 
 const album = useAlbumStore()
@@ -164,7 +167,7 @@ function getArtistAlbumComponents(): ScrollerItem[] {
                     type: 'album',
                     item: album,
                 })),
-                title: `More from ${artistname}`,
+                title: t('Views.AlbumViews.MoreFrom', {art: artistname}),
                 route: `/artists/${artisthash}/discography/all?artist=${artistname}`,
             },
         }
@@ -187,7 +190,7 @@ function getAlbumVersionsComponent(): ScrollerItem | null {
                 type: 'album',
                 item: album,
             })),
-            title: 'Other versions',
+            title: t('Views.AlbumViews.OtherVersions'),
             child_props: {
                 hide_artists: true,
             },
@@ -241,7 +244,7 @@ const scrollerItems = computed(() => {
             id: 'similarAlbums',
             component: CardScroller,
             props: {
-                title: 'Related Albums',
+                title: t('Views.AlbumViews.RelatedAlbums'),
                 items: album.similarAlbums.map(i => ({
                     type: 'album',
                     item: i,

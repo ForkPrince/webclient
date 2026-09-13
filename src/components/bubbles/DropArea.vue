@@ -1,11 +1,10 @@
 <template>
   <div class="bin-drop-area t-center rounded-sm">
     <div class="bin-count circular">10</div>
-    DROP TRACKS HERE
+    {{ $t('Bubbles.DropHere') }}
     <br />
   </div>
 </template>
-
 <style lang="scss">
 .bin-drop-area {
   // background-color: $gray;

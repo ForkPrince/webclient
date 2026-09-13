@@ -21,6 +21,10 @@ import {
     QueueWork,
     Track,
 } from '@/interfaces'
+import track from '@/context_menus/track'
+import { useT } from '@/i18n'
+
+const { t } = useT();
 
 export type From = fromFolder | fromAlbum | fromPlaylist | fromSearch | fromArtist | fromFav | fromMix
 
@@ -176,7 +180,7 @@ export default defineStore('tracklist', {
             }
 
             const Toast = useToast()
-            Toast.showNotification(`Added ${tracks.length} tracks to queue`, NotifType.Success)
+            Toast.showNotification(t("Stores.Tracklist.AddTrackToQueue", {n: tracks.length}, tracks.length), NotifType.Success)
         },
         insertAt(tracks: Track[], index: number) {
             this.tracklist.splice(index, 0, ...tracks)
@@ -241,7 +245,7 @@ export default defineStore('tracklist', {
             }
 
             const Toast = useToast()
-            Toast.showNotification(`Added ${tracks.length} tracks to queue`, NotifType.Success)
+            Toast.showNotification(t("Stores.Tracklist.AddTrackToQueue", {n: tracks.length}, tracks.length), NotifType.Success)
         },
     },
     getters: {

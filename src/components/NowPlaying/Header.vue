@@ -13,7 +13,7 @@
                         albumhash: queue.currenttrack?.albumhash || ' ',
                     },
                 }"
-                title="Go to Album"
+                :title="$t('NowPlaying.GoToAlbum')"
                 class="np-image"
             >
                 <ImageLoader
@@ -38,7 +38,7 @@
             </div>
         </div>
         <!-- <TrackContext /> -->
-        <!-- <h3 v-if="queue.next" class="nowplaying_title">Up Next</h3>
+        <!-- <h3 v-if="queue.next" class="nowplaying_title">{{ $t('NowPlaying.UpNext') }}</h3>
         <SongItem
             v-if="queue.next"
             :track="queue.next"
@@ -46,7 +46,7 @@
             :source="dropSources.folder"
             @play-this="queue.playNext"
         />
-        <h3 class="nowplaying_title">Queue</h3> -->
+        <h3 class="nowplaying_title">{{ $t('NowPlaying.Queue') }}</h3> -->
     </div>
 </template>
 

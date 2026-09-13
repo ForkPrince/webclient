@@ -8,17 +8,18 @@
             <div class="info">
                 <div class="header">
                     <b
-                        ><span v-if="!licenseInfo">GitHub Sponsor Benefits</span
-                        ><span v-else>Thank you for sponsoring Swing Music!</span></b
+                        ><span v-if="!licenseInfo">{{ $t('Settings.License.GithubSponsorTitle') }}</span
+                        ><span v-else>{{ $t('Settings.Backup.ThankYouMessage') }}</span></b
                     >
                 </div>
                 <div class="desc">
                     <span v-if="!licenseInfo">
-                        Swing Music Premium is available to all our GitHub Sponsors. Log in with GitHub to get access.
+                        {{ $t('Settings.License.NoGithubLogin') }}
+                        
                     </span>
                     <span v-else>
-                        Hello @{{ licenseInfo.customer.name }}! You have access to Swing Music Premium. <br />
-                        Thank you for your support. ❤️❤️</span
+                        {{ $t('Settings.License.ThanksCustName', {cust: licenseInfo.customer.name}) }}<br />
+                        {{ $t('Settings.License.ThanksWithHearts') }}</span
                     >
 
                     <!-- <br /><br /> -->
@@ -27,11 +28,11 @@
                 <div v-if="!licenseInfo" class="btns">
                     <button @click="loginWithGitHub">{{ loginWithGitHubText }}</button>
                     <a
-                        v-if="loginWithGitHubText === 'Log in with GitHub'"
+                        v-if="loginWithGitHubText === $t('Settings.License.LogInToGithub')"
                         href="https://github.com/sponsors/swingmx"
                         target="_blank"
                     >
-                        <button>Sponsor on GitHub ❤️</button>
+                        <button>{{ $t('Settings.License.SponsorOnGithub') }}</button>
                     </a>
                 </div>
             </div>
@@ -39,13 +40,10 @@
         </div>
 
         <div v-if="!licenseInfo?.license" class="infocard rounded">
-            <div class="header"><span>No Active Subscription</span><CrownSvg /></div>
-            <div class="content">
-                Get a subscription to unlock all premium features. Use the link below to browse the available plans and
-                benefits.
-            </div>
+            <div class="header"><span>{{ $t('Settings.License.NoActiveSub') }}</span><CrownSvg /></div>
+            <div class="content"> {{ $t('Settings.License.NoActiveSubDesc') }}</div>
             <div class="footer">
-                <a href="https://swingmx.com/pricing" target="_blank" class="cta rounded-sm">View Pricing</a>
+                <a href="https://swingmx.com/pricing" target="_blank" class="cta rounded-sm">{{ $t('Settings.License.ViewPricing') }}</a>
             </div>
         </div>
 
@@ -54,9 +52,9 @@
             class="rounded"
             @submit.prevent="registerLicenseKey"
         >
-            <div class="header">{{ licenseInfo?.license_key ? 'License key info' : 'Already got a license key?' }}</div>
+            <div class="header">{{ licenseInfo?.license_key ? $t('Settings.License.LicenseKey.Info') : $t('Settings.License.LicenseKey.AlreadyHave') }}</div>
             <label for="license-key">{{
-                licenseInfo?.license_key ? 'Update your license key:' : 'Paste your license key here:'
+                licenseInfo?.license_key ? $t('Settings.License.LicenseKey.Update') : $t('Settings.License.LicenseKey.Paste')
             }}</label>
             <Input
                 input-id="license-key"
@@ -67,7 +65,7 @@
             />
 
             <div>
-                <label for="device-name">{{ licenseInfo ? 'Update' : 'New' }} server name:</label>
+                <label for="device-name">{{ $t('Settings.License.NewOrUpServerName', {action: licenseInfo ? $t('Common.Update') : $t('Common.New')}) }}</label>
                 <Input
                     input-id="device-name"
                     :text="licenseInfo?.devices.list?.find(d => d.current)?.device_name || ''"
@@ -77,8 +75,8 @@
 
                 <div v-if="submitEnabled" class="btngroup">
                     <button type="submit" class="btn-active" :disabled="!submitEnabled">
-                        <!-- {{ licenseInfo && licenseInfo.license_key !== licenseKey ? 'Update' : 'Activate' }} License -->
-                        Save Changes
+                        <!-- {{ $t('Settings.License.ActivateLicense', { action: licenseInfo && licenseInfo.license_key !== licenseKey ? $t('Common.Update') : $t('Common.Activate') }) }} -->
+                        {{ $t('Settings.License.SaveChanges') }}
                     </button>
                     <Spinner v-if="loading" />
                 </div>
@@ -96,13 +94,13 @@
 
         <div v-if="licenseInfo?.license.subscription" class="licenseMeta rounded">
             <h3 class="h2">
-                {{ `${licenseInfo.license.license_type === 'gh_sponsor' ? 'GitHub Sponsors' : 'Subscription'}` }}
-                Details
+                {{ `${licenseInfo.license.license_type === 'gh_sponsor' ? $t('Settings.License.GithubSponsors') : $t('Settings.License.Subscription')}` }}
+                {{ $t('Common.Details') }}
             </h3>
             <div class="content">
                 <div class="info">
                     <div class="label">
-                        {{ `${licenseInfo.license.license_type === 'gh_sponsor' ? 'Tier' : `Amount`}` }}
+                        {{ `${licenseInfo.license.license_type === 'gh_sponsor' ? $t('Settings.License.Tier') : $t('Settings.License.Amount')}` }}
                     </div>
                     <span class="primary">
                         {{
@@ -116,7 +114,7 @@
                     >
                 </div>
                 <div class="info">
-                    <div class="label">Status</div>
+                    <div class="label">{{ $t('Settings.License.Status') }}</div>
                     <span class="primary">
                         {{ licenseInfo?.license.subscription.status }}
                     </span>
@@ -124,23 +122,23 @@
                         <br />
                         {{
                             licenseInfo?.license.subscription.canceled_at
-                                ? 'CANCELLED ' + getTimeAgo(licenseInfo.license.subscription.canceled_at).toUpperCase()
+                                ? $t('Settings.License.CanceledAt').toUpperCase() + getTimeAgo(licenseInfo.license.subscription.canceled_at).toUpperCase()
                                 : ''
                         }}
                     </span>
                 </div>
                 <div v-if="licenseInfo?.license.subscription.recurring_interval !== 'one_time'" class="info">
-                    <div class="label">Renewal</div>
+                    <div class="label">{{ $t('Settings.License.Renewal') }}</div>
                     <span class="primary renewal">
                         {{
                             licenseInfo?.license.subscription.cancel_at_period_end
-                                ? 'Auto-renew off'
+                                ? $t('Settings.License.AutoRenewOff')
                                 : getDate(licenseInfo?.license.subscription.current_period_end || '')
                         }}
                     </span>
                 </div>
                 <div v-if="licenseInfo?.license.subscription.recurring_interval == 'one_time'" class="info">
-                    <div class="label">Expires</div>
+                    <div class="label">{{ $t('Settings.License.Expires') }}</div>
                     <span class="primary renewal">
                         {{ getDate(licenseInfo?.license.subscription.ends_at || '') }}
                     </span>
@@ -149,12 +147,9 @@
         </div>
 
         <div v-if="licenseInfo?.license.device_id" class="licenseinfo">
-            <h3 class="h2">Authorized Devices</h3>
+            <h3 class="h2">{{ $t('Settings.License.AuthDevices') }}</h3>
             <div class="desc">
-                Instances currently using your license key ({{ licenseInfo?.devices.active }}/{{
-                    licenseInfo?.devices.limit
-                }}
-                active)
+                {{ t('Settings.License.CurrentlyUsed', { cur: licenseInfo?.devices.active, tot: licenseInfo?.devices.limit}) }}
             </div>
             <div class="license-devices">
                 <div
@@ -175,7 +170,7 @@
                         <div class="lastseen">{{ getLastSeen(device.last_seen) }}</div>
                     </div>
 
-                    <button class="btnred" @click="() => logOutDevice(device.device_id)">Revoke</button>
+                    <button class="btnred" @click="() => logOutDevice(device.device_id)">{{ $t('Settings.License.Revoke') }}</button>
                 </div>
             </div>
         </div>
@@ -190,10 +185,9 @@
                         : 'https://polar.sh/swingmx/portal/overview'
                 "
                 target="_blank"
-            >
-                Manage {{ licenseInfo?.license.license_type === 'gh_sponsor' ? 'Sponsorship' : 'Subscription' }} ↗
+            > {{ $t('Settings.License.Manage', {lic: licenseInfo?.license.license_type === 'gh_sponsor' ? $t('Settings.License.Sponsorship') : $t('Settings.License.Subscription')}) }}
             </a>
-            <button class="btnred" @click="() => logOutDevice(settings.device_id)">Log Out</button>
+            <button class="btnred" @click="() => logOutDevice(settings.device_id)">{{ $t('Common.LogOut') }}</button>
         </div>
     </div>
 </template>
@@ -220,19 +214,21 @@ import useAxios from '@/requests/useAxios'
 import { LicenseInfo } from '@/interfaces'
 import useSettingsStore from '@/stores/settings'
 import { storeToRefs } from 'pinia'
+import { useT } from '@/i18n'
 
 TimeAgo.addLocale(en)
 
 let clientId = 'Ov23li5bsrEqMmqdT10i'
 let redirectUri = 'https://cloud.swingmx.com/auth/github/callback'
 
+const { t } = useT()
 const error = ref<string | null>(null)
 const loading = ref(false)
 const settings = useSettingsStore()
 const licenseKey = ref<string | null>(null)
 const deviceName = ref<string | null>(null)
 const licenseInfo = storeToRefs(useSettingsStore()).licenseInfo
-const loginWithGitHubText = ref<string>('Log in with GitHub')
+const loginWithGitHubText = ref<string>(t('Settings.License.LogInToGithub'))
 
 const submitEnabled = computed(() => {
     // If license has changed
@@ -256,11 +252,11 @@ const submitEnabled = computed(() => {
 function getRecurringInterval(interval: string) {
     switch (interval) {
         case 'month':
-            return 'mo'
+            return t('Common.Periods.MonthShort')
         case 'year':
-            return 'yr'
+            return t('Common.Periods.YearShort')
         case 'one_time':
-            return 'once'
+            return t('Common.Periods.OnceShort')
     }
 
     return interval
@@ -296,10 +292,10 @@ function getTimeAgo(date: string) {
 }
 
 function getLastSeen(date: string | null) {
-    if (!date) return 'No activity'
+    if (!date) return t('Settings.License.NoActivity')
 
     const timeAgo = new TimeAgo(userLocale()).format(new Date(date))
-    return `Last activity: ${timeAgo}`
+    return t('Settings.License.LastActivity', { time: timeAgo })
 }
 
 function handleLicenseKeyInput(value: string) {
@@ -355,7 +351,7 @@ async function registerLicenseKey() {
     }
 
     if (response.status !== 200) {
-        error.value = response.data?.error || 'An unknown error occurred'
+        error.value = response.data?.error || t('Settings.License.UnknownError')
     }
 
     loading.value = false
@@ -388,9 +384,9 @@ async function logOutDevice(deviceId: string) {
 }
 
 async function loginWithGitHub() {
-    if (loginWithGitHubText.value === 'Refresh Status') {
+    if (loginWithGitHubText.value === t('Settings.License.RefreshStatus')) {
         return await getLicenseInfo(true).then(() => {
-            loginWithGitHubText.value = 'Log in with GitHub'
+            loginWithGitHubText.value = t('Settings.License.LogInToGithub')
         })
     }
 
@@ -406,7 +402,7 @@ async function loginWithGitHub() {
     const url = `${githubUrl}?${queryParams.toString()}`
     window.open(url, '_blank')
 
-    loginWithGitHubText.value = 'Refresh Status'
+    loginWithGitHubText.value = t('Settings.License.RefreshStatus')
 }
 
 onMounted(async () => {

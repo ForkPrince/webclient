@@ -5,7 +5,7 @@
                 {{
                     (queue.currenttrack as ClassicalMovement)?.movement_title ??
                     (queue.currenttrack as Track)?.title ??
-                    'Swing Music'
+                    $t('Common.AppTitle')
                 }}
             </div>
             <div class="artist">
@@ -15,7 +15,7 @@
                     :albumartists="queue.currenttrack?.albumartists || ''"
                 />
                 <span v-else class="artist author">
-                    <a href="https://github.com/cwilvx" target="_blank">built by @cwilvx ↗</a>
+                    <a href="https://github.com/cwilvx" target="_blank">{{ $t('Common.BuiltBy')}}</a>
                 </span>
             </div>
         </div>

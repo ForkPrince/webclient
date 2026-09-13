@@ -1,13 +1,13 @@
 <template>
     <div class="welcome">
         <div class="logo"><LogoSvg /></div>
-        <div class="heading">Welcome to</div>
-        <div class="appname">Swing Music</div>
+        <div class="heading">{{ $t('Onboarding.Welcome.Title') }}</div>
+        <div class="appname">{{ $t('Common.AppTitle') }}</div>
         <p class="tagline">
-            Click the button below to let's create your account <br />
+            {{ $t('Onboarding.Welcome.Tagline') }}<br />
             <!-- and configure your music folders to get started. -->
         </p>
-        <button class="btn-continue" tabindex="0" @click="emit('continue')">Get Started</button>
+        <button class="btn-continue" tabindex="0" @click="emit('continue')">{{ $t('Onboarding.Welcome.GetStarted') }}</button>
     </div>
 </template>
 

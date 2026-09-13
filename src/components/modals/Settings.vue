@@ -19,7 +19,7 @@
                     </button>
                     {{ currentGroup?.displayName || currentGroup?.title }}
                     <span v-if="currentGroup?.experimental" class="badge experimental circular">
-                        {{ currentGroup?.experimental ? 'experimental' : '' }}
+                        {{ currentGroup?.experimental ? $t('Settings.Experimental') : '' }}
                     </span>
                 </div>
                 <div v-if="currentGroup?.desc" class="desc">
@@ -62,7 +62,7 @@ const currentGroup = computed(() => {
     // select default tab
     for (const group of settingGroups) {
         for (const settings of group.groups) {
-            if (settings.title === 'Appearance') {
+            if (settings.id === 'appearance') {
                 return settings
             }
         }

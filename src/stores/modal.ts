@@ -1,5 +1,8 @@
 import { defineStore } from 'pinia'
 import useUI from '@/stores/interface'
+import { useT } from '@/i18n'
+
+const { t } = useT()
 
 export enum ModalOptions {
     newPlaylist,
@@ -45,7 +48,7 @@ export default defineStore('newModal', {
         showSaveArtistAsPlaylistModal(name: string, artisthash: string) {
             const props = {
                 artisthash,
-                playlist_name: `This is ${name}`,
+                playlist_name: t('Menus.Artist.ThisIsPlaylist', { artist: name }),
             }
             this.showModal(ModalOptions.newPlaylist, props)
         },

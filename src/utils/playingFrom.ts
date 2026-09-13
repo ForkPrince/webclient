@@ -13,6 +13,9 @@ import HeartSvg from '@/assets/icons/heart.fill.svg'
 import PlaylistSvg from '@/assets/icons/playlist.svg'
 import SearchSvg from '@/assets/icons/search.svg'
 import RadioSvg from '@/assets/icons/radio.svg'
+import { useT } from '@/i18n'
+
+const { t } = useT()
 
 interface PlayingFrom {
     name: string
@@ -64,7 +67,7 @@ export default (source: From): PlayingFrom => {
 
         case FromOptions.search:
             return {
-                name: `Search for: "${source.query}"`,
+                name: t('Utils.PlayingFrom.SearchFrom', {source: source.query}),
                 icon: SearchSvg,
                 location: {
                     name: Routes.search,
@@ -93,7 +96,7 @@ export default (source: From): PlayingFrom => {
 
         case FromOptions.favorite:
             return {
-                name: 'Favorite Tracks',
+                name: t('Utils.PlayingFrom.FavoriteTracks'),
                 icon: HeartSvg,
                 location: {
                     name: Routes.favoriteTracks,
@@ -121,6 +124,6 @@ export default (source: From): PlayingFrom => {
             }
 
         default:
-            return { name: '👻 No source', location: {}, icon: '' }
+            return { name: t('Utils.PlayingFrom.NoSource'), location: {}, icon: '' }
     }
 }

@@ -11,6 +11,9 @@ import { addAlbumToPlaylist } from '@/requests/playlists'
 import { AddToQueueIcon, DeleteIcon, PlayNextIcon, PlusIcon } from '@/icons'
 import { Album, ClassicalWork, Collection, Option, Playlist, Track } from '@/interfaces'
 import { get_find_on_social, getAddToCollectionOptions, getAddToPlaylistOptions } from './utils'
+import { useT } from '@/i18n'
+
+const { t } = useT();
 
 export default async (album?: Album) => {
     const albumStore = useAlbum()
@@ -20,7 +23,7 @@ export default async (album?: Album) => {
     }
 
     const play_next = <Option>{
-        label: 'Play next',
+        label: t('Menus.Common.PlayNext'),
         action: async () => {
             let tracks: Track[] = []
             let works: ClassicalWork[] | undefined
@@ -38,7 +41,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_queue = <Option>{
-        label: 'Add to queue',
+        label: t('Menus.Common.AddToQueue'),
         action: async () => {
             let tracks: Track[] = []
             let works: ClassicalWork[] | undefined
@@ -61,7 +64,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_playlist: Option = {
-        label: 'Add to Playlist',
+        label: t('Menus.Common.AddToPlaylist'),
         children: () =>
             getAddToPlaylistOptions(AddToPlaylistAction, {
                 albumhash: album.albumhash,
@@ -75,7 +78,7 @@ export default async (album?: Album) => {
     }
 
     const add_to_page: Option = {
-        label: 'Add to Collection',
+        label: t('Menus.Common.AddToCollection'),
         children: () =>
             getAddToCollectionOptions(addToPageAction, {
                 collection: null,
@@ -87,7 +90,7 @@ export default async (album?: Album) => {
     }
 
     const remove_from_page: Option = {
-        label: 'Remove item',
+        label: t('Menus.Common.RemoveFromCollection'),
         action: async () => {
             const success = await addOrRemoveItemFromCollection(
                 parseInt(router.currentRoute.value.params.collection as string),

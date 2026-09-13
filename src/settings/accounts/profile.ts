@@ -1,11 +1,15 @@
 import { SettingCategory } from '@/interfaces/settings'
 import { SettingType } from '../enums'
+import { useT } from '@/i18n'
+
+const { t } = useT()
 
 export default <SettingCategory>{
     groups: [
         {
-            title: 'Profile',
-            desc: 'Manage your profile and login information',
+            id: 'profile',
+            title: t('Settings.Profile.Title'),
+            desc: t('Settings.Profile.Desc'),
             settings: [
                 {
                     type: SettingType.profile,

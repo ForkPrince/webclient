@@ -2,13 +2,12 @@
     <CardGridPage :page="itemtype" :items="items" :fetch_callback="() => loadMore()" :more-items="waitingForMore">
         <template #header>
             <GenericHeader>
-                <template #name
-                    >Favorite <span style="text-transform: capitalize">{{ itemtype }}s</span>
+                <template #name>
+                    {{ $t('Views.FavCardScroller.Title', { item: $t(itemtype == 'album' ? 'Common.Album' : 'Common.Artist', 2) }) }}
                 </template>
-                <template #description
-                    >You have {{ itemtype == 'album' ? albumCount : artistCount }} favorited
-                    {{ itemtype + (items.length == 1 ? '' : 's') }}</template
-                >
+                <template #description>
+                    {{ $t('Views.FavCardScroller.Desc', { nelem: count, type: $t(itemtype == 'album' ? 'Common.album' : 'Common.artist', count) }, count) }}
+                </template>
             </GenericHeader>
         </template>
     </CardGridPage>
@@ -49,6 +48,8 @@ const itemtype = computed(() => {
 
     return 'artist'
 })
+
+const count = computed(() => (itemtype.value == 'album' ? albumCount.value : artistCount.value))
 
 const items = computed(() => {
     if (itemtype.value == 'album') {

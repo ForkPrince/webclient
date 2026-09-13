@@ -8,7 +8,7 @@
             }"
         >
             <div class="type" :style="{ color: getTypeColor(mix.extra.images?.[0]?.color || '') }">
-                {{ mix.extra['type'] }} mix
+                {{ mixTypeLabel(mix.extra['type']) }}
             </div>
             <div class="title ellip">{{ mix.title.replace('Radio', '') }}</div>
         </div>
@@ -37,6 +37,7 @@
 </template>
 
 <script setup lang="ts">
+import mixTypeLabel from '@/utils/mixTypeLabel'
 import { paths } from '@/config'
 import { Mix } from '@/interfaces'
 import { addOpacity } from '@/utils/colortools/shift'

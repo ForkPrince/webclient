@@ -43,7 +43,7 @@
             <!-- <div
                 v-if="!isClassicalTrack"
                 class="fav-icon"
-                :title="is_fav ? 'Add to favorites' : 'Remove from favorites'"
+                :title="is_fav ? $t('TrackItem.AddToFavorites') : $t('TrackItem.RemoveFromFavorites')"
                 @click.stop="() => addToFav(track.trackhash)"
             >
                 <HeartSvg :state="is_fav" :no_emit="true" />
@@ -51,7 +51,7 @@
             <div
                 v-if="isQueueTrack"
                 class="remove-track"
-                title="Remove from queue"
+                :title="$t('TrackItem.RemoveFromQueue')"
                 @click.stop="player.removeByIndex(index)"
             >
                 <DelSvg />

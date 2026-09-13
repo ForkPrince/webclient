@@ -8,7 +8,7 @@
             </button>
         </div>
         <div class="right">
-            <button>{{ buttonText ?? 'Save' }}</button>
+            <button>{{ buttonText ?? $t('Settings.Save')  }}</button>
         </div>
     </form>
 </template>
@@ -18,6 +18,7 @@ import { computed, onMounted, ref } from 'vue'
 
 import EyeSvg from '@/assets/icons/eye.svg'
 import EyeSlashSvg from '@/assets/icons/eye.slash.svg'
+
 
 const props = defineProps<{
     text?: string

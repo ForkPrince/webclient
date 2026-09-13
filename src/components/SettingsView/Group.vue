@@ -15,14 +15,14 @@
                         <span class="ellip">
                             {{ setting.title }}
                             <span v-if="setting.experimental" class="badge experimental circular">
-                                {{ setting.experimental ? 'experimental' : '' }}
+                                {{ setting.experimental ? $t('Common.experimental') : '' }}
                             </span>
                             <span v-if="setting.new" class="badge new circular">
-                                {{ setting.new ? 'new' : '' }}
+                                {{ setting.new ? $t('Common.new') : '' }}
                             </span>
                         </span>
                         <button v-if="setting.type == SettingType.root_dirs" @click="setting.action">
-                            <ReloadSvg height="1.5rem" /> <span>Full Scan</span>
+                            <ReloadSvg height="1.5rem" /> <span>{{ $t('Common.FullScan') }}</span>
                         </button>
                     </div>
                     <div v-if="setting.desc" class="desc">
@@ -41,6 +41,14 @@
                         :source="setting.state !== null ? setting.state : () => ''"
                         :setter-fn="setting.action"
                     />
+                    <DropDown
+                        v-if="setting.type === SettingType.dropdown"
+                        :items="(setting.options ?? [] as any)"
+                        :current="(setting.state && setting.state() as any)"
+                        :reverse="'hide'"
+                        component_key="setting-dropdown"
+                        @item-clicked="setting.action"
+                    />
                     <NumberInput
                         v-if="setting.type === SettingType.free_number_input"
                         :value="setting.state && setting.state()"
@@ -48,6 +56,13 @@
                     />
                     <button v-if="setting.type === SettingType.button" @click="setting.action">
                         {{ setting.button_text && setting.button_text() }}
+                    </button>
+                    <button
+                        v-if="setting.type === SettingType.separators_input"
+                        :disabled="!separatorsDirty"
+                        @click="separatorsInput?.save()"
+                    >
+                        {{ $t('Settings.Save') }}
                     </button>
                     <LockedNumberInput
                         v-if="setting.type == SettingType.locked_number_input"
@@ -68,8 +83,10 @@
                 />
                 <SeparatorsInput
                     v-if="setting.type === SettingType.separators_input && setting.action"
+                    :ref="el => (separatorsInput = el as SeparatorsInputRef)"
                     :submit="setting.action"
                     :default="setting.state ? setting.state() : []"
+                    @dirty="value => (separatorsDirty = value)"
                 />
                 <Profile v-if="setting.type === SettingType.profile" />
                 <Accounts v-if="setting.type === SettingType.accounts" />
@@ -96,6 +113,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { SettingGroup } from '@/interfaces/settings'
 import { SettingType } from '@/settings/enums'
 
@@ -119,6 +137,11 @@ import License from './Components/License.vue'
 defineProps<{
     group: SettingGroup
 }>()
+
+type SeparatorsInputRef = { save: () => void } | null
+
+const separatorsInput = ref<SeparatorsInputRef>(null)
+const separatorsDirty = ref(false)
 </script>
 
 <style lang="scss">
@@ -177,6 +200,10 @@ defineProps<{
 
         .options {
             margin: auto 0;
+        }
+
+        .setting-dropdown {
+            width: 9rem;
         }
 
         .text {

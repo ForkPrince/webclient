@@ -15,11 +15,14 @@ import { getAllSettings } from "@/requests/settings";
 import updatePageTitle from "@/utils/updatePageTitle";
 
 import Content from "../components/SettingsView/Content.vue";
+import { useT } from "@/i18n";
+
+const { t } = useT();
 
 const store = useSettingsStore();
 
 onMounted(() => {
-  updatePageTitle("Settings");
+  updatePageTitle(t('Common.Settings'));
   getAllSettings().then(({ settings }) => {
     store.mapDbSettings(settings);
   });
