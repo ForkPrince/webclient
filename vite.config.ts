@@ -22,6 +22,21 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
+      workbox: {
+        cleanupOutdatedCaches: true,
+        navigateFallback: "index.html",
+        navigateFallbackDenylist: [/^\/api/],
+        runtimeCaching: [
+          {
+            urlPattern: /^\/index\.html$/,
+            handler: "NetworkOnly",
+          },
+          {
+            urlPattern: /\/sw\.js$/,
+            handler: "NetworkOnly",
+          },
+        ],
+      },
       manifest: {
         name: "Swing Music",
         short_name: "Swing Music",
